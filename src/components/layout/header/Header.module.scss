@@ -385,3 +385,134 @@
     }
   }
 }
+
+// Ocultar elementos solo en mobile/desktop
+.mobileOnly {
+  display: flex;
+  
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.desktopOnly {
+  display: none;
+  
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+// Barra de navegación desktop
+.desktopNav {
+  display: none;
+  background-color: #f8f8f8;
+  border-top: 1px solid #eee;
+  
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.navItem {
+  position: relative;
+  
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}
+
+.navButton, .navLink {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 1rem 0;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  text-decoration: none;
+  
+  &:hover {
+    color: #000;
+  }
+}
+
+// Mega menú desktop
+.megaMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 600px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 1.5rem;
+  z-index: 1000;
+}
+
+.megaMenuContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.megaMenuColumn {
+  h4 {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+    
+    a {
+      color: #333;
+      text-decoration: none;
+      font-size: 0.95rem;
+      
+      &:hover {
+        color: #000;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.megaSubmenu {
+  margin-left: 1rem;
+  margin-top: 0.25rem;
+  
+  li {
+    margin-bottom: 0.25rem;
+    
+    a {
+      font-size: 0.85rem;
+      color: #666;
+    }
+  }
+}
