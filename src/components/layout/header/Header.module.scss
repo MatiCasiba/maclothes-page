@@ -1,0 +1,103 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+// menú hamburguesa (visible en mobile)
+.menuToggle {
+  flex: 0 0 auto;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #333;
+  
+  &:hover {
+    color: #000;
+  }
+}
+
+// logo
+.logo {
+  flex: 0 0 auto;
+  
+  img {
+    height: 80px;
+    width: auto;
+    
+    @media (min-width: 768px) {
+      height: 90px;
+    }
+  }
+}
+
+// buscador
+.searchContainer {
+  flex: 1;
+  max-width: 400px;
+  margin: 0 1rem;
+  
+  // en mobile, se puede ocultarlo y mostrarlo con un ícono
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+// carrito
+.cartContainer {
+  flex: 0 0 auto;
+}
+
+// overlay del menú en mobile
+.menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  
+  // el MenuToggle se posiciona dentro
+  :global {
+    animation: slideIn 0.3s ease;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+// tablet | desktop
+@media (min-width: 768px) {
+  .menuToggle {
+    display: none; // oculto hamburguesa en desktop
+  }
+  
+  .headerContainer {
+    padding: 1rem 2rem;
+  }
+}
