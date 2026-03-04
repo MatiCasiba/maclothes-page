@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FiMenu, FiSearch, FiShoppingBag, FiX, FiChevronDown } from 'react-icons/fi';
+import { FiMenu, FiSearch, FiShoppingBag, FiX, FiChevronDown, FiChevronRight } from 'react-icons/fi';
 import MenuToggle from './MenuToggle';
 import styles from './Header.module.scss';
 import SearchBar from './SearchBar';
@@ -9,13 +9,12 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [categoriaDesktop, setCategoriaDesktop] = useState(null);
-  const [subcategoriaDesktop, setSubcategoriaDesktop] = useState(null);
+  const [subcategoriaDesktop, setSubcategoriaDesktop] = useState('hombre'); // 'hombre' o 'mujer'
 
   return (
     <header className={styles.header}>
-      {/* Fila superior: Logo, buscador, íconos */}
+      {/* Fila superior */}
       <div className={styles.headerContainer}>
-        {/* Menú Hamburguesa (solo mobile) */}
         <button 
           className={`${styles.iconButton} ${styles.mobileOnly}`}
           onClick={() => setIsMenuOpen(true)}
@@ -24,21 +23,17 @@ const Header = () => {
           <FiMenu size={24} />
         </button>
 
-        {/* Logo */}
         <div className={styles.logo}>
-          <a href="/">
-            <img src="/logo/logo.png" alt="Maclothes" />
+          <a href="/" className={styles.logoText}>
+            MACLOTHES
           </a>
         </div>
 
-        {/* Buscador desktop */}
         <div className={styles.searchDesktop}>
           <SearchBar />
         </div>
 
-        {/* Íconos de acción (derecha) */}
         <div className={styles.actionIcons}>
-          {/* Buscador mobile */}
           <button 
             className={`${styles.iconButton} ${styles.mobileSearch}`}
             onClick={() => setIsSearchOpen(!isSearchOpen)}
@@ -47,25 +42,20 @@ const Header = () => {
             <FiSearch size={24} />
           </button>
 
-          {/* Carrito */}
           <button className={styles.iconButton} aria-label="Carrito">
             <FiShoppingBag size={24} />
           </button>
         </div>
       </div>
 
-      {/* Barra de navegación desktop (solo visible en desktop) */}
+      {/* Navegación Desktop */}
       <nav className={styles.desktopNav}>
         <div className={styles.navContainer}>
           <ul className={styles.navList}>
-            {/* Productos con submenú */}
             <li 
               className={styles.navItem}
               onMouseEnter={() => setCategoriaDesktop('productos')}
-              onMouseLeave={() => {
-                setCategoriaDesktop(null);
-                setSubcategoriaDesktop(null);
-              }}
+              onMouseLeave={() => setCategoriaDesktop(null)}
             >
               <button className={styles.navButton}>
                 Productos <FiChevronDown size={16} />
@@ -74,60 +64,77 @@ const Header = () => {
               {categoriaDesktop === 'productos' && (
                 <div className={styles.megaMenu}>
                   <div className={styles.megaMenuContainer}>
-                    {/* Columna Hombre */}
-                    <div className={styles.megaMenuColumn}>
-                      <h4>Hombre</h4>
-                      <ul>
-                        {Object.entries(menuData.productos.hombre).map(([key, categoria]) => (
-                          <li key={key}>
-                            <a href={categoria.path}>{categoria.label}</a>
-                            {categoria.subcategorias && (
-                              <ul className={styles.megaSubmenu}>
-                                {Object.entries(categoria.subcategorias).map(([subKey, subCategoria]) => (
-                                  <li key={subKey}>
-                                    <a href={subCategoria.path}>{subCategoria.label}</a>
-                                  </li>
-                                ))}
-                              </ul>
-                            )}
-                          </li>
-                        ))}
-                      </ul>
+                    {/* Columna izquierda: Hombre / Mujer */}
+                    <div className={styles.megaMenuSidebar}>
+                      <button 
+                        className={`${styles.megaMenuTab} ${subcategoriaDesktop === 'hombre' ? styles.active : ''}`}
+                        onMouseEnter={() => setSubcategoriaDesktop('hombre')}
+                      >
+                        Hombre <FiChevronRight size={16} />
+                      </button>
+                      <button 
+                        className={`${styles.megaMenuTab} ${subcategoriaDesktop === 'mujer' ? styles.active : ''}`}
+                        onMouseEnter={() => setSubcategoriaDesktop('mujer')}
+                      >
+                        Mujer <FiChevronRight size={16} />
+                      </button>
                     </div>
 
-                    {/* Columna Mujer */}
-                    <div className={styles.megaMenuColumn}>
-                      <h4>Mujer</h4>
-                      <ul>
-                        {Object.entries(menuData.productos.mujer).map(([key, categoria]) => (
-                          <li key={key}>
-                            <a href={categoria.path}>{categoria.label}</a>
-                            {categoria.subcategorias && (
-                              <ul className={styles.megaSubmenu}>
-                                {Object.entries(categoria.subcategorias).map(([subKey, subCategoria]) => (
-                                  <li key={subKey}>
-                                    <a href={subCategoria.path}>{subCategoria.label}</a>
-                                  </li>
-                                ))}
-                              </ul>
-                            )}
-                          </li>
-                        ))}
-                      </ul>
+                    {/* Columna derecha: Categorías según selección */}
+                    <div className={styles.megaMenuContent}>
+                      {subcategoriaDesktop === 'hombre' && (
+                        <div className={styles.categoriaGrid}>
+                          {Object.entries(menuData.productos.hombre).map(([key, categoria]) => (
+                            <div key={key} className={styles.categoriaItem}>
+                              <a href={categoria.path} className={styles.categoriaTitulo}>
+                                {categoria.label}
+                              </a>
+                              {categoria.subcategorias && (
+                                <ul className={styles.subcategoriaList}>
+                                  {Object.entries(categoria.subcategorias).map(([subKey, subCategoria]) => (
+                                    <li key={subKey}>
+                                      <a href={subCategoria.path}>{subCategoria.label}</a>
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+
+                      {subcategoriaDesktop === 'mujer' && (
+                        <div className={styles.categoriaGrid}>
+                          {Object.entries(menuData.productos.mujer).map(([key, categoria]) => (
+                            <div key={key} className={styles.categoriaItem}>
+                              <a href={categoria.path} className={styles.categoriaTitulo}>
+                                {categoria.label}
+                              </a>
+                              {categoria.subcategorias && (
+                                <ul className={styles.subcategoriaList}>
+                                  {Object.entries(categoria.subcategorias).map(([subKey, subCategoria]) => (
+                                    <li key={subKey}>
+                                      <a href={subCategoria.path}>{subCategoria.label}</a>
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
               )}
             </li>
 
-            {/* Nosotros */}
             <li className={styles.navItem}>
               <a href={menuData.nosotros.path} className={styles.navLink}>
                 {menuData.nosotros.label}
               </a>
             </li>
 
-            {/* Contacto */}
             <li className={styles.navItem}>
               <a href={menuData.contacto.path} className={styles.navLink}>
                 {menuData.contacto.label}
@@ -137,7 +144,7 @@ const Header = () => {
         </div>
       </nav>
 
-      {/* Barra de búsqueda mobile overlay */}
+      {/* Búsqueda mobile */}
       {isSearchOpen && (
         <div className={styles.searchOverlay}>
           <div className={styles.searchBar}>
@@ -157,7 +164,7 @@ const Header = () => {
         </div>
       )}
 
-      {/* Menú móvil overlay */}
+      {/* Menú móvil */}
       {isMenuOpen && (
         <MenuToggle onClose={() => setIsMenuOpen(false)} />
       )}
