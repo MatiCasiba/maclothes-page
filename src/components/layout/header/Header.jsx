@@ -1,52 +1,75 @@
-import { useState } from "react"
-import SearchBar from "./SearchBar"
-import CartIcon from "./CartIcon"
-import MenuToggle from "./MenuToggle"
-import styles from './Header.module.scss'
+import { useState } from 'react';
+import { FiMenu, FiSearch, FiShoppingBag, FiX } from 'react-icons/fi';
+import MenuToggle from './MenuToggle';
+import styles from './Header.module.scss';
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
     <header className={styles.header}>
       <div className={styles.headerContainer}>
-        {/* menú Hamburguesa */}
-        <div className={styles.menuToggle}>
-          <button 
-            className={styles.hamburger}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            ☰
-          </button>
-        </div>
+        {/* Menú Hamburguesa */}
+        <button 
+          className={styles.iconButton}
+          onClick={() => setIsMenuOpen(true)}
+          aria-label="Abrir menú"
+        >
+          <FiMenu size={24} />
+        </button>
 
-        {/* logo */}
+        {/* Logo */}
         <div className={styles.logo}>
           <a href="/">
             <img src="/logo/logo.png" alt="Maclothes" />
-            {/* <p>Maclothes</p> */}
           </a>
         </div>
 
-        {/* buscador (visible en desktop, toggle en mobile) */}
-        <div className={styles.searchContainer}>
-          <SearchBar />
-        </div>
+        {/* Íconos de acción (derecha) */}
+        <div className={styles.actionIcons}>
+          {/* Buscador (mobile) */}
+          <button 
+            className={`${styles.iconButton} ${styles.mobileSearch}`}
+            onClick={() => setIsSearchOpen(!isSearchOpen)}
+            aria-label="Buscar"
+          >
+            <FiSearch size={24} />
+          </button>
 
-        {/* carrito */}
-        <div className={styles.cartContainer}>
-          <CartIcon />
+          {/* Carrito */}
+          <button className={styles.iconButton} aria-label="Carrito">
+            <FiShoppingBag size={24} />
+          </button>
         </div>
       </div>
 
-      {/* menú desplegable (solo visible cuando isMenuOpen es true) */}
-      {isMenuOpen && (
-        <div className={styles.menuOverlay}>
-          <MenuToggle onClose={() => setIsMenuOpen(false)} />
+      {/* Barra de búsqueda (se despliega en mobile) */}
+      {isSearchOpen && (
+        <div className={styles.searchOverlay}>
+          <div className={styles.searchBar}>
+            <FiSearch size={20} className={styles.searchIcon} />
+            <input 
+              type="text" 
+              placeholder="Buscar productos..."
+              autoFocus
+            />
+            <button 
+              className={styles.closeSearch}
+              onClick={() => setIsSearchOpen(false)}
+            >
+              <FiX size={20} />
+            </button>
+          </div>
         </div>
       )}
-    </header>
-  )
-}
 
-export default Header
+      {/* Menú desplegable */}
+      {isMenuOpen && (
+        <MenuToggle onClose={() => setIsMenuOpen(false)} />
+      )}
+    </header>
+  );
+};
+
+export default Header;
