@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { FiMenu, FiSearch, FiShoppingBag, FiX } from 'react-icons/fi';
 import MenuToggle from './MenuToggle';
 import styles from './Header.module.scss';
+import SearchBar from './SearchBar';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,6 +25,11 @@ const Header = () => {
           <a href="/">
             <img src="/logo/logo.png" alt="Maclothes" />
           </a>
+        </div>
+
+        {/* buscador desktop */}
+        <div className={styles.searchDesktop}>
+          <SearchBar />
         </div>
 
         {/* Íconos de acción (derecha) */}
