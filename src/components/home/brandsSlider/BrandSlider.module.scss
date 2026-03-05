@@ -1,9 +1,11 @@
 .brandsSection {
   padding: 2rem 0;
   background-color: #f8f8f8;
-  width: 100%;
-  overflow: hidden; // aseguro que nada se desborde
-}
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
 
 .sliderContainer {
   width: 100%;
@@ -59,4 +61,5 @@
     // Calculamos basado en el ancho real
     transform: translateX(calc(-50%));
   }
+}
 }
