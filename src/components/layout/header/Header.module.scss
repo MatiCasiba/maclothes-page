@@ -1,3 +1,5 @@
+// src/components/layout/Header/Header.module.scss
+
 .header {
   position: sticky;
   top: 0;
@@ -512,12 +514,12 @@
   }
 }
 
-// === MEGA MENÚ DESKTOP (ACTUALIZADO) === //
+// === MEGA MENÚ DESKTOP (CON ESPACIADO AJUSTADO) === //
 .megaMenu {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 700px;
+  width: 650px;
   background-color: white;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
@@ -526,20 +528,19 @@
 
 .megaMenuContainer {
   display: flex;
-  min-height: 350px;
 }
 
 .megaMenuSidebar {
-  width: 150px;
+  width: 140px;
   background-color: #f8f8f8;
-  padding: 1rem 0;
+  padding: 0.75rem 0;
   border-right: 1px solid #eee;
   border-radius: 8px 0 0 8px;
 }
 
 .megaMenuTab {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.6rem 1rem;
   background: none;
   border: none;
   text-align: left;
@@ -548,6 +549,7 @@
   justify-content: space-between;
   cursor: pointer;
   color: #666;
+  font-size: 0.95rem;
   
   &:hover {
     background-color: #f0f0f0;
@@ -562,7 +564,7 @@
 
 .megaMenuContent {
   flex: 1;
-  padding: 1.5rem;
+  padding: 1.25rem;
   background-color: white;
   border-radius: 0 8px 8px 0;
   transition: opacity 0.2s ease;
@@ -571,20 +573,25 @@
 .categoriaGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 0.25rem 1.5rem;
+  grid-auto-rows: min-content;
+  grid-auto-flow: dense;
 }
 
 .categoriaItem {
-  margin-bottom: 1rem;
+  .categoriaTitulo {
+    margin-bottom: 0.35rem;
+    font-weight: 700;
+  }
 }
 
 .categoriaTitulo {
   display: block;
-  font-weight: 600;
-  color: #333;
+  font-weight: 700;
+  color: #1a1a1a;
   text-decoration: none;
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  line-height: 1.3;
   
   &:hover {
     color: #000;
@@ -598,16 +605,21 @@
   margin: 0;
   
   li {
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.2rem; // espacio reducido entre subcategorías
     
     a {
       color: #666;
       text-decoration: none;
-      font-size: 0.85rem;
+      font-size: 0.8rem; 
+      line-height: 1.3;
+      display: inline-block;
+      padding: 0.1rem 0;
       
       &:hover {
         color: #333;
         text-decoration: underline;
+        padding-left: 2px;
+        transition: padding 0.1s ease;
       }
     }
   }
