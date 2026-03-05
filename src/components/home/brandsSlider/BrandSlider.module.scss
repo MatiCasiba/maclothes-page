@@ -1,0 +1,47 @@
+.brandsSection {
+  padding: 2rem 0;
+  background-color: #f8f8f8;
+}
+
+.sliderContainer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.sliderTrack {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.brandItem {
+  flex: 0 0 auto;
+  width: 150px;
+  margin: 0 2rem;
+  
+  img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      filter: grayscale(0);
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-150px * 6 - 4rem * 6)); // ancho total negativo
+  }
+}
