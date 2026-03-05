@@ -1,0 +1,76 @@
+.banner {
+  width: 100%;
+  height: 500px;
+  background-image: url('/banners/home-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  
+  @media (max-width: 768px) {
+    height: 350px;
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.bannerContent {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 1rem;
+}
+
+.bannerTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+}
+
+.bannerSubtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+.bannerButton {
+  padding: 1rem 2.5rem;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: white;
+    color: #333;
+  }
+}
