@@ -1,6 +1,8 @@
 .brandsSection {
   padding: 2rem 0;
   background-color: #f8f8f8;
+  width: 100%;
+  overflow: hidden; // aseguro que nada se desborde
 }
 
 .sliderContainer {
@@ -12,16 +14,27 @@
 .sliderTrack {
   display: flex;
   animation: scroll 20s linear infinite;
+  width: fit-content;
   
   &:hover {
     animation-play-state: paused;
+  }
+  
+  // en mobile, aseguros que no haya desbordamiento
+  @media (max-width: 768px) {
+    animation: scroll 15s linear infinite; // un poco más rápido en mobile
   }
 }
 
 .brandItem {
   flex: 0 0 auto;
-  width: 150px;
-  margin: 0 2rem;
+  width: 120px; // reducción para mobile
+  margin: 0 1.5rem; // reducción del margen
+  
+  @media (min-width: 768px) {
+    width: 150px;
+    margin: 0 2rem;
+  }
   
   img {
     width: 100%;
@@ -37,11 +50,13 @@
   }
 }
 
+// ajusto la animación para que sea más suave en todos los dispositivos
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-150px * 6 - 4rem * 6)); // ancho total negativo
+    // Calculamos basado en el ancho real
+    transform: translateX(calc(-50%));
   }
 }
