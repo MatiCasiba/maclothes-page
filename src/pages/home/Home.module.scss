@@ -1,0 +1,11 @@
+.home {
+  width: 100%;
+  
+  section {
+    margin-bottom: 4rem;
+    
+    @media (max-width: 768px) {
+      margin-bottom: 3rem;
+    }
+  }
+}
