@@ -13,6 +13,50 @@
   }
 }
 
+// ProductGrid - Grid responsivo para productos
+.productGrid {
+  // mobile: scroll horizontal
+  @media (max-width: 767px) {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 0.5rem 0 1.5rem;
+    scroll-snap-type: x mandatory;
+    
+    &::-webkit-scrollbar {
+      height: 4px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: #f0f0f0;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 4px;
+    }
+    
+    > * {
+      flex: 0 0 250px;
+      scroll-snap-align: start;
+    }
+  }
+
+  // tablet: 2 columnas
+  @media (min-width: 768px) and (max-width: 1023px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  // desktop: 3 columnas
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
 // mobile: scroll horizontal
 .mobileGrid {
   display: flex;
