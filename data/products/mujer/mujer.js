@@ -574,7 +574,7 @@ export const mujerProducts = [
         colores: ['Blanco'],
         destacado: false,
         fechaCreacion: new Date('2025-04-20')
-    }, 
+    },
     {
         id: 'valkur-reloj-seren ',
         name: 'Valkur Reloj Seren ',
@@ -592,7 +592,7 @@ export const mujerProducts = [
         colores: ['Rosa'],
         destacado: true,
         fechaCreacion: new Date('2025-04-20')
-    }, 
+    },
     {
         id: 'valkur-reloj-trya ',
         name: 'Valkur Reloj Trya ',
@@ -646,7 +646,7 @@ export const mujerProducts = [
         colores: ['Marron'],
         destacado: false,
         fechaCreacion: new Date('2025-11-10')
-    }, 
+    },
     {
         id: 'remera-nube',
         name: 'Remera nube',
@@ -664,7 +664,7 @@ export const mujerProducts = [
         colores: ['Negro', 'Marron'],
         destacado: false,
         fechaCreacion: new Date('2025-11-10')
-    }, 
+    },
     {
         id: 'top-leticia',
         name: 'Top Leticia',
@@ -682,7 +682,7 @@ export const mujerProducts = [
         colores: ['Maní', 'Marron'],
         destacado: false,
         fechaCreacion: new Date('2025-11-10')
-    }, 
+    },
     {
         id: 'top-palabra-de-honor-peplum',
         name: 'Top Palabra de Honor Peplum',
@@ -700,7 +700,7 @@ export const mujerProducts = [
         colores: ['Rosa', 'Blanca', 'Amarillo'],
         destacado: false,
         fechaCreacion: new Date('2025-11-10')
-    }, 
+    },
     {
         id: 'top-peplum',
         name: 'Remera duster',
@@ -718,7 +718,329 @@ export const mujerProducts = [
         colores: ['Negra', 'Blanca'],
         destacado: true,
         fechaCreacion: new Date('2025-11-10')
-    },       
-
-
+    },
+    {
+        id: 'pantalon-001',
+        name: 'Pantalón Lanka',
+        description: 'Pantalón de sastrería elastizada, de tiro alto y pierna ancha. Posee doble pinza en delantero, acceso central y cinturón forrado en la misma tela con hebilla y pasador metálico. Su silueta hace de esta prenda una pieza moderna que elevará todos tus looks. Combinalo con el blazer Lanka y armá un total look, ideal tanto para un evento como para la oficina.',
+        price: 190000,
+        offerPrice: null,
+        images: [
+            '/productos/mujer/pantalones/de-vestir/pantalon-lanka.jpg',
+            '/productos/mujer/pantalones/de-vestir/pantalon-lanka-2.jpg'
+        ],
+        category: 'mujer',
+        subcategoria: 'pantalones',
+        tipo: 'de-vestir',
+        talles: ['36', '38', '40', '42', '46', '48'],
+        colores: ['Negro', 'Blanco'],
+        destacado: true,
+        fechaCreacion: new Date('2024-01-18')
+    },
+    {
+        id: 'pantalon-002',
+        name: 'Pantalón Mauna',
+        description: 'Pantalón de sastrería viscosa, de tiro alto y pierna flare. Posee cintura cruzada y bolsillos diagonales. Combinalo con el blazer Mauna y obtené un total look cachero y sofisticado ideal para un evento como para la oficina.',
+        price: 190000,
+        offerPrice: null,
+        images: [
+            '/productos/mujer/pantalones/de-vestir/pantalon-mauna.jpg',
+            '/productos/mujer/pantalones/de-vestir/pantalon-mauna-2.jpg'
+        ],
+        category: 'mujer',
+        subcategoria: 'pantalones',
+        tipo: 'de-vestir',
+        talles: ['36', '38', '40', '42', '46', '48'],
+        colores: ['Negro', 'Gris'],
+        destacado: true,
+        fechaCreacion: new Date('2024-01-18')
+    },
+    {
+        id: 'pantalon-003',
+        name: 'Pantalón Minto',
+        description: 'Pantalón de sastrería elastizada, de tiro alto y corte flare. Presenta bolsillos ojal en el frente con broches metálicos y cierre invisible en el lateral. Combinalo con el blazer Minto y creá un total look elegante y sofisticado.',
+        price: 180000,
+        offerPrice: 130000,
+        images: [
+            '/productos/mujer/pantalones/de-vestir/pantalon-minto.jpg',
+            '/productos/mujer/pantalones/de-vestir/pantalon-minto-2.jpg'
+        ],
+        category: 'mujer',
+        subcategoria: 'pantalones',
+        tipo: 'de-vestir',
+        talles: ['36', '38', '40', '42', '46', '48'],
+        colores: ['Negro', 'Blanco'],
+        destacado: false,
+        fechaCreacion: new Date('2024-01-18')
+    },
+    {
+        id: 'jean-001',
+        name: 'Jean Z195 Barrel Tiro Alto',
+        description: 'Jeans de tiro alto con cinco bolsillos. Pernera holgada estrechándose hacia el tobillo. Detalle de pespuntes en color rojo. Cierre frontal con cremallera y botón.',
+        price: 149900,
+        offerPrice: 129990,
+        images: [
+            '/productos/mujer/pantalones/jeans/jean-z1975.jpg',
+            '/productos/mujer/pantalones/jeans/jean-z1975-2.jpg'
+        ],
+        category: 'mujer',
+        subcategoria: 'pantalones',
+        tipo: 'jeans',
+        talles: ['36', '38', '40', '42'],
+        colores: ['Azul'],
+        destacado: false,
+        fechaCreacion: new Date('2024-01-25')
+    },
+    {
+        id: 'jean-002',
+        name: 'Jean ZW Balloon Tiro Medio',
+        description: 'Jeans de tiro alto con cinco bolsillos. Pernera holgada estrechándose hacia el tobillo. Detalle de pespuntes en color rojo. Cierre frontal con cremallera y botón.',
+        price: 165900,
+        offerPrice: null,
+        images: [
+            '/productos/mujer/pantalones/jeans/jean-zw.jpg',
+            '/productos/mujer/pantalones/jeans/jean-zw-2.jpg'
+        ],
+        category: 'mujer',
+        subcategoria: 'pantalones',
+        tipo: 'jeans',
+        talles: ['36', '38', '40', '42'],
+        colores: ['Gris'],
+        destacado: true,
+        fechaCreacion: new Date('2024-01-25')
+    },
+    {
+        id: 'campera-001',
+        name: 'Chaqueta Bolsillos Trabillas',
+        description: 'Chaqueta de cuello subido. Manga larga con hombreras y trabillas. Bolsillos de plastrón con solapa en delantero y detalle de solapas en pecho. Forro interior. Cierre frontal con botones..',
+        price: 245990,
+        offerPrice: 205500,
+        images: [
+            '/productos/mujer/abrigos/camperas/chaqueta-bolsillos-trabilla.jpg',
+            '/productos/mujer/abrigos/camperas/chaqueta-bolsillos-trabilla-2.jpg'
+        ],
+        category: 'mujer',
+        subcategoria: 'abrigos',
+        tipo: 'camperas',
+        talles: ['S', 'M', 'L', 'XL'],
+        colores: ['Mostaza'],
+        destacado: true,
+        fechaCreacion: new Date('2025-10-05')
+    },
+    {
+        id: 'campera-002',
+        name: 'Chaqueta Clot',
+        description: 'Chaqueta efecto gamuza, de silueta relajada y manga larga. Lleva cierre central, broches metálicos personalizados MKV y cintura con puño tejido para un fit cómodo. Su silueta y el acabado efecto gamuza la convierten en un ítem moderno y versátil.',
+        price: 220000,
+        offerPrice: null,
+        images: [
+            '/productos/mujer/abrigos/camperas/chaqueta-clot.jpg',
+            '/productos/mujer/abrigos/camperas/chaqueta-clot-2.jpg'
+        ],
+        category: 'mujer',
+        subcategoria: 'abrigos',
+        tipo: 'camperas',
+        talles: ['XS', 'S', 'M', 'L', 'XL'],
+        colores: ['Mostaza'],
+        destacado: true,
+        fechaCreacion: new Date('2025-10-05')
+    },
+    {
+        id: 'campera-003',
+        name: 'Chaqueta Oriza',
+        description: 'Chaqueta biker efecto piel, con silueta relajada y mangas largas. Cuenta con cierre frontal, broches metálicos personalizados MKV y un cinturón con hebilla metálica en el ruedo. La combinación de pelo y cuero sintético la convierte en una prenda tendencia que eleva cualquier look.',
+        price: 320000,
+        offerPrice: null,
+        images: [
+            '/productos/mujer/abrigos/camperas/chaqueta-oriza.jpg',
+            '/productos/mujer/abrigos/camperas/chaqueta-oriza-2.jpg'
+        ],
+        category: 'mujer',
+        subcategoria: 'abrigos',
+        tipo: 'camperas',
+        talles: ['XS', 'S', 'M', 'L', 'XL'],
+        colores: ['Negro'],
+        destacado: false,
+        fechaCreacion: new Date('2025-10-05')
+    },
+    {
+        id: 'campera-004',
+        name: 'Chaqueta Rasac',
+        description: 'Chaqueta efecto cuero premium, de silueta entallada y manga larga. Posee acceso con cierre doble carro, broche metálico personalizado MKV en cuello y cierres en bolsillos. Una chaqueta clásica y moderna que no puede faltarte en tu guardarropas, ideal tanto para el día como para la noche.',
+        price: 220000,
+        offerPrice: null,
+        images: [
+            '/productos/mujer/abrigos/camperas/chaqueta-rasac.jpg',
+            '/productos/mujer/abrigos/camperas/chaqueta-rasac-2.jpg'
+        ],
+        category: 'mujer',
+        subcategoria: 'abrigos',
+        tipo: 'camperas',
+        talles: ['S', 'M', 'L', 'XL'],
+        colores: ['Negro'],
+        destacado: true,
+        fechaCreacion: new Date('2025-10-05')
+    },
+    {
+        id: 'chaleco-001',
+        name: 'Chaleco Norin',
+        description: 'Chaleco efecto piel de silueta relajada. Tiene cierre central, cuello y cartera en combinación efecto cuero, broches personalizados MKV y hebilla metálica. El mix de pelo y cuero, junto con su color, la convierten en una prenda de absoluta tendencia, ideal para completar tus looks en una noche de invierno.',
+        price: 265000,
+        offerPrice: 230500,
+        images: [
+            '/productos/mujer/abrigos/chalecos/chaleco-norin.jpg',
+            '/productos/mujer/abrigos/chalecos/chaleco-norin-2.jpg'
+        ],
+        category: 'mujer',
+        subcategoria: 'abrigos',
+        tipo: 'chalecos',
+        talles: ['36', '38', '40', '42', '44', '46', '48'],
+        colores: ['Marron'],
+        destacado: false,
+        fechaCreacion: new Date('2025-12-28')
+    },
+    {
+        id: 'chaleco-002',
+        name: 'Chaleco Riso',
+        description: 'Chaleco largo de sastrería elastizada, de calce entallado. Posee escote a la base, acceso con botones de pasta a tono y bolsillos ojal en el delantero. Combinalo con el skort Riso y armá un total look sastrero de absoluta tendencia.',
+        price: 190000,
+        offerPrice: null,
+        images: [
+            '/productos/mujer/abrigos/chalecos/chaleco-riso.jpg',
+            '/productos/mujer/abrigos/chalecos/chaleco-riso-2.jpg'
+        ],
+        category: 'mujer',
+        subcategoria: 'abrigos',
+        tipo: 'chalecos',
+        talles: ['36', '38', '40', '42', '44', '46'],
+        colores: ['Negro'],
+        destacado: false,
+        fechaCreacion: new Date('2025-12-28')
+    },
+    {
+        id: 'sweater-001',
+        name: 'Polera Farmer',
+        description: 'Polera tejida de calce anatómico y mangas largas. Cuello semi polera y mangas ranglan con transparencia. Renová tus tejidos de invierno con este imprescindible, ideal tanto para la oficina como para una salida de noche.',
+        price: 120000,
+        offerPrice: null,
+        images: [
+            '/productos/mujer/abrigos/sweaters/polera-farmer.jpg',
+            '/productos/mujer/abrigos/sweaters/polera-farmer-2.jpg'
+        ],
+        category: 'mujer',
+        subcategoria: 'abrigos',
+        tipo: 'sweaters',
+        talles: ['1', '2', '3', '4'],
+        colores: ['Marron'],
+        destacado: false,
+        fechaCreacion: new Date('2025-11-30')
+    },
+    {
+        id: 'sweater-002',
+        name: 'Sweater Derson',
+        description: 'Sweater tejido de calce relajado, con mangas largo 3/4. Escote bote y detalle de perlas metálicas en escote delantero y centro de mangas. Largo a la primera cadera, ideal para usar con tiro altos.',
+        price: 125000,
+        offerPrice: null,
+        images: [
+            '/productos/mujer/abrigos/sweaters/sweater-derson.jpg',
+            '/productos/mujer/abrigos/sweaters/sweater-derson-2.jpg'
+        ],
+        category: 'mujer',
+        subcategoria: 'abrigos',
+        tipo: 'sweaters',
+        talles: ['1', '2', '3', '4'],
+        colores: ['Negro'],
+        destacado: true,
+        fechaCreacion: new Date('2025-11-30')
+    },
+    {
+        id: 'sweater-003',
+        name: 'Sweater Rizzu',
+        description: 'Sweater tejido de calce relajado y mangas largas. Escote bote, hombro caído y maxi botones metálicos de textura orgánica ubicados en hombros. Un toque distintivo para realzar tus looks de invierno.',
+        price: 135000,
+        offerPrice: null,
+        images: [
+            '/productos/mujer/abrigos/sweaters/sweater-rizzu.jpg',
+            '/productos/mujer/abrigos/sweaters/sweater-rizzu-2.jpg'
+        ],
+        category: 'mujer',
+        subcategoria: 'abrigos',
+        tipo: 'sweaters',
+        talles: ['1', '2', '3', '4'],
+        colores: ['Crema'],
+        destacado: true,
+        fechaCreacion: new Date('2025-11-30')
+    },
+    {
+        id: 'calzado-001',
+        name: 'Botas militares Monolith',
+        description: 'Las botas militares Monolith reflejan el alma dual de Prada en esta versión elaborada en piel y Re-Nylon, con suelas extragrandes y un diseño totalmente único. Este modelo de calzado viene con un pouch extraíble decorado con el icónico logo triangular de metal esmaltado. ',
+        price: 2385080,
+        offerPrice: 2000000,
+        images: [
+            '/productos/mujer/calzados/botas-militares-monolith.avif',
+            '/productos/mujer/calzados/botas-militares-monolith-2.avif'
+        ],
+        category: 'mujer',
+        subcategoria: 'calzados',
+        tipo: null,
+        talles: ['34', '35', '36', '37'],
+        colores: ['Negro'],
+        destacado: false,
+        fechaCreacion: new Date('2025-11-25')
+    },
+    {
+        id: 'calzado-002',
+        name: 'Botines Monolith',
+        description: 'Un diseño distintivo con volúmenes audaces define estos botines con contrastes marcados, expresión de la dualidad inherente a la estética Prada. La icónica suela Monolith, geométrica y moderna, añade un carácter único al modelo de napa elástica.',
+        price: 2100750,
+        offerPrice: 1850700,
+        images: [
+            '/productos/mujer/calzados/botines-monolith.avif',
+            '/productos/mujer/calzados/botines-monolith-2.avif'
+        ],
+        category: 'mujer',
+        subcategoria: 'calzados',
+        tipo: null,
+        talles: ['34', '35', '36', '37'],
+        colores: ['Negro'],
+        destacado: false,
+        fechaCreacion: new Date('2025-11-25')
+    },
+    {
+        id: 'calzado-003',
+        name: 'Stilettos Baltoro',
+        description: 'Stiletto efecto cuero acharolado con tira cruzada, abertura lateral y taco triangular metalizado. Ideal para sumar un aire moderno a tus looks más formales. Altura taco: 11,5cm',
+        price: 195000,
+        offerPrice: null,
+        images: [
+            '/productos/mujer/calzados/stilettos-baltoro.jpg',
+            '/productos/mujer/calzados/stilettos-baltoro-2.jpg'
+        ],
+        category: 'mujer',
+        subcategoria: 'calzados',
+        tipo: null,
+        talles: ['34', '35', '36', '37','40'],
+        colores: ['Negro'],
+        destacado: true,
+        fechaCreacion: new Date('2025-11-25')
+    },
+    {
+        id: 'calzado-004',
+        name: 'Botinetas Frondella',
+        description: 'Botas caña baja efecto gamuza, con taco paleta a tono. Ideal para sumar los colores de temporada en tus looks. Altura taco: 10,5 cm',
+        price: 220000,
+        offerPrice: null,
+        images: [
+            '/productos/mujer/calzados/botinetas-frondella.jpg',
+            '/productos/mujer/calzados/botinetas-frondella-2.jpg'
+        ],
+        category: 'mujer',
+        subcategoria: 'calzados',
+        tipo: null,
+        talles: ['36', '37', '38', '40'],
+        colores: ['Verde mate'],
+        destacado: false,
+        fechaCreacion: new Date('2025-11-25')
+    },
 ]
