@@ -271,14 +271,14 @@ export const hombreProducts = [
     },
     // Camperas
     {
-        id: 'campera-001',
+        id: 'h-campera-001',
         name: 'Campera de Paño Gris Claro',
         description: 'Campera de paño clásica con capucha, corte regular fit y diseño liso atemporal. De color gris claro, confeccionada en 100% poliéster. Marca: Simonacci Polo Life.',
         price: 99990,
         offerPrice: 58999,
         images: [
-            '/productos/hombre/abrigos/camperas/campera-paño.webp',
-            '/productos/hombre/abrigos/camperas/campera-paño-2.webp'
+            '/productos/hombre/abrigos/camperas/campera-pano.webp',
+            '/productos/hombre/abrigos/camperas/campera-pano-2.webp'
         ],
         category: 'hombre',
         subcategoria: 'abrigos',
