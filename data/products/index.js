@@ -3,8 +3,8 @@ import { hombreProducts } from "./hombre/hombre"
 
 export const products = {
     mujer: mujerProducts,
-    hombre: hombreProducts || [],
-    all: [...mujerProducts, ...(hombreProducts || [])]
+    hombre: hombreProducts,
+    all: [...mujerProducts, ...hombreProducts]
 } 
 
 // helpper para filtrar por categoría
