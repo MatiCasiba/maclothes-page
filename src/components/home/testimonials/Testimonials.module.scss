@@ -1,5 +1,9 @@
 .testimonialsSection {
   background-color: #f8f8f8;
+  padding: 4rem 0;
+  width: 100%;
+  overflow: hidden; // prevengo desbordamiento
+  position: relative;
 }
 
 .sectionTitle {
@@ -7,34 +11,122 @@
   font-size: 2rem;
   margin-bottom: 3rem;
   color: #333;
+  padding: 0 1.5rem;
   
   @media (max-width: 768px) {
     font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
 }
 
-.testimonialsGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+// contenedor del slider
+.testimonialsContainer {
+  width: 100%;
+  position: relative;
   
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  // flechas de navegación
+  .arrowLeft, .arrowRight {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+    opacity: 0; // invisible por defecto
+    visibility: hidden; // oculto
+    pointer-events: none; // no recibe clicks
+    
+    &:hover {
+      background: #333;
+      color: white;
+      border-color: #333;
+      transform: translateY(-50%) scale(1.05);
+    }
+    
+    @media (max-width: 768px) {
+      display: none; // oculto flechas en mobile
+    }
   }
+  
+  .arrowLeft {
+    left: 20px;
+  }
+  
+  .arrowRight {
+    right: 20px;
+  }
+
+  // cuando el contenedor está en hover, muestro las flechas
+  &:hover {
+    .arrowLeft, .arrowRight {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto; // habilita clicks
+    }
+  }
+}
+
+// grid convertido en slider horizontal
+.testimonialsGrid {
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+  padding: 0.5rem 1.5rem 2rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  
+  // oculto la barra de scroll pero mantengo funcionalidad
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 10px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 10px;
+    
+    &:hover {
+      background: #666;
+    }
+  }
+  
+  // firefox
+  scrollbar-width: thin;
+  scrollbar-color: #999 #e0e0e0;
 }
 
 .testimonialCard {
+  flex: 0 0 auto;
+  width: 350px; // ancho fijo para desktop
   background: white;
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  scroll-snap-align: start;
   
   &:hover {
     transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  @media (max-width: 768px) {
+    width: 280px; // más angosto en mobile
+    padding: 1.25rem;
   }
 }
 
@@ -50,6 +142,7 @@
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
+  border: 2px solid #f0f0f0;
 }
 
 .clientInfo {
@@ -57,6 +150,7 @@
     margin: 0 0 0.25rem;
     font-size: 1rem;
     color: #333;
+    font-weight: 600;
   }
 }
 
@@ -79,4 +173,39 @@
   color: #666;
   line-height: 1.6;
   font-style: italic;
+  font-size: 0.95rem;
+  
+  // limito a 4 líneas para uniformidad
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// indicadores de scroll (puntos)
+.scrollIndicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  
+  @media (min-width: 769px) {
+    display: none; // oculto en desktop
+  }
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ddd;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  
+  &.active {
+    background: #333;
+    width: 20px;
+    border-radius: 4px;
+  }
 }
