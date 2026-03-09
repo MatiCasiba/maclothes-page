@@ -28,3 +28,13 @@ export const getOfferProducts = () => {
 export const getFeaturedProducts = () => {
     return products.all.filter(p => p.destacado)
 }
+
+// helper para productos por categoría específica de hombre
+export const getHombreByProductsByTipo = (tipo) => {
+    return hombreProducts.filter(p => p.tipo === tipo)
+}
+
+// helper para productos por categoría específica de mujer
+export const getMujerByProductsByTipo = (tipo) => {
+    return mujerProducts.filter(p => p.tipo === tipo)
+}
