@@ -21,12 +21,12 @@ export const getProductsByCategory = (category, subcategoria = null, tipo = null
 
 // helper para productos en oferta
 export const getOfferProducts = () => {
-    return products.all.filter(p => p.offerPrice !== null)
+    return products.all.filter(p => p.offerPrice !== null && p.offerPrice > 0)
 }
 
 // helper para productos destacados
 export const getFeaturedProducts = () => {
-    return products.all.filter(p => p.destacado)
+    return products.all.filter(p => p.destacado === true)
 }
 
 // helper para productos por categoría específica de hombre
