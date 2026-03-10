@@ -2,11 +2,12 @@ import { FiShoppingBag, FiHeart } from 'react-icons/fi';
 import styles from './ProductCard.module.scss';
 
 const ProductCard = ({ product }) => {
+  console.log('ProductCard recibió:', product)
   const { name, price, offerPrice, images, category } = product;
   const hasOffer = offerPrice && offerPrice < price;
 
   // tomo la primera imagen del array, o una imagen por defecto
-  const productImage = images && images.lenght > 0
+  const productImage = images && images.length > 0
     ? images[0]
     : '/placeholder.jpg'
 

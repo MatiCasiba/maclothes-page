@@ -29,8 +29,14 @@ const OfferSection = () => {
     const productsOnOffer = getOfferProducts()
     setOfferProducts(productsOnOffer)
     console.log('Productos en oferta:', productsOnOffer.length) // para verificar
+
+     // verifico que tengan imágenes
     productsOnOffer.forEach(p => {
-      console.log(`${p.name}:`, p.images) // ver que imágenes tiene cada producto
+      console.log(`${p.name}:`, {
+        tieneImages: !!p.images,
+        cantidad: p.images?.length,
+        primeraImgen: p.images?.[0]
+      })
     })
   }, [])
 
