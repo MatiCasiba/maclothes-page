@@ -1,6 +1,6 @@
 export const mujerProducts = [
     {
-        id: 'blazer-alain',
+        id: 'm-blazer-001',
         name: 'Blazer Alain',
         description: 'Blazer largo de sastrería tencel lana, de silueta relajada con solapa smoking y mangas largas. Su interior está forrado con satén elastizado generando extra confort. Su largo a la cadera hace de esta prenda un ítem clásico, fácil para combinar tanto con jeans como con el pantalón Alain para completar un total look.',
         price: 265000,
@@ -18,7 +18,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-01-15')
     },
     {
-        id: 'blazer-baker',
+        id: 'm-blazer-002',
         name: 'Blazer Baker',
         description: 'Blazer largo de sastrería elastizada, silueta entallada y mangas largas. El acceso con avío metálico aporta un toque sofisticado y actual. Su interior está forrado con satén elastizado generando extra confort. Combinalo con el pantalón Baker y armá un total look ideal para la oficina o un evento.',
         price: 265000,
@@ -36,7 +36,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-01-15')
     },
     {
-        id: 'blazer-corta-cruzada',
+        id: 'm-blazer-003',
         name: 'Blazer corta-cruzada',
         description: 'Blazer corta de cuello solapa y manga larga con hombreras. Cierre frontal cruzado con botones.',
         price: 165000,
@@ -54,14 +54,14 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-02-05')
     },
     {
-        id: 'blazer-demin',
+        id: 'm-blazer-004',
         name: 'Blazer Demin ZW',
         description: 'Blazer con cuello solapa de muescas. Manga larga con hombreras. Bolsillos con solapa en delantero. Forro interior combinado. Cierre frontal con botones.',
         price: 329990,
         offerPrice: null,
         images: [
-            '/productos/mujer/blazers/blazer-demin-zw.jpg',
-            '/productos/mujer/blazers/blazer-demin-zw-2.jpg'
+            '/productos/mujer/blazers/blazer-denim-zw.jpg',
+            '/productos/mujer/blazers/blazer-denim-zw-2.jpg'
         ],
         category: 'mujer',
         subcategory: 'blazers',
@@ -72,7 +72,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-03-15')
     },
     {
-        id: 'blazer-espiga',
+        id: 'm-blazer-005',
         name: 'Blazer Espiga',
         description: 'Blazer confeccionada en hilatura con lana 38%. Cuello subido y manga larga con abertura y botones. Bolsillos con solapa en delantero. Forro interior. Cierre frontal con botón.',
         price: 369800,
@@ -90,7 +90,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-03-17')
     },
     {
-        id: 'blazer-evelyn',
+        id: 'm-blazer-006',
         name: 'Blazer evelyn',
         description: 'Blazer largo efecto cuero encerado, de silueta relajada, con solapa smoking y mangas 3/4 con frunce. Su interior está forrado en satén elastizado aportando extra confort. Su género ultra suave al tacto, su largo a la cadera y su color de tendencia lo convierten en un ítem súper moderno, fácil de combinar tanto con jeans como con el pantalón Evelyn para completar un total look.',
         price: 245000,
@@ -108,7 +108,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-04-15')
     },
     {
-        id: 'blazer-lanka',
+        id: 'm-blazer-007',
         name: 'Blazer Lanka',
         description: 'Blazer corto de sastrería elastizada, silueta entallada y mangas largas. Su interior está forrado con satén elastizado generando extra confort. Posee pinzas en delantero con pespuntes y acceso con doble botón metálico personalizado MKV, que hacen de esta prenda un ítem clásico pero con un twist moderno. Combinalo con el pantalón Lanka y armá un total look.',
         price: 290000,
@@ -126,7 +126,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-04-12')
     },
     {
-        id: 'blusa-boho',
+        id: 'm-blusa-001',
         name: 'Blusa Boho',
         description: 'Camisa de crepe texturado de calce al cuerpo. Mangas largas y escote en V. Presenta volados en el escote, el ruedo y los puños, todos con terminación festón, y botones tipo nácar que suman un guiño delicado. Un ítem con impronta boho, protagonista absoluta de la temporada.',
         price: 115000,
@@ -144,7 +144,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-02-10')
     },
     {
-        id: 'blusa-churen',
+        id: 'm-blusa-002',
         name: 'Blusa Churen',
         description: 'Blusa de sedita plisada de calce relajado. Mangas largas con puños altos, cartera cruzada con tablón y cuello mao con gemelo metálico. Liviana, luminosa y con movimiento. La aliada perfecta para elevar cualquier look sastrero sin esfuerzo.',
         price: 135000,
@@ -162,7 +162,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-02-10')
     },
     {
-        id: 'camisa-bordados',
+        id: 'm-camisa-001',
         name: 'Camisa Bordados',
         description: 'Camisa de cuello redondo y escote pico. Manga larga acabada en puño. Detalle de bordados combinados a tono. Cierre frontal con botones.',
         price: 93900,
@@ -180,7 +180,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-03-01')
     },
     {
-        id: 'camisa-denim-zw',
+        id: 'm-camisa-002',
         name: 'Camisa Denim ZW',
         description: 'Camisa de cuello solapa y manga larga. Bajo asimétrico. Cierre frontal con botones.',
         price: 165900,
@@ -198,7 +198,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-02-10')
     },
     {
-        id: 'camisa-lino',
+        id: 'm-camisa-003',
         name: 'Camisa Lino',
         description: 'Camisa con tejido principal confeccionada en hilatura de lino 100%. Cuello solapa y manga larga acabada en puño. Cierre frontal con botones.',
         price: 119990,
@@ -216,7 +216,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-02-10')
     },
     {
-        id: 'camisa-sahara',
+        id: 'm-camisa-004',
         name: 'Camisa Sahara',
         description: 'Camisa de sedita liviana estampada, de calce relajado. Mangas 3/4, cuello camisa clásico y escote en V con triple botón metálico en la cartera. Su estampa degradé en los colores tendencia de la temporada aporta un toque luminoso y actual.',
         price: 115000,
@@ -234,14 +234,14 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-03-07')
     },
     {
-        id: 'pollera-moshi',
+        id: 'm-pollera-001',
         name: 'Pollera Moshi',
         description: 'Pollera de sastrería elastizada, de tiro alto y silueta tubo. Posee recortes en el delantero con tajo, cinturón efecto charol con hebilla metálica y forrería elastizada para mayor confort. Su género contenedor y elegante la convierte en la prenda ideal para la oficina.',
         price: 145000,
         offerPrice: null,
         images: [
             '/productos/mujer/shorts-polleras/pollera-moshi.jpg',
-            '/productos/mujer/shorts-polleras/polleras-moshi-2.jpg'
+            '/productos/mujer/shorts-polleras/pollera-moshi-2.jpg'
         ],
         category: 'mujer',
         subcategory: 'shorts-polleras',
@@ -252,14 +252,14 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-02-17')
     },
     {
-        id: 'pollera-ramia',
+        id: 'm-pollera-002',
         name: 'Pollera Ramia',
         description: 'Pollera midi de satén, tiro alto. Posee acceso con cierre invisible. Su largo modular y su silueta la convierten en una prenda moderna y canchera, ideal para combinar con botas altas y un abrigo protagonista.',
         price: 165000,
         offerPrice: 135000,
         images: [
             '/productos/mujer/shorts-polleras/pollera-ramia.jpg',
-            '/productos/mujer/shorts-polleras/polleras-ramia-2.jpg'
+            '/productos/mujer/shorts-polleras/pollera-ramia-2.jpg'
         ],
         category: 'mujer',
         subcategory: 'shorts-polleras',
@@ -270,7 +270,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-02-17')
     },
     {
-        id: 'skort-droll',
+        id: 'm-skort-001',
         name: 'Skort Droll',
         description: 'Pollera pantalón efecto gamuza, de tiro alto y silueta evasé. El delantero simula ser una minifalda pero tiene la comodidad clásica de un short. Posee acceso lateral con cierre invisible. Su género efecto gamuza y su color, protagonista de la temporada, la convierten en un ítem de tendencia que no puede faltarte en tu guardarropa. Combinala con el blazer Droll y armá un total look canchero y moderno.',
         price: 130000,
@@ -288,7 +288,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-02-17')
     },
     {
-        id: 'skort-mauna',
+        id: 'm-skort-002',
         name: 'Skort Mauna',
         description: 'Pollera pantalón de sastrería elastizada, de tiro alto y silueta evasé. El delantero simula ser una minifalda pero tiene la comodidad clásica de un short. Posee avío metálico con cadena en el delantero y acceso con cierre invisible en el lateral. Combinalo con el blazer Mauna y armá un total look moderno, ideal tanto para un evento como para la oficina.',
         price: 135000,
@@ -306,7 +306,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-02-17')
     },
     {
-        id: 'skort-riso',
+        id: 'm-skort-003',
         name: 'Skort Riso',
         description: 'Pollera pantalón de sastrería elastizada, de tiro alto y silueta evasé. El delantero simula ser una minifalda, pero ofrece la comodidad clásica de un short. Posee acceso lateral con cierre invisible y bolsillos ojal. Un diseño clásico y sofisticado, combinalo con el chaleco Riso y armá un total look sastrero ideal para lucirte, tanto en la oficina como para una salida.',
         price: 135000,
@@ -324,17 +324,17 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-05-27')
     },
     {
-        id: 'mono-roraima',
+        id: 'm-mono-001',
         name: 'Mono Roraima',
         description: 'Mono de sastrería elastizada combinado con morley, de silueta entallada y pierna ancha palazzo. Posee cuello semi polera, manga japones, acceso por la espalda con cierre invisible. Sin dudas, un mono elegante y sobrio que elevará todos tus looks, ideal tanto para la oficina como para un evento.',
         price: 240000,
         offerPrice: null,
         images: [
-            '/productos/mujer/vestido-monos/mono-roraima.jpg',
-            '/productos/mujer/vestido-monos/mono-roraima-2.jpg'
+            '/productos/mujer/vestidos-monos/mono-roraima.jpg',
+            '/productos/mujer/vestidos-monos/mono-roraima-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'vestido-monos',
+        subcategory: 'vestidos-monos',
         tipo: null,
         talles: ['36', '38', '40', '42', '44', '46', '48'],
         colores: ['Negro'],
@@ -342,17 +342,17 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-02-17')
     },
     {
-        id: 'mono-webb',
+        id: 'm-mono-002',
         name: 'Mono Webb',
         description: 'Mono de crepe, de silueta entallada y pierna ancha fluida. Posee escote en V con doble tabla y cinturón con hebilla metálica para un mayor ajuste en cintura. Acceso por espalda con cierre invisible. Un ítem sofisticado y elegante, ideal tanto para la oficina como para un evento.',
         price: 275000,
         offerPrice: null,
         images: [
-            '/productos/mujer/vestido-monos/mono-webb.jpg',
-            '/productos/mujer/vestido-monos/mono-webb-2.jpg'
+            '/productos/mujer/vestidos-monos/mono-webb.jpg',
+            '/productos/mujer/vestidos-monos/mono-webb-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'vestido-monos',
+        subcategory: 'vestidos-monos',
         tipo: null,
         talles: ['36', '38', '40', '42', '44', '46', '48'],
         colores: ['Bordo'],
@@ -360,17 +360,17 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-02-20')
     },
     {
-        id: 'vestido-kundra',
+        id: 'm-vestido-001',
         name: 'Vestido Kundra',
         description: 'Vestido tejido en punto acanalado de calce anatómico, con falda evasé, largo por arriba de las rodillas y mangas largas. Cuello alto rebatible, charreteras en hombros y cinturón tejido con hebilla de resina en la cintura. Sofisticado y elegante, un ítem clave de tu fondo de armario.',
         price: 190000,
         offerPrice: 150000,
         images: [
-            '/productos/mujer/vestido-monos/vestido-kundra.jpg',
-            '/productos/mujer/vestido-monos/vestido-kundra-2.jpg'
+            '/productos/mujer/vestidos-monos/vestido-kundra.jpg',
+            '/productos/mujer/vestidos-monos/vestido-kundra-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'vestido-monos',
+        subcategory: 'vestidos-monos',
         tipo: null,
         talles: ['1', '2', '3'],
         colores: ['Negro', 'Marron'],
@@ -378,17 +378,17 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-05-10')
     },
     {
-        id: 'vestido-maxim',
+        id: 'm-vestido-002',
         name: 'Vestido Maxim',
         description: 'Vestido corto de denim elastizado, de silueta entallada y sin mangas. Posee escote a la base, recortes y pinzas de entalle en el delantero. Su diseño y su género lo convierten en un ítem canchero, ideal para un evento de noche.',
         price: 165000,
         offerPrice: null,
         images: [
-            '/productos/mujer/vestido-monos/vestido-maxim.jpg',
-            '/productos/mujer/vestido-monos/vestido-maxim-2.jpg'
+            '/productos/mujer/vestidos-monos/vestido-maxim.jpg',
+            '/productos/mujer/vestidos-monos/vestido-maxim-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'vestido-monos',
+        subcategory: 'vestidos-monos',
         tipo: null,
         talles: ['36', '38', '40', '42', '44', '46'],
         colores: ['Azul'],
@@ -396,17 +396,17 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-02-19')
     },
     {
-        id: 'vestido-mini-asimetrico',
+        id: 'm-vestido-003',
         name: 'Vestido Mini Asimétrico',
         description: 'Vestido de cuello subido y manga larga. Detalle de cinturón. Bajo asimétrico. Forro interior.',
         price: 150000,
         offerPrice: 115990,
         images: [
-            '/productos/mujer/vestido-monos/vestido-mini-asimetrico.jpg',
-            '/productos/mujer/vestido-monos/vestido-mini-asimetrico-2.jpg'
+            '/productos/mujer/vestidos-monos/vestido-mini-asimetrico.jpg',
+            '/productos/mujer/vestidos-monos/vestido-mini-asimétrico-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'vestido-monos',
+        subcategory: 'vestidos-monos',
         tipo: null,
         talles: ['36', '38', '40', '42', '44', '46'],
         colores: ['Marron'],
@@ -414,17 +414,17 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-02-17')
     },
     {
-        id: 'vestido-trelles',
+        id: 'm-vestido-004',
         name: 'Vestido Trelles',
         description: 'Vestido de crepe de punto de calce anatómico con falda evasé, que aporta movimiento y feminidad. Posee cuello semipolera, mangas al codo y cinturón con cadena metálica en la cintura, que define la silueta con un toque moderno. Versátil y fácil de combinar, se convierte en tu nuevo comodín.',
         price: 145000,
         offerPrice: null,
         images: [
-            '/productos/mujer/vestido-monos/vestido-trelles.jpg',
-            '/productos/mujer/vestido-monos/vestido-trelles-2.jpg'
+            '/productos/mujer/vestidos-monos/vestido-trelles.jpg',
+            '/productos/mujer/vestidos-monos/vestido-trelles-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'vestido-monos',
+        subcategory: 'vestidos-monos',
         tipo: null,
         talles: ['1', '2', '3', '4'],
         colores: ['Negro'],
@@ -432,14 +432,13 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-04-10')
     },
     {
-        id: 'bufanda-elise',
+        id: 'm-bufanda-001',
         name: 'Bufanda Elise',
         description: 'Bufanda de lanilla plisada, de tacto suave y cálido. Ideal para aportar textura a tus outfits de invierno. Medida: 70 x 180 cm',
         price: 45000,
         offerPrice: null,
         images: [
-            '/productos/mujer/accesorios/bufanda/bufanda-elise.jpg',
-            '/productos/mujer/accesorios/bufanda/bufanda-elise-2.jpg'
+            '/productos/mujer/accesorios/bufanda/bufanda-elise.jpg'
         ],
         category: 'mujer',
         subcategory: 'accesorios',
@@ -450,14 +449,13 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-10-05')
     },
     {
-        id: 'bufanda-lina',
+        id: 'm-bufanda-002',
         name: 'Bufanda Lina',
         description: 'Bufanda de lanilla bouclé con diseño a rayas, de tacto suave y cálido. Perfecta para complementar tus outfits de invierno. Medida: 60 x 200 cm',
         price: 55000,
         offerPrice: null,
         images: [
-            '/productos/mujer/accesorios/bufanda/bufanda-lina.jpg',
-            '/productos/mujer/accesorios/bufanda/bufanda-lina-2.jpg'
+            '/productos/mujer/accesorios/bufanda/bufanda-lina.jpg'
         ],
         category: 'mujer',
         subcategory: 'accesorios',
@@ -468,14 +466,13 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-10-05')
     },
     {
-        id: 'bufanda-nora',
+        id: 'm-bufanda-003',
         name: 'Bufanda Nora',
         description: 'Bufanda de lanilla bouclé con diseño a cuadros, de tacto suave y cálido. Ideal para darle un toque elegante y clásico a tus outfits. Medida: 40 x 190',
         price: 55000,
         offerPrice: null,
         images: [
-            '/productos/mujer/accesorios/bufanda/bufanda-nora.jpg',
-            '/productos/mujer/accesorios/bufanda/bufanda-nora-2.jpg'
+            '/productos/mujer/accesorios/bufanda/bufanda-nora.jpg'
         ],
         category: 'mujer',
         subcategory: 'accesorios',
@@ -486,14 +483,13 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-10-05')
     },
     {
-        id: 'cinturon-cadena-flores',
+        id: 'm-cinturon-001',
         name: 'Cinturón Cadena Flores Combinadas',
         description: 'Cinturón tipo cadena de eslabones metálicos y aplicación de flores combinadas en relieve. Cierre con mosquetón.',
         price: 93900,
         offerPrice: null,
         images: [
-            '/productos/mujer/accesorios/cinto/cinto-cadena-flores.jpg',
-            '/productos/mujer/accesorios/cinto/cinto-cadena-flores-2.jpg'
+            '/productos/mujer/accesorios/cinto/cinturon-cadena-flores.jpg'
         ],
         category: 'mujer',
         subcategory: 'accesorios',
@@ -504,14 +500,13 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-09-15')
     },
     {
-        id: 'cinturon-fino-piel',
+        id: 'm-cinturon-002',
         name: 'Cinturón Fino Piel Hebilla Rectangular',
         description: 'Cinturón fino de 1,5 cm de ancho con tejido principal realizado en piel 100%. Hebilla metálica en forma rectangular.',
         price: 0,
         offerPrice: null,
         images: [
-            '/productos/mujer/accesorios/cinto/cinto-cadena-flores.jpg',
-            '/productos/mujer/accesorios/cinto/cinto-cadena-flores-2.jpg'
+            '/productos/mujer/accesorios/cinto/cinturon-fino-piel.jpg'
         ],
         category: 'mujer',
         subcategory: 'accesorios',
@@ -522,14 +517,13 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-09-15')
     },
     {
-        id: 'cinturon-piel-serraje',
+        id: 'm-cinturon-003',
         name: 'Cinturón Piel Serraje',
         description: 'Cinturón de 3 cm de ancho con tejido principal realizado en piel de serraje 100%. Detalle aplicación de anillas. Hebilla metálica rectangular.',
         price: 105990,
         offerPrice: 85900,
         images: [
-            '/productos/mujer/accesorios/cinto/cinto-cadena-flores.jpg',
-            '/productos/mujer/accesorios/cinto/cinto-cadena-flores-2.jpg'
+            '/productos/mujer/accesorios/cinto/cinto-piel-serraje.jpg'
         ],
         category: 'mujer',
         subcategory: 'accesorios',
@@ -540,7 +534,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-09-15')
     },
     {
-        id: 'valkur-reloj-helmi ',
+        id: 'm-reloj-001 ',
         name: 'Valkur Reloj Helmi ',
         description: '',
         price: 179000,
@@ -558,7 +552,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-04-20')
     },
     {
-        id: 'valkur-reloj-janne ',
+        id: 'm-reloj-002 ',
         name: 'Valkur Reloj Janne ',
         description: '',
         price: 179000,
@@ -576,7 +570,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-04-20')
     },
     {
-        id: 'valkur-reloj-seren ',
+        id: 'm-reloj-003 ',
         name: 'Valkur Reloj Seren ',
         description: '',
         price: 179000,
@@ -594,7 +588,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-04-20')
     },
     {
-        id: 'valkur-reloj-trya ',
+        id: 'm-reloj-004 ',
         name: 'Valkur Reloj Trya ',
         description: '',
         price: 179000,
@@ -612,7 +606,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-04-20')
     },
     {
-        id: 'remera-duster',
+        id: 'm-remera-001',
         name: 'Remera duster',
         description: 'Remera de punto tramado de calce anatómico y mangas cortas. Con cuello semipolera y recorte delantero en micro tul adornado con botones metálicos redondos. Acceso mediante botones en el cuello de la espalda. Un básico con estilo, ideal para sumar actitud a tus looks.',
         price: 85000,
@@ -630,7 +624,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-11-10')
     },
     {
-        id: 'remera-liam',
+        id: 'm-remera-002',
         name: 'Remera Liam',
         description: 'Remera de microfibra de calce anatómico y hombros caídos. Cuello semipolera con detalle de avío metálico en forma de nudo en el delantero. Frunces laterales que ciñen la cintura. Una prenda canchera y audaz, sin perder elegancia.',
         price: 85000,
@@ -648,7 +642,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-11-10')
     },
     {
-        id: 'remera-nube',
+        id: 'm-remera-003',
         name: 'Remera nube',
         description: 'Top de organza de punto, de calce anatómico y mangas largas. Presenta cuello semipolera y un drapeado tipo corazón en el busto que realza la silueta. Una pieza tan sensual como innovadora, perfecta para sumar un toque distintivo en una salida nocturna.',
         price: 79000,
@@ -666,7 +660,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-11-10')
     },
     {
-        id: 'top-leticia',
+        id: 'm-top-001',
         name: 'Top Leticia',
         description: 'Top tejido en punto acanalado de calce anatómico y espalda abierta. Escote en V estilo halter con reminiscencias a los años 90. Un básico sexy y versátil, perfecto para cualquier ocasión.',
         price: 65000,
@@ -684,7 +678,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-11-10')
     },
     {
-        id: 'top-palabra-de-honor-peplum',
+        id: 'm-top-002',
         name: 'Top Palabra de Honor Peplum',
         description: 'Top palabra de honor con hombros descubiertos. Bajo acabado en peplum. Cierre en espalda.',
         price: 93400,
@@ -702,7 +696,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-11-10')
     },
     {
-        id: 'top-peplum',
+        id: 'm-top-003',
         name: 'Remera duster',
         description: 'Top de escote redondo y tirantes finos. Bajo acabado en peplum.',
         price: 93900,
@@ -720,7 +714,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-11-10')
     },
     {
-        id: 'pantalon-001',
+        id: 'm-pantalon-001',
         name: 'Pantalón Lanka',
         description: 'Pantalón de sastrería elastizada, de tiro alto y pierna ancha. Posee doble pinza en delantero, acceso central y cinturón forrado en la misma tela con hebilla y pasador metálico. Su silueta hace de esta prenda una pieza moderna que elevará todos tus looks. Combinalo con el blazer Lanka y armá un total look, ideal tanto para un evento como para la oficina.',
         price: 190000,
@@ -738,7 +732,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2024-01-18')
     },
     {
-        id: 'pantalon-002',
+        id: 'm-pantalon-002',
         name: 'Pantalón Mauna',
         description: 'Pantalón de sastrería viscosa, de tiro alto y pierna flare. Posee cintura cruzada y bolsillos diagonales. Combinalo con el blazer Mauna y obtené un total look cachero y sofisticado ideal para un evento como para la oficina.',
         price: 190000,
@@ -756,7 +750,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2024-01-18')
     },
     {
-        id: 'pantalon-003',
+        id: 'm-pantalon-003',
         name: 'Pantalón Minto',
         description: 'Pantalón de sastrería elastizada, de tiro alto y corte flare. Presenta bolsillos ojal en el frente con broches metálicos y cierre invisible en el lateral. Combinalo con el blazer Minto y creá un total look elegante y sofisticado.',
         price: 180000,
@@ -774,7 +768,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2024-01-18')
     },
     {
-        id: 'jean-001',
+        id: 'm-jean-001',
         name: 'Jean Z195 Barrel Tiro Alto',
         description: 'Jeans de tiro alto con cinco bolsillos. Pernera holgada estrechándose hacia el tobillo. Detalle de pespuntes en color rojo. Cierre frontal con cremallera y botón.',
         price: 149900,
@@ -792,7 +786,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2024-01-25')
     },
     {
-        id: 'jean-002',
+        id: 'm-jean-002',
         name: 'Jean ZW Balloon Tiro Medio',
         description: 'Jeans de tiro alto con cinco bolsillos. Pernera holgada estrechándose hacia el tobillo. Detalle de pespuntes en color rojo. Cierre frontal con cremallera y botón.',
         price: 165900,
@@ -810,7 +804,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2024-01-25')
     },
     {
-        id: 'campera-001',
+        id: 'm-campera-001',
         name: 'Chaqueta Bolsillos Trabillas',
         description: 'Chaqueta de cuello subido. Manga larga con hombreras y trabillas. Bolsillos de plastrón con solapa en delantero y detalle de solapas en pecho. Forro interior. Cierre frontal con botones..',
         price: 245990,
@@ -828,7 +822,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-10-05')
     },
     {
-        id: 'campera-002',
+        id: 'm-campera-002',
         name: 'Chaqueta Clot',
         description: 'Chaqueta efecto gamuza, de silueta relajada y manga larga. Lleva cierre central, broches metálicos personalizados MKV y cintura con puño tejido para un fit cómodo. Su silueta y el acabado efecto gamuza la convierten en un ítem moderno y versátil.',
         price: 220000,
@@ -846,7 +840,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-10-05')
     },
     {
-        id: 'campera-003',
+        id: 'm-campera-003',
         name: 'Chaqueta Oriza',
         description: 'Chaqueta biker efecto piel, con silueta relajada y mangas largas. Cuenta con cierre frontal, broches metálicos personalizados MKV y un cinturón con hebilla metálica en el ruedo. La combinación de pelo y cuero sintético la convierte en una prenda tendencia que eleva cualquier look.',
         price: 320000,
@@ -864,7 +858,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-10-05')
     },
     {
-        id: 'campera-004',
+        id: 'm-campera-004',
         name: 'Chaqueta Rasac',
         description: 'Chaqueta efecto cuero premium, de silueta entallada y manga larga. Posee acceso con cierre doble carro, broche metálico personalizado MKV en cuello y cierres en bolsillos. Una chaqueta clásica y moderna que no puede faltarte en tu guardarropas, ideal tanto para el día como para la noche.',
         price: 220000,
@@ -882,7 +876,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-10-05')
     },
     {
-        id: 'chaleco-001',
+        id: 'm-chaleco-001',
         name: 'Chaleco Norin',
         description: 'Chaleco efecto piel de silueta relajada. Tiene cierre central, cuello y cartera en combinación efecto cuero, broches personalizados MKV y hebilla metálica. El mix de pelo y cuero, junto con su color, la convierten en una prenda de absoluta tendencia, ideal para completar tus looks en una noche de invierno.',
         price: 265000,
@@ -900,7 +894,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-12-28')
     },
     {
-        id: 'chaleco-002',
+        id: 'm-chaleco-002',
         name: 'Chaleco Riso',
         description: 'Chaleco largo de sastrería elastizada, de calce entallado. Posee escote a la base, acceso con botones de pasta a tono y bolsillos ojal en el delantero. Combinalo con el skort Riso y armá un total look sastrero de absoluta tendencia.',
         price: 190000,
@@ -918,7 +912,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-12-28')
     },
     {
-        id: 'sweater-001',
+        id: 'm-sweater-001',
         name: 'Polera Farmer',
         description: 'Polera tejida de calce anatómico y mangas largas. Cuello semi polera y mangas ranglan con transparencia. Renová tus tejidos de invierno con este imprescindible, ideal tanto para la oficina como para una salida de noche.',
         price: 120000,
@@ -936,7 +930,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-11-30')
     },
     {
-        id: 'sweater-002',
+        id: 'm-sweater-002',
         name: 'Sweater Derson',
         description: 'Sweater tejido de calce relajado, con mangas largo 3/4. Escote bote y detalle de perlas metálicas en escote delantero y centro de mangas. Largo a la primera cadera, ideal para usar con tiro altos.',
         price: 125000,
@@ -954,7 +948,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-11-30')
     },
     {
-        id: 'sweater-003',
+        id: 'm-sweater-003',
         name: 'Sweater Rizzu',
         description: 'Sweater tejido de calce relajado y mangas largas. Escote bote, hombro caído y maxi botones metálicos de textura orgánica ubicados en hombros. Un toque distintivo para realzar tus looks de invierno.',
         price: 135000,
@@ -972,7 +966,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-11-30')
     },
     {
-        id: 'calzado-001',
+        id: 'm-calzado-001',
         name: 'Botas militares Monolith',
         description: 'Las botas militares Monolith reflejan el alma dual de Prada en esta versión elaborada en piel y Re-Nylon, con suelas extragrandes y un diseño totalmente único. Este modelo de calzado viene con un pouch extraíble decorado con el icónico logo triangular de metal esmaltado. ',
         price: 2385080,
@@ -990,7 +984,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-11-25')
     },
     {
-        id: 'calzado-002',
+        id: 'm-calzado-002',
         name: 'Botines Monolith',
         description: 'Un diseño distintivo con volúmenes audaces define estos botines con contrastes marcados, expresión de la dualidad inherente a la estética Prada. La icónica suela Monolith, geométrica y moderna, añade un carácter único al modelo de napa elástica.',
         price: 2100750,
@@ -1008,7 +1002,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-11-25')
     },
     {
-        id: 'calzado-003',
+        id: 'm-calzado-003',
         name: 'Stilettos Baltoro',
         description: 'Stiletto efecto cuero acharolado con tira cruzada, abertura lateral y taco triangular metalizado. Ideal para sumar un aire moderno a tus looks más formales. Altura taco: 11,5cm',
         price: 195000,
@@ -1026,7 +1020,7 @@ export const mujerProducts = [
         fechaCreacion: new Date('2025-11-25')
     },
     {
-        id: 'calzado-004',
+        id: 'm-calzado-004',
         name: 'Botinetas Frondella',
         description: 'Botas caña baja efecto gamuza, con taco paleta a tono. Ideal para sumar los colores de temporada en tus looks. Altura taco: 10,5 cm',
         price: 220000,

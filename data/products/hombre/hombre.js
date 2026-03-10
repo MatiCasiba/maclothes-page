@@ -1,13 +1,13 @@
 export const hombreProducts = [
     {
-        id: 'remera-001',
+        id: 'h-remera-001',
         name: 'Remera Jersey',
         description: 'Remera manga corta en jersey con diseño liso en color blanco. De cuello en V. De calce clásico. Composición 100% Poliéster. Ideal para combinar con un look casual de verano. Marca: Edmonds.',
         price: 14900,
         offerPrice: null,
         images: [
-            '/products/hombre/remeras/remera-jersey.webp',
-            '/products/hombre/remeras/remera-jersey-2.webp'
+            '/productos/hombre/remeras/remera-jersey.webp',
+            '/productos/hombre/remeras/remera-jersey-2.webp'
         ],
         category: 'hombre',
         subcategoria: 'remeras',
@@ -18,14 +18,14 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-01-05')
     },
     {
-        id: 'remera-002',
+        id: 'h-remera-002',
         name: 'Remera Jersey Estampada',
         description: 'Remera manga corta en jersey con diseño estampado full print en color gris claro, su calce clásico se adapta fácilmente a distintos estilos. Cuenta con cuello redondo. Confeccionada en 100% Poliéster, brinda una sensación suave al tacto con buena resistencia al lavado, ideal para el verano. Marca Simonacci Polo Life.',
         price: 14900,
         offerPrice: null,
         images: [
-            '/products/hombre/remeras/remera-jersey-estampada.webp',
-            '/products/hombre/remeras/remera-jersey-estampada-2.webp'
+            '/productos/hombre/remeras/remera-jersey-estampada.webp',
+            '/productos/hombre/remeras/remera-jersey-estampada-2.webp'
         ],
         category: 'hombre',
         subcategoria: 'remeras',
@@ -36,14 +36,14 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-01-05')
     },
     {
-        id: 'remera-003',
+        id: 'h-remera-003',
         name: 'Remera Flamé',
         description: 'Remera manga corta en jersey con diseño liso flamé en color azul claro. De cuello redondo. De calce clásico. Composición 100% algodón. Otorgando mayor frescura y calidad. Ideal para combinar con un look casual de verano. Marca: Simonacci Polo Life.',
         price: 14900,
         offerPrice: null,
         images: [
-            '/products/hombre/remeras/remera-flame.webp',
-            '/products/hombre/remeras/remera-flame-2.webp'
+            '/productos/hombre/remeras/remera-flame.webp',
+            '/productos/hombre/remeras/remera-flame-2.webp'
         ],
         category: 'hombre',
         subcategoria: 'remeras',
@@ -54,14 +54,14 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-01-05')
     },
     {
-        id: 'pantalones-shorts-001',
+        id: 'h-pantalones-shorts-001',
         name: 'Short Baño Estampado',
         description: 'Short de baño con diseño estampado garden en color gris oscuro. De tiro medio y calce clásico. Composición 100% poliéster. Es un short fresco ideal para ocasiones de verano. Marca: Edmonds',
         price: 14900,
         offerPrice: 10500,
         images: [
-            '/products/hombre/pantalones/shorts/short-baño-estampado.webp',
-            '/products/hombre/pantalones/shorts/short-baño-estampado-2.webp'
+            '/productos/hombre/pantalones/shorts/short-baño-estampado.webp',
+            '/productos/hombre/pantalones/shorts/short-baño-estampado-2.webp'
         ],
         category: 'hombre',
         subcategoria: 'pantalones',
@@ -72,14 +72,14 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-01-05')
     },
     {
-        id: 'pantalones-shorts-002',
+        id: 'h-pantalones-shorts-002',
         name: 'Short Baño Rayado',
         description: 'Short de baño con diseño rayado en color azul washed. De tiro medio y calce clásico. Composición 100% poliéster. Es un short fresco ideal para ocasiones de verano. Marca: Simonacci Polo Life.',
         price: 14900,
         offerPrice: null,
         images: [
-            '/products/hombre/pantalones/shorts/short-rayado.webp',
-            '/products/hombre/pantalones/shorts/short-rayado-2.webp'
+            '/productos/hombre/pantalones/shorts/short-rayado.webp',
+            '/productos/hombre/pantalones/shorts/short-rayado-2.webp'
         ],
         category: 'hombre',
         subcategoria: 'pantalones',
@@ -90,14 +90,14 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-01-05')
     },
     {
-        id: 'pantalones-shorts-003',
+        id: 'h-pantalones-shorts-003',
         name: 'Short Estampado Coral',
         description: 'Short de baño con diseño Estampado life de color Coral. De tiro medio. Composición 100% poliéster. Es un short fresco ideal para ocasiones de verano, casual. De calce clásico. Marca: Simonacci Polo Life.',
         price: 14900,
         offerPrice: 10500,
         images: [
-            '/products/hombre/pantalones/shorts/short-estampado-coral.webp',
-            '/products/hombre/pantalones/shorts/short-estampado-coral-2.webp'
+            '/productos/hombre/pantalones/shorts/short-estampado-coral.webp',
+            '/productos/hombre/pantalones/shorts/short-estampado-coral-2.webp'
         ],
         category: 'hombre',
         subcategoria: 'pantalones',
@@ -108,14 +108,14 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-01-05')
     },
     {
-        id: 'pantalones-jeans-001',
+        id: 'h-pantalones-jeans-001',
         name: 'Jean Gastado',
         description: 'Jean con diseño gastado en color azul claro, de 5 bolsillos y calce clásico. Confeccionado en 55% algodón, 28% poliéster, 17% viscosa. Clásico y versátil, perfecto para ocasiones casuales. Marca: Edmonds',
         price: 55900,
         offerPrice: null,
         images: [
-            '/products/hombre/pantalones/jeans/jean-gastado.webp',
-            '/products/hombre/pantalones/jeans/jean-gastado-2.webp'
+            '/productos/hombre/pantalones/jeans/jean-gastado.webp',
+            '/productos/hombre/pantalones/jeans/jean-gastado-2.webp'
         ],
         category: 'hombre',
         subcategoria: 'pantalones',
@@ -126,14 +126,14 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-01-05')
     },
     {
-        id: 'pantalones-jeans-002',
+        id: 'h-pantalones-jeans-002',
         name: 'Jean Liso',
         description: 'Jean liso en color negro, de 5 bolsillos y calce clásico. Confeccionado en 55% algodón, 28% poliéster, 17% viscosa. Clásico y versátil, perfecto para ocasiones casuales. Marca: Edmonds',
         price: 55900,
         offerPrice: null,
         images: [
-            '/products/hombre/pantalones/jeans/jean-liso.webp',
-            '/products/hombre/pantalones/jeans/jean-liso-2.webp'
+            '/productos/hombre/pantalones/jeans/jean-liso.webp',
+            '/productos/hombre/pantalones/jeans/jean-liso-2.webp'
         ],
         category: 'hombre',
         subcategoria: 'pantalones',
@@ -144,14 +144,14 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-01-05')
     },
     {
-        id: 'pantalones-jeans-003',
+        id: 'h-pantalones-jeans-003',
         name: 'Jean Entallado',
         description: 'Jean con diseño liso en color vblanco, de 5 bolsillos y calce entallado. Composición: 98% Algodón 2% Elastano. Una prenda ideal para ocasiones casuales. Marca: Simonacci Polo Life',
         price: 55900,
         offerPrice: null,
         images: [
-            '/products/hombre/pantalones/jeans/jean-entallado.webp',
-            '/products/hombre/pantalones/jeans/jean-entallado-2.webp'
+            '/productos/hombre/pantalones/jeans/jean-entallado.webp',
+            '/productos/hombre/pantalones/jeans/jean-entallado-2.webp'
         ],
         category: 'hombre',
         subcategoria: 'pantalones',
@@ -162,14 +162,14 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-01-05')
     },
     {
-        id: 'pantalones-vestir-001',
+        id: 'h-pantalones-vestir-001',
         name: 'Pantalon Vestir Melange',
         description: 'Pantalón de vestir de punto melange en color gris claro, sin pinzas calce entallado y moderno. Confecciona en 73% Poliéster 24% Rayón y 3% Elastano. Una prenda que combina elegancia y funcionalidad para destacar en cualquier ocasión. Marca: Furest',
         price: 89900,
         offerPrice: null,
         images: [
-            '/products/hombre/pantalones/de-vestir/pantalon-vestir-melange.webp',
-            '/products/hombre/pantalones/de-vestir/pantalon-vestir-melange-2.webp'
+            '/productos/hombre/pantalones/de-vestir/pantalon-vestir-melange.webp',
+            '/productos/hombre/pantalones/de-vestir/pantalon-vestir-melange-2.webp'
         ],
         category: 'hombre',
         subcategoria: 'pantalones',
@@ -180,14 +180,14 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-01-05')
     },
     {
-        id: 'pantalones-vestir-002',
+        id: 'h-pantalones-vestir-002',
         name: 'Pantalon Vestir SS100',
         description: 'Pantalón de vestir con diseño SS 100 Liso en color azul marino. Sin pinzas. De tiro medio y calce Entallado. De 4 bolsillos: 2 laterales delanteros y 2 traseros con ojal. Composición 80% poliéster 20%Rayón. Ideal para combinar con un look formal. Marca: Giancarlo Valentino',
         price: 75900,
         offerPrice: null,
         images: [
-            '/products/hombre/pantalones/de-vestir/pantalon-vestir-ss100.webp',
-            '/products/hombre/pantalones/de-vestir/pantalon-vestir-ss100-2.webp'
+            '/productos/hombre/pantalones/de-vestir/pantalon-vestir-ss100.webp',
+            '/productos/hombre/pantalones/de-vestir/pantalon-vestir-ss100-2.webp'
         ],
         category: 'hombre',
         subcategoria: 'pantalones',
@@ -198,14 +198,14 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-01-05')
     },
     {
-        id: 'pantalones-vestir-003',
+        id: 'h-pantalones-vestir-003',
         name: 'Pantalon de Vestir liso',
         description: 'Pantalón de vestir de color negro con diseño liso. Sin pinzas de tiro medio. De calce entallado. Marca Edmonds. Composición 100% poliéster para mayor duración. Ideal para combinar con un look formal.',
         price: 59900,
         offerPrice: 30500,
         images: [
-            '/products/hombre/pantalones/de-vestir/pantalon-vestir-liso.webp',
-            '/products/hombre/pantalones/de-vestir/pantalon-vestir-liso-2.webp'
+            '/productos/hombre/pantalones/de-vestir/pantalon-vestir-liso.webp',
+            '/productos/hombre/pantalones/de-vestir/pantalon-vestir-liso-2.webp'
         ],
         category: 'hombre',
         subcategoria: 'pantalones',
@@ -216,14 +216,14 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-01-05')
     },
     {
-        id: 'zapatos-001',
+        id: 'h-zapatos-001',
         name: 'Zapatos Brogue',
         description: 'Estos zapatos brogue con cordones elaborados en piel cepillada combinan líneas contemporáneas y detalles atemporales. El modelo se ha realzado con un clásico motivo brogue perforado y la suela de goma proporciona comodidad y versatilidad.',
         price: 1470500,
         offerPrice: 1001700,
         images: [
-            '/products/hombre/calzados/zapatos/zapatos-brogue.avif',
-            '/products/hombre/calzados/zapatos/zapatos-brogue-2.avif'
+            '/productos/hombre/calzados/zapatos/zapatos-brogue.avif',
+            '/productos/hombre/calzados/zapatos/zapatos-brogue-2.avif'
         ],
         category: 'hombre',
         subcategoria: 'calzados',
@@ -234,14 +234,14 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-01-05')
     },
     {
-        id: 'zapatos-002',
+        id: 'h-zapatos-002',
         name: 'Zapatos de piel cepillada',
         description: 'Estos zapatos brogue con cordones elaborados en piel cepillada combinan líneas contemporáneas y detalles atemporales. El modelo se ha realzado con un clásico motivo brogue perforado y la suela de goma proporciona comodidad y versatilidad.',
         price: 1612500,
         offerPrice: 1310000,
         images: [
-            '/products/hombre/calzados/zapatos/zapatos-piel-cepillada.avif',
-            '/products/hombre/calzados/zapatos/zapatos-piel-cepillada-2.avif'
+            '/productos/hombre/calzados/zapatos/zapatos-piel-cepillada.avif',
+            '/productos/hombre/calzados/zapatos/zapatos-piel-cepillada-2.avif'
         ],
         category: 'hombre',
         subcategoria: 'calzados',
@@ -252,14 +252,14 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-01-05')
     },
     {
-        id: 'zapatillas-001',
+        id: 'h-zapatillas-001',
         name: 'Zapatillas Montecarlo',
         description: 'Presentadas por primera vez en 2005 como parte de la Colección Linea Rossa, las zapatillas Montecarlo combinan estilo y comodidad en un diseño refinado e innovador. Esta última versión presenta un estilo deportivo realzado con costuras visibles que evocan las líneas dinámicas del modelo original. Inspiradas en los zapatos de conducción, la silueta de napa suave y flexible se complementa con suelas deconstruidas, dando a las zapatillas una apariencia ligera y una estética elegante.',
         price: 1470500,
         offerPrice: null,
         images: [
-            '/products/hombre/calzados/zapatillas/zapatillas-montecarlo.avif',
-            '/products/hombre/calzados/zapatillas/zapatillas-montecarlo-2.avif'
+            '/productos/hombre/calzados/zapatillas/zapatillas-montecarlo.avif',
+            '/productos/hombre/calzados/zapatillas/zapatillas-montecarlo-2.avif'
         ],
         category: 'hombre',
         subcategoria: 'calzados',
@@ -271,7 +271,7 @@ export const hombreProducts = [
     },
     // Camperas
     {
-        id: 'h-campera-001',
+        id: 'h-h-campera-001',
         name: 'Campera de Paño Gris Claro',
         description: 'Campera de paño clásica con capucha, corte regular fit y diseño liso atemporal. De color gris claro, confeccionada en 100% poliéster. Marca: Simonacci Polo Life.',
         price: 99990,
@@ -289,7 +289,7 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-03-08')
     },
     {
-        id: 'campera-002',
+        id: 'h-campera-002',
         name: 'Campera Inflada Corta Tostado',
         description: 'Campera inflable corta con diseño liso en color tostado, confeccionada en 100% Poliamida. Cuenta con cuello alto y bolsillos, calce clásico y diseño inflado, ofreciendo abrigo y estilo. Marca: Edmonds.',
         price: 74900,
@@ -308,7 +308,7 @@ export const hombreProducts = [
     },
     // Chaquetas
     {
-        id: 'chaqueta-001',
+        id: 'h-chaqueta-001',
         name: 'Chaqueta Paño Lisa',
         description: 'Chaqueta en paño lisa en color gris oscuro melange, cuenta con 2 bolsillos externos y 1 interno. Cuello soft. Calce Clásico. Confeccionada en 100% Poliéster. Un abrigo ideal para lucir un look moderno invernal. Marca: Giancarlo Valentino',
         price: 99990,
@@ -326,7 +326,7 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-10-05')
     },
     {
-        id: 'chaqueta-002',
+        id: 'h-chaqueta-002',
         name: 'Chaqueta rompeviento',
         description: 'Chaqueta rompeviento con capucha en color azul marino, confeccionada en 100% poliéster. Presenta un calce clásico y diseño liviano, ideal para días ventosos o de lluvia ligera. Incluye cierre frontal, 2 bolsillos externos y 1 interno. Marca: Simonacci Polo Life.',
         price: 89900,
@@ -345,7 +345,7 @@ export const hombreProducts = [
     },
     // Sobretodos
     {
-        id: 'sobretodo-001',
+        id: 'h-sobretodo-001',
         name: 'Sobretodo Garesio',
         description: 'Sobretodo liso cruzado. Solapa en punta. Bolsillos con tapa. Interior con forro. Abertura trasera simple. Moldería regular.',
         price: 999990,
@@ -363,7 +363,7 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-04-25')
     },
     {
-        id: 'sobretodo-002',
+        id: 'h-sobretodo-002',
         name: 'Sobretodo Igliano',
         description: 'Sobretodo clásico recto Tombolini. Solapa angosta. Interior forrado. Bolsillos con tapa. Abertura trasera simple. Moldería regular.',
         price: 2899990,
@@ -381,7 +381,7 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-04-25')
     },
     {
-        id: 'sobretodo-003',
+        id: 'h-sobretodo-003',
         name: 'Sobretodo Gagliato',
         description: 'Sobretodo cruzado. Solapa en punta. Interior forrado. Bolsillos con tapa. Abertura trasera simple.',
         price: 999990,
@@ -400,7 +400,7 @@ export const hombreProducts = [
     },
     // Chalecos
     {
-        id: 'chaleco-001',
+        id: 'h-chaleco-001',
         name: 'Chaleco de Vestir',
         description: 'Chaleco de vestir de punto con diseño melange en color gris claro, con 2 bolsillos exteriores, cuenta con forrería interna. Espalda de tafeta, con ajuste trasero de martingala con hebilla metálica.  De calce entallado. Composición 73 % Poliéster 24% Rayón, 3% Elastano.  Ideal para completar con un look formal y elegante. Marca: Furest.',
         price: 75990,
@@ -418,7 +418,7 @@ export const hombreProducts = [
         fechaCreacion: new Date('2024-02-18')
     },
     {
-        id: 'chaleco-002',
+        id: 'h-chaleco-002',
         name: 'Sweater Chaleco Escote V',
         description: 'Sweater estilo chaleco en color azul marino, confeccionado en poliéster con 100% de composición. Su diseño sin mangas y escote en V aportan un toque de estilo, ideal para superponer con camisas o remeras. Marca: Simonacci Polo Life.',
         price: 39990,
@@ -436,7 +436,7 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-02-18')
     },
     {
-        id: 'chaleco-003',
+        id: 'h-chaleco-003',
         name: 'Chaleco Infldo',
         description: 'Chaleco Inflado en color azul marino, confeccionado en 100% Poliamida. Su corte inflado y cuello alto ofrecen abrigo, y suma 2 bolsillos externos para máxima utilidad. Ideal para climas fríos, logra un equilibrio entre funcionalidad y estilo contemporáneo. Marca: Simonacci Polo Life.',
         price: 49990,
@@ -455,7 +455,7 @@ export const hombreProducts = [
     },
     // Sacos
     {
-        id: 'saco-001',
+        id: 'h-saco-001',
         name: 'Saco de melange',
         description: 'Saco de punto melange en color gris claro, confeccionado en 73% poliéster, 24% rayon y 3% elastano. Calce entallado, cuenta con 1 tajo y 2 botones, dispone de 3 bolsillos externo y 1 bolsillo interno. Perfecto para looks de oficina y ocasiones especiales. Marca: Furest.',
         price: 209990,
@@ -473,7 +473,7 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-01-01')
     },
     {
-        id: 'saco-002',
+        id: 'h-saco-002',
         name: 'Saco de fantasia',
         description: 'Traje premium con diseño fantasía en color negro. Calce entallado. Saco con 2 botones sin tajo. Pantalón tiro medio. Confeccionado en 100% Poliéster. Ideal para completar un look elegante y formal. Marca: Edmonds.',
         price: 189990,
@@ -492,7 +492,7 @@ export const hombreProducts = [
     },
     // Sweaters | Buzos
     {
-        id: 'sweater-001',
+        id: 'h-sweater-001',
         name: 'Sweater Liso',
         description: 'Sweater liso con escote en V en tono bordó ofrece un diseño clásico y atemporal. Confeccionado en 100% Poliéster. Su tejido de calidad y corte impecable aportan calidez y distinción, convirtiéndolo en la prenda perfecta para realzar cualquier look durante el invierno. Marca: Simonacci Polo Life',
         price: 39900,
@@ -510,7 +510,7 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-01-30')
     },
     {
-        id: 'sweater-002',
+        id: 'h-sweater-002',
         name: 'Sweater Contratono',
         description: 'Sweater con diseño liso y cuello redondo con interior contratono en color negro. Cuello redondo. Confeccionado en 100% Poliéster. Prenda ideal para ocaciones casuales en epoca invernal. Marca: Giancarlo Valentino',
         price: 59900,
@@ -528,7 +528,7 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-01-30')
     },
     {
-        id: 'buzo-001',
+        id: 'h-buzo-001',
         name: 'Buzo Liso',
         description: 'Buzo sport de fisa con diseño liso en color negro. Calce clásico, cuenta con cuello con capucha de algodón frisado con cordones. Confeccionado en 60% Algodón 40% Poliéster. Prenda básica ideal para combinar con un look casual en días más frescos. Marca: Edmonds',
         price: 49990,
@@ -547,7 +547,7 @@ export const hombreProducts = [
     },
     // Gorras
     {
-        id: 'h-gorra-001',
+        id: 'h-h-gorra-001',
         name: 'Gorra Sport Lisa',
         description: 'Gorra sport con diseño liso en color blanco. Composición 100% Algodón. Ideal para completar un look casual. Marca: Simonacci Polo Life.',
         price: 15990,
@@ -566,7 +566,7 @@ export const hombreProducts = [
     },
     // Corbatas
     {
-        id: 'corbata-001',
+        id: 'h-corbata-001',
         name: 'Corbata Lisa Diagonal',
         description: 'Corbata con diseño liso en relieve diagonal en color negro. Pala angosta de 6cm de ancho. Confeccionado en 100% Poliéster. Accesorio ideal para completar un look formal y elegante.',
         price: 22900,
@@ -583,7 +583,7 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-02-08')
     },
     {
-        id: 'corbata-002',
+        id: 'h-corbata-002',
         name: 'Corbata de fantasia',
         description: 'Corbata con diseño fantasía grande en color azul marino. Pala angosta de 6cm de ancho. Confeccionado en 100% Poliéster. Accesorio ideal para completar un look formal y elegante.',
         price: 22990,
@@ -601,7 +601,7 @@ export const hombreProducts = [
     },
     // Moños
     {
-        id: 'mono-001',
+        id: 'h-mono-001',
         name: 'Moño FantasÍa',
         description: 'Moño con diseño fantasía de tono sobre tono en color negro, es el complemento perfecto para un look de vestir elegante y a la moda. Fabricada en 100% poliéster. Marca: Macowens',
         price: 12990,
@@ -619,7 +619,7 @@ export const hombreProducts = [
     },
     // Relojes
     {
-        id: 'reloj-001',
+        id: 'h-reloj-001',
         name: 'Reloj Valkur Balder',
         description: 'La línea Balder que marcó el inicio inicio y definió a Valkur. Diseños simples, equilibrados y funcionales, creados para acompañarte todos los días. Clásicos representa la esencia de Valkur: la pasión por los relojes, el respeto por la tradición y la búsqueda constante de calidad sin exceso.',
         price: 179990,
@@ -637,7 +637,7 @@ export const hombreProducts = [
         fechaCreacion: new Date('2025-01-28')
     },
     {
-        id: 'reloj-002',
+        id: 'h-reloj-002',
         name: 'Reloj Valkur Torolof X',
         description: 'Es híper confiable por su diseño simple y robusto, lo que la hace resistente y precisa. Fabricada en Japón por Citizen, ofrece un rendimiento duradero con bajo mantenimiento.',
         price: 179990,
@@ -656,7 +656,7 @@ export const hombreProducts = [
     },
     // Boxers
     {
-        id: 'h-boxer-001',
+        id: 'h-h-boxer-001',
         name: 'Boxer Liso Negro',
         description: 'Boxer con diseño liso en color negro. Con cintura de elastico embutido. Confeccionado en 95% algodón y 5% elastano, para mayor comodidad. Marca: Edmonds',
         price: 14990,
@@ -674,7 +674,7 @@ export const hombreProducts = [
     },
     // Cinturones
     {
-        id: 'cinturon-001',
+        id: 'h-cinturon-001',
         name: 'Cinturón Sport Texturado',
         description: 'Cinturón sport texturado simil cuero en color negro. Composición 100% Poliéster. Ideal para completar con un look casual o formal. Marca: Edmonds',
         price: 22990,
@@ -691,7 +691,7 @@ export const hombreProducts = [
         fechaCreacion: new Date('2024-01-15')
     },
     {
-        id: 'cinturon-002',
+        id: 'h-cinturon-002',
         name: 'Cinturón Sport Trenzado',
         description: 'Cinturón sport con diseño trenzado simil cuero color marrón. Composición 100% Poliéster. Ideal para combinar con un look casual o formal. Marca: Furest.',
         price: 29990,
