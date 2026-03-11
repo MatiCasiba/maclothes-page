@@ -9,7 +9,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [categoriaDesktop, setCategoriaDesktop] = useState(null);
-  const [subcategoriaDesktop, setSubcategoriaDesktop] = useState('hombre'); // 'hombre' o 'mujer'
+  const [subcategoriaDesktop, setSubcategoriaDesktop] = useState('hombre');
 
   return (
     <header className={styles.header}>
@@ -86,14 +86,19 @@ const Header = () => {
                         <div className={styles.categoriaGrid}>
                           {Object.entries(menuData.productos.hombre).map(([key, categoria]) => (
                             <div key={key} className={styles.categoriaItem}>
-                              <a href={categoria.path} className={styles.categoriaTitulo}>
+                              <a 
+                                href={`/hombre?categoria=${key}`} 
+                                className={styles.categoriaTitulo}
+                              >
                                 {categoria.label}
                               </a>
                               {categoria.subcategorias && (
                                 <ul className={styles.subcategoriaList}>
                                   {Object.entries(categoria.subcategorias).map(([subKey, subCategoria]) => (
                                     <li key={subKey}>
-                                      <a href={subCategoria.path}>{subCategoria.label}</a>
+                                      <a href={`/hombre?categoria=${key}&subcategoria=${subKey}`}>
+                                        {subCategoria.label}
+                                      </a>
                                     </li>
                                   ))}
                                 </ul>
@@ -107,14 +112,19 @@ const Header = () => {
                         <div className={styles.categoriaGrid}>
                           {Object.entries(menuData.productos.mujer).map(([key, categoria]) => (
                             <div key={key} className={styles.categoriaItem}>
-                              <a href={categoria.path} className={styles.categoriaTitulo}>
+                              <a 
+                                href={`/mujer?categoria=${key}`} 
+                                className={styles.categoriaTitulo}
+                              >
                                 {categoria.label}
                               </a>
                               {categoria.subcategorias && (
                                 <ul className={styles.subcategoriaList}>
                                   {Object.entries(categoria.subcategorias).map(([subKey, subCategoria]) => (
                                     <li key={subKey}>
-                                      <a href={subCategoria.path}>{subCategoria.label}</a>
+                                      <a href={`/mujer?categoria=${key}&subcategoria=${subKey}`}>
+                                        {subCategoria.label}
+                                      </a>
                                     </li>
                                   ))}
                                 </ul>

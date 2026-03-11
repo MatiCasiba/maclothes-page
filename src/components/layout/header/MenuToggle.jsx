@@ -4,7 +4,7 @@ import { menuData } from '@data/menuData';
 import styles from './Header.module.scss';
 
 const MenuToggle = ({ onClose }) => {
-  const [paso, setPaso] = useState('principal'); // 'principal', 'hombre', 'mujer'
+  const [paso, setPaso] = useState('principal');
   const [animacion, setAnimacion] = useState('');
 
   const irA = (nuevoPaso) => {
@@ -91,7 +91,10 @@ const MenuToggle = ({ onClose }) => {
                       <ul className={styles.submenuList}>
                         {Object.entries(categoria.subcategorias).map(([subKey, subCategoria]) => (
                           <li key={subKey}>
-                            <a href={subCategoria.path} className={styles.submenuLink}>
+                            <a 
+                              href={`/hombre?categoria=${key}&subcategoria=${subKey}`}
+                              className={styles.submenuLink}
+                            >
                               {subCategoria.label}
                             </a>
                           </li>
@@ -99,7 +102,10 @@ const MenuToggle = ({ onClose }) => {
                       </ul>
                     </details>
                   ) : (
-                    <a href={categoria.path} className={styles.menuLink}>
+                    <a 
+                      href={`/hombre?categoria=${key}`}
+                      className={styles.menuLink}
+                    >
                       {categoria.label}
                     </a>
                   )}
@@ -121,7 +127,10 @@ const MenuToggle = ({ onClose }) => {
                       <ul className={styles.submenuList}>
                         {Object.entries(categoria.subcategorias).map(([subKey, subCategoria]) => (
                           <li key={subKey}>
-                            <a href={subCategoria.path} className={styles.submenuLink}>
+                            <a 
+                              href={`/mujer?categoria=${key}&subcategoria=${subKey}`}
+                              className={styles.submenuLink}
+                            >
                               {subCategoria.label}
                             </a>
                           </li>
@@ -129,7 +138,10 @@ const MenuToggle = ({ onClose }) => {
                       </ul>
                     </details>
                   ) : (
-                    <a href={categoria.path} className={styles.menuLink}>
+                    <a 
+                      href={`/mujer?categoria=${key}`}
+                      className={styles.menuLink}
+                    >
                       {categoria.label}
                     </a>
                   )}
