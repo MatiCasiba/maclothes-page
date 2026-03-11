@@ -10,7 +10,7 @@ export const mujerProducts = [
             '/productos/mujer/blazers/blazer-alain-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'blazers',
+        subcategoria: 'blazers',
         tipo: null,
         talles: ['S', 'M', 'L', 'XL'],
         colores: ['Negro', 'Bordo', 'Beige'],
@@ -28,7 +28,7 @@ export const mujerProducts = [
             '/productos/mujer/blazers/blazer-baker-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'blazers',
+        subcategoria: 'blazers',
         tipo: null,
         talles: ['XS', 'S', 'M', 'L', 'XL'],
         colores: ['Negro'],
@@ -46,7 +46,7 @@ export const mujerProducts = [
             '/productos/mujer/blazers/blazer-corta-cruzada-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'blazers',
+        subcategoria: 'blazers',
         tipo: null,
         talles: ['S', 'M', 'L', 'XL'],
         colores: ['Beige'],
@@ -64,7 +64,7 @@ export const mujerProducts = [
             '/productos/mujer/blazers/blazer-denim-zw-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'blazers',
+        subcategoria: 'blazers',
         tipo: null,
         talles: ['S', 'M', 'L', 'XL'],
         colores: ['Negro'],
@@ -82,7 +82,7 @@ export const mujerProducts = [
             '/productos/mujer/blazers/blazer-espiga-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'blazers',
+        subcategoria: 'blazers',
         tipo: null,
         talles: ['S', 'M', 'L', 'XL'],
         colores: ['Marron'],
@@ -100,7 +100,7 @@ export const mujerProducts = [
             '/productos/mujer/blazers/blazer-evelyn-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'blazers',
+        subcategoria: 'blazers',
         tipo: null,
         talles: ['S', 'M', 'L', 'XL'],
         colores: ['Marron'],
@@ -118,7 +118,7 @@ export const mujerProducts = [
             '/productos/mujer/blazers/blazer-lanka-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'blazers',
+        subcategoria: 'blazers',
         tipo: null,
         talles: ['XS', 'S', 'M', 'L', 'XL'],
         colores: ['Negro', 'Marron', 'Beige'],
@@ -136,7 +136,7 @@ export const mujerProducts = [
             '/productos/mujer/camisas-blusas/blusa-boho-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'camisas-blusas',
+        subcategoria: 'camisas-blusas',
         tipo: null,
         talles: ['36', '38', '40', '42', '44', '46', '48'],
         colores: ['Marron', 'Beige'],
@@ -154,7 +154,7 @@ export const mujerProducts = [
             '/productos/mujer/camisas-blusas/blusa-churen-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'camisas-blusas',
+        subcategoria: 'camisas-blusas',
         tipo: null,
         talles: ['36', '38', '40', '42', '44', '46', '48'],
         colores: ['Negro', 'Beige'],
@@ -172,7 +172,7 @@ export const mujerProducts = [
             '/productos/mujer/camisas-blusas/camisa-bordados-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'camisas-blusas',
+        subcategoria: 'camisas-blusas',
         tipo: null,
         talles: ['36', '38', '40', '42', '44', '46', '48'],
         colores: ['Blanco', 'Negro'],
@@ -190,7 +190,7 @@ export const mujerProducts = [
             '/productos/mujer/camisas-blusas/camisa-denim-zw-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'camisas-blusas',
+        subcategoria: 'camisas-blusas',
         tipo: null,
         talles: ['36', '38', '40', '42', '44', '46', '48'],
         colores: ['Azul'],
@@ -208,7 +208,7 @@ export const mujerProducts = [
             '/productos/mujer/camisas-blusas/camisa-lino-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'camisas-blusas',
+        subcategoria: 'camisas-blusas',
         tipo: null,
         talles: ['36', '38', '40', '42', '44', '46', '48'],
         colores: ['Celeste', 'Beige', 'Negro', 'Naranja'],
@@ -226,7 +226,7 @@ export const mujerProducts = [
             '/productos/mujer/camisas-blusas/camisa-sahara-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'camisas-blusas',
+        subcategoria: 'camisas-blusas',
         tipo: null,
         talles: ['36', '38', '40', '42', '44', '46', '48'],
         colores: ['Beige'],
@@ -244,7 +244,7 @@ export const mujerProducts = [
             '/productos/mujer/shorts-polleras/pollera-moshi-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'shorts-polleras',
+        subcategoria: 'shorts-polleras',
         tipo: null,
         talles: ['36', '38', '40', '42', '44', '46'],
         colores: ['Negro'],
@@ -262,7 +262,7 @@ export const mujerProducts = [
             '/productos/mujer/shorts-polleras/pollera-ramia-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'shorts-polleras',
+        subcategoria: 'shorts-polleras',
         tipo: null,
         talles: ['36', '38', '40', '42', '44', '46'],
         colores: ['Negro', 'Marron'],
@@ -280,7 +280,7 @@ export const mujerProducts = [
             '/productos/mujer/shorts-polleras/polleras-moshi-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'shorts-polleras',
+        subcategoria: 'shorts-polleras',
         tipo: null,
         talles: ['36', '38', '40', '42', '44', '46'],
         colores: ['Negro', 'Marron'],
@@ -298,7 +298,7 @@ export const mujerProducts = [
             '/productos/mujer/shorts-polleras/skort-mauna-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'shorts-polleras',
+        subcategoria: 'shorts-polleras',
         tipo: null,
         talles: ['36', '38', '40', '42', '44', '46'],
         colores: ['Negro', 'Gris'],
@@ -316,7 +316,7 @@ export const mujerProducts = [
             '/productos/mujer/shorts-polleras/skort-riso-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'shorts-polleras',
+        subcategoria: 'shorts-polleras',
         tipo: null,
         talles: ['36', '38', '40', '42', '44', '46'],
         colores: ['Negro'],
@@ -334,7 +334,7 @@ export const mujerProducts = [
             '/productos/mujer/vestidos-monos/mono-roraima-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'vestidos-monos',
+        subcategoria: 'vestidos-monos',
         tipo: null,
         talles: ['36', '38', '40', '42', '44', '46', '48'],
         colores: ['Negro'],
@@ -352,7 +352,7 @@ export const mujerProducts = [
             '/productos/mujer/vestidos-monos/mono-webb-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'vestidos-monos',
+        subcategoria: 'vestidos-monos',
         tipo: null,
         talles: ['36', '38', '40', '42', '44', '46', '48'],
         colores: ['Bordo'],
@@ -370,7 +370,7 @@ export const mujerProducts = [
             '/productos/mujer/vestidos-monos/vestido-kundra-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'vestidos-monos',
+        subcategoria: 'vestidos-monos',
         tipo: null,
         talles: ['1', '2', '3'],
         colores: ['Negro', 'Marron'],
@@ -388,7 +388,7 @@ export const mujerProducts = [
             '/productos/mujer/vestidos-monos/vestido-maxim-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'vestidos-monos',
+        subcategoria: 'vestidos-monos',
         tipo: null,
         talles: ['36', '38', '40', '42', '44', '46'],
         colores: ['Azul'],
@@ -406,7 +406,7 @@ export const mujerProducts = [
             '/productos/mujer/vestidos-monos/vestido-mini-asimétrico-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'vestidos-monos',
+        subcategoria: 'vestidos-monos',
         tipo: null,
         talles: ['36', '38', '40', '42', '44', '46'],
         colores: ['Marron'],
@@ -424,7 +424,7 @@ export const mujerProducts = [
             '/productos/mujer/vestidos-monos/vestido-trelles-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'vestidos-monos',
+        subcategoria: 'vestidos-monos',
         tipo: null,
         talles: ['1', '2', '3', '4'],
         colores: ['Negro'],
@@ -441,7 +441,7 @@ export const mujerProducts = [
             '/productos/mujer/accesorios/bufanda/bufanda-elise.jpg'
         ],
         category: 'mujer',
-        subcategory: 'accesorios',
+        subcategoria: 'accesorios',
         tipo: 'bufanda',
         talles: ['talle único'],
         colores: ['Negro', 'Beige', 'Bordo'],
@@ -458,7 +458,7 @@ export const mujerProducts = [
             '/productos/mujer/accesorios/bufanda/bufanda-lina.jpg'
         ],
         category: 'mujer',
-        subcategory: 'accesorios',
+        subcategoria: 'accesorios',
         tipo: 'bufanda',
         talles: ['talle único'],
         colores: ['Gris'],
@@ -475,7 +475,7 @@ export const mujerProducts = [
             '/productos/mujer/accesorios/bufanda/bufanda-nora.jpg'
         ],
         category: 'mujer',
-        subcategory: 'accesorios',
+        subcategoria: 'accesorios',
         tipo: 'bufanda',
         talles: ['talle único'],
         colores: ['Marron'],
@@ -492,7 +492,7 @@ export const mujerProducts = [
             '/productos/mujer/accesorios/cinto/cinturon-cadena-flores.jpg'
         ],
         category: 'mujer',
-        subcategory: 'accesorios',
+        subcategoria: 'accesorios',
         tipo: 'cinto',
         talles: [''],
         colores: ['Oro', 'Plata'],
@@ -509,7 +509,7 @@ export const mujerProducts = [
             '/productos/mujer/accesorios/cinto/cinturon-fino-piel.jpg'
         ],
         category: 'mujer',
-        subcategory: 'accesorios',
+        subcategoria: 'accesorios',
         tipo: 'cinto',
         talles: [''],
         colores: ['Marron', 'Negro'],
@@ -526,7 +526,7 @@ export const mujerProducts = [
             '/productos/mujer/accesorios/cinto/cinto-piel-serraje.jpg'
         ],
         category: 'mujer',
-        subcategory: 'accesorios',
+        subcategoria: 'accesorios',
         tipo: 'cinto',
         talles: [''],
         colores: ['Marron'],
@@ -544,7 +544,7 @@ export const mujerProducts = [
             '/productos/mujer/accesorios/relojes/valkur-reloj-helmi-2.webp'
         ],
         category: 'mujer',
-        subcategory: 'accesorios',
+        subcategoria: 'accesorios',
         tipo: 'reloj',
         talles: [''],
         colores: ['Rosa'],
@@ -562,7 +562,7 @@ export const mujerProducts = [
             '/productos/mujer/accesorios/relojes/valkur-reloj-janne-2.webp'
         ],
         category: 'mujer',
-        subcategory: 'accesorios',
+        subcategoria: 'accesorios',
         tipo: 'reloj',
         talles: [''],
         colores: ['Blanco'],
@@ -580,7 +580,7 @@ export const mujerProducts = [
             '/productos/mujer/accesorios/relojes/valkur-reloj-seren-2.webp'
         ],
         category: 'mujer',
-        subcategory: 'accesorios',
+        subcategoria: 'accesorios',
         tipo: 'reloj',
         talles: [''],
         colores: ['Rosa'],
@@ -598,7 +598,7 @@ export const mujerProducts = [
             '/productos/mujer/accesorios/relojes/valkur-reloj-trya-2.webp'
         ],
         category: 'mujer',
-        subcategory: 'accesorios',
+        subcategoria: 'accesorios',
         tipo: 'reloj',
         talles: [''],
         colores: ['Rosa'],
@@ -616,7 +616,7 @@ export const mujerProducts = [
             '/productos/mujer/remeras-tops/remera-duster-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'remeras-tops',
+        subcategoria: 'remeras-tops',
         tipo: null,
         talles: ['XS', 'S', 'M', 'L', 'XL', 'XX'],
         colores: ['Negra', 'Blanca'],
@@ -634,7 +634,7 @@ export const mujerProducts = [
             '/productos/mujer/remeras-tops/remera-liam-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'remeras-tops',
+        subcategoria: 'remeras-tops',
         tipo: null,
         talles: ['XS', 'S', 'M', 'L', 'XL'],
         colores: ['Marron'],
@@ -652,7 +652,7 @@ export const mujerProducts = [
             '/productos/mujer/remeras-tops/remera-nube-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'remeras-tops',
+        subcategoria: 'remeras-tops',
         tipo: null,
         talles: ['XS', 'S', 'M', 'L', 'XL'],
         colores: ['Negro', 'Marron'],
@@ -670,7 +670,7 @@ export const mujerProducts = [
             '/productos/mujer/remeras-tops/top-leticia-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'remeras-tops',
+        subcategoria: 'remeras-tops',
         tipo: null,
         talles: ['1', '2', '3'],
         colores: ['Maní', 'Marron'],
@@ -688,7 +688,7 @@ export const mujerProducts = [
             '/productos/mujer/remeras-tops/top-palabra-de-honor-peplum-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'remeras-tops',
+        subcategoria: 'remeras-tops',
         tipo: null,
         talles: ['1', '2', '3'],
         colores: ['Rosa', 'Blanca', 'Amarillo'],
@@ -706,7 +706,7 @@ export const mujerProducts = [
             '/productos/mujer/remeras-tops/top-peplum-2.jpg'
         ],
         category: 'mujer',
-        subcategory: 'remeras-tops',
+        subcategoria: 'remeras-tops',
         tipo: null,
         talles: ['1', '2', '3'],
         colores: ['Negra', 'Blanca'],
