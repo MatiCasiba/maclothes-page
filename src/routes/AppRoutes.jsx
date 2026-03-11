@@ -1,4 +1,3 @@
-
 import { Routes, Route } from 'react-router-dom';
 import Layout from '../components/layout/Layout';
 import Home from '../pages/home/Home';
@@ -11,8 +10,7 @@ const AppRoutes = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="hombre" element={<CategoryPage />}/>
-        <Route path="mujer" element={<CategoryPage />}/>
+        <Route path=":category" element={<CategoryPage />}/>
         <Route path="contacto" element={<Contact />} />
         <Route path="nosotros" element={<AboutUs />} />
         

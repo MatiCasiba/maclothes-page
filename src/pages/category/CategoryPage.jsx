@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useParams, useSearchParams } from 'react-router-dom'
 import { products } from '@data/products'
 import styles from './CategoryPage.module.scss'
 import { useEffect, useState } from 'react'
@@ -6,6 +6,7 @@ import ProductCard from '../../components/common/productCard/ProductCard'
 
 const CategoryPage = () => {
   const { category } = useParams() // hombre o mujer
+  const [searchParams] = useSearchParams()
   const [categoryProducts, setCategoryProducts] = useState([])
   const [filters, setFilters] = useState({
     subcategoria: '',
@@ -17,15 +18,58 @@ const CategoryPage = () => {
 
   useEffect(() => {
     //filtro productos por categoría (hombre/mujer)
-    const filtered = products.all.filter(p => p.category === category)
+    // categoría viene de la ruta dinámica
+    // productos ya cargados en products.all
+
+    let filtered = products.all.filter(p => {
+      const match = p.category === category
+      if(match) console.log('MATCH encontrado:', p.id, p.category)
+      return match
+    })
+    // número tras filtro categoría
+
+    // convertidor camelCase -> kebab-case (slug)
+    const slugify = (str) => {
+      if (!str) return str;
+      return str
+        .replace(/([a-z])([A-Z])/g, '$1-$2') //agrego guion entre camelCase
+        .replace(/_/g, '-') // guiones bajos para poner guiones si los hay
+        .toLowerCase();
+    };
+
+    // aplico filtro por subcategoría sii viene en la url
+    let subcategoriaParam = searchParams.get('categoria');
+    subcategoriaParam = slugify(subcategoriaParam);
+    // valor normalizado de subcategoriaParam
+    if(subcategoriaParam) {
+      filtered = filtered.filter(p => p.subcategoria === subcategoriaParam)
+      console.log('Después filtro subcategoriaParam, count =', filtered.length)
+
+      // actualizo el filtro para que se vea en el select (usar valor real)
+      setFilters(prev => ({ ...prev, subcategoria: subcategoriaParam}))
+    }
+
+    // aplico filtro por tipo (sub-subcategoria)
+    let tipoParam = searchParams.get('subcategoria');
+    tipoParam = slugify(tipoParam);
+    // valor normalizado de tipoParam
+    if(tipoParam){
+      filtered = filtered.filter(p => p.tipo === tipoParam)
+      console.log('Después filtro tipoParam, count =', filtered.length)
+    }
+
+    // mostrar resultados finales
+
     setCategoryProducts(filtered)
     window.scrollTo(0,0) //scroll al inicio al cambiar de categoría
-  }, [category])
+  }, [category, searchParams])
 
   //obtengo valores únicos para filtros
   const subcategorias = [...new Set(categoryProducts.map(p => p.subcategoria))]
   const talles = [...new Set(categoryProducts.flatMap(p => p.talles))]
   const colores = [...new Set(categoryProducts.flatMap(p => p.colores))]
+  
+  // logs de depuración opcionales (comentar si no hace falta)
 
   // aplico filtros
   const filteredProducts = categoryProducts.filter(product => {

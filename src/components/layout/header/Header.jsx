@@ -5,6 +5,9 @@ import styles from './Header.module.scss';
 import SearchBar from './SearchBar';
 import { menuData } from '@data/menuData';
 
+// convierte camelCase a kebab-case para parámetros de URL
+const slugify = (str) => str?.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -87,7 +90,7 @@ const Header = () => {
                           {Object.entries(menuData.productos.hombre).map(([key, categoria]) => (
                             <div key={key} className={styles.categoriaItem}>
                               <a 
-                                href={`/hombre?categoria=${key}`} 
+                                href={`/hombre?categoria=${slugify(key)}`} 
                                 className={styles.categoriaTitulo}
                               >
                                 {categoria.label}
@@ -96,7 +99,7 @@ const Header = () => {
                                 <ul className={styles.subcategoriaList}>
                                   {Object.entries(categoria.subcategorias).map(([subKey, subCategoria]) => (
                                     <li key={subKey}>
-                                      <a href={`/hombre?categoria=${key}&subcategoria=${subKey}`}>
+                                      <a href={`/hombre?categoria=${slugify(key)}&subcategoria=${slugify(subKey)}` }>
                                         {subCategoria.label}
                                       </a>
                                     </li>
@@ -113,7 +116,7 @@ const Header = () => {
                           {Object.entries(menuData.productos.mujer).map(([key, categoria]) => (
                             <div key={key} className={styles.categoriaItem}>
                               <a 
-                                href={`/mujer?categoria=${key}`} 
+                                href={`/mujer?categoria=${slugify(key)}`} 
                                 className={styles.categoriaTitulo}
                               >
                                 {categoria.label}
@@ -122,7 +125,7 @@ const Header = () => {
                                 <ul className={styles.subcategoriaList}>
                                   {Object.entries(categoria.subcategorias).map(([subKey, subCategoria]) => (
                                     <li key={subKey}>
-                                      <a href={`/mujer?categoria=${key}&subcategoria=${subKey}`}>
+                                      <a href={`/mujer?categoria=${slugify(key)}&subcategoria=${slugify(subKey)}` }>
                                         {subCategoria.label}
                                       </a>
                                     </li>

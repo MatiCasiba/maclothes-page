@@ -7,6 +7,9 @@ const MenuToggle = ({ onClose }) => {
   const [paso, setPaso] = useState('principal');
   const [animacion, setAnimacion] = useState('');
 
+  // convierte camelCase a kebab-case
+  const slugify = (str) => str?.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+
   const irA = (nuevoPaso) => {
     setAnimacion('slideOut');
     setTimeout(() => {
@@ -92,7 +95,7 @@ const MenuToggle = ({ onClose }) => {
                         {Object.entries(categoria.subcategorias).map(([subKey, subCategoria]) => (
                           <li key={subKey}>
                             <a 
-                              href={`/hombre?categoria=${key}&subcategoria=${subKey}`}
+                              href={`/hombre?categoria=${slugify(key)}&subcategoria=${slugify(subKey)}`}
                               className={styles.submenuLink}
                             >
                               {subCategoria.label}
@@ -103,7 +106,7 @@ const MenuToggle = ({ onClose }) => {
                     </details>
                   ) : (
                     <a 
-                      href={`/hombre?categoria=${key}`}
+                      href={`/hombre?categoria=${slugify(key)}`}
                       className={styles.menuLink}
                     >
                       {categoria.label}
@@ -128,7 +131,7 @@ const MenuToggle = ({ onClose }) => {
                         {Object.entries(categoria.subcategorias).map(([subKey, subCategoria]) => (
                           <li key={subKey}>
                             <a 
-                              href={`/mujer?categoria=${key}&subcategoria=${subKey}`}
+                              href={`/mujer?categoria=${slugify(key)}&subcategoria=${slugify(subKey)}`}
                               className={styles.submenuLink}
                             >
                               {subCategoria.label}
@@ -139,7 +142,7 @@ const MenuToggle = ({ onClose }) => {
                     </details>
                   ) : (
                     <a 
-                      href={`/mujer?categoria=${key}`}
+                      href={`/mujer?categoria=${slugify(key)}`}
                       className={styles.menuLink}
                     >
                       {categoria.label}
