@@ -1,18 +1,30 @@
 import { FiShoppingBag, FiHeart } from 'react-icons/fi';
 import styles from './ProductCard.module.scss';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 const ProductCard = ({ product }) => {
   console.log('ProductCard recibió:', product)
-  const { name, price, offerPrice, images, category } = product;
+  const navigate = useNavigate()
+  const { id, name, price, offerPrice, images, category } = product;
   const hasOffer = offerPrice && offerPrice < price;
+  const [imgError, setImgError] = useState(false)
 
   // tomo la primera imagen del array, o una imagen por defecto
-  const productImage = images && images.length > 0
+  const productImage = !imgError && images && images.length > 0
     ? images[0]
     : '/placeholder.jpg'
+  
+  const handleImageError = () => {
+    setImgError(true)
+  }
+
+  const handleClick = () => {
+    navigate(`/producto/${id}`) // navega al detalle
+  }
 
   return (
-    <div className={styles.productCard}>
+    <div className={styles.productCard} onClick={handleClick}>
       <div className={styles.productImage}>
         <img 
           src={productImage} 
@@ -22,7 +34,11 @@ const ProductCard = ({ product }) => {
           }}
         />
         {hasOffer && <span className={styles.offerBadge}>Oferta</span>}
-        <button className={styles.favoriteButton} aria-label="Agregar a favoritos">
+        <button 
+          className={styles.favoriteButton} 
+          aria-label="Agregar a favoritos"
+          onClick={(e) => e.stopPropagation()} // evita que el click llega a la card
+        > 
           <FiHeart size={18} />
         </button>
       </div>
