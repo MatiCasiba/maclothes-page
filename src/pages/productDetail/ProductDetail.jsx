@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react"
+// src/pages/ProductDetail/ProductDetail.jsx
+import { useEffect, useState, useRef } from "react"
 import { useNavigate, useParams } from "react-router-dom"
-import { FiArrowLeft, FiShoppingBag, FiHeart } from 'react-icons/fi'
+import { FiArrowLeft, FiShoppingBag, FiHeart, FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 import ProductCard from '../../components/common/productCard/ProductCard'
 import {products} from '@data/products'
 import styles from './ProductDetail.module.scss'
@@ -12,6 +13,7 @@ const ProductDetail = () => {
   const [selectedImage, setSelectedImage] = useState(0)
   const [selectedTalle, setSelectedTalle] = useState('')
   const [selectedColor, setSelectedColor] = useState('')
+  const sliderRef = useRef(null)
 
   useEffect(() => {
     // busca el producto por id
@@ -19,6 +21,18 @@ const ProductDetail = () => {
     setProduct(foundProduct)
     window.scrollTo(0, 0)
   }, [id])
+
+  const scrollLeft = () => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+    }
+  };
 
   if(!product){
     return <div className={styles.loading}>Cargando producto...</div>
@@ -30,7 +44,6 @@ const ProductDetail = () => {
       p.id !== product.id &&
       p.subcategoria === product.subcategoria
     )
-    .slice(0, 4)
   
   const handleAddToCart = () => {
     if(!selectedTalle){
@@ -144,15 +157,58 @@ const ProductDetail = () => {
         </div>
       </div>
 
-      {/* productos relacionados */}
+      {/* productos relacionados - slider */}
       {relatedProducts.length > 0 && (
         <div className={styles.relatedProducts}>
           <h2>Productos relacionados</h2>
-          <div className={styles.relatedGrid}>
-            {relatedProducts.map(p => (
-              <ProductCard key={p.id} product={p} />
-            ))}
+          
+          <div className={styles.sliderContainer}>
+            {/* botones de navegación */}
+            <button 
+              className={`${styles.sliderArrow} ${styles.arrowLeft}`} 
+              onClick={scrollLeft}
+              aria-label="Productos anteriores"
+            >
+              <FiChevronLeft size={24} />
+            </button>
+            
+            <button 
+              className={`${styles.sliderArrow} ${styles.arrowRight}`} 
+              onClick={scrollRight}
+              aria-label="Próximos productos"
+            >
+              <FiChevronRight size={24} />
+            </button>
+
+            {/* slider */}
+            <div className={styles.relatedSlider} ref={sliderRef}>
+              {relatedProducts.map(p => (
+                <div key={p.id} className={styles.sliderItem}>
+                  <ProductCard product={p} />
+                </div>
+              ))}
+            </div>
           </div>
+
+          {/* indicadores de scroll (solo mobile) */}
+          {relatedProducts.length > 4 && (
+            <div className={styles.scrollIndicators}>
+              {relatedProducts.map((_, index) => (
+                <span 
+                  key={index} 
+                  className={styles.indicator}
+                  onClick={() => {
+                    if (sliderRef.current) {
+                      sliderRef.current.scrollTo({ 
+                        left: index * 320, 
+                        behavior: 'smooth' 
+                      });
+                    }
+                  }}
+                />
+              ))}
+            </div>
+          )}
         </div>
       )}
     </div>

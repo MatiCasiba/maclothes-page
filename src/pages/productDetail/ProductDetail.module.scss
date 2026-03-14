@@ -281,7 +281,7 @@
   }
 }
 
-.relatedGrid {
+/* .relatedGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
@@ -297,11 +297,149 @@
   @media (max-width: 480px) {
     grid-template-columns: 1fr;
   }
-}
+} */
 
 .loading {
   text-align: center;
   padding: 4rem;
   color: #666;
   font-size: 1.2rem;
+}
+
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.relatedSlider {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding: 0.5rem 0 2rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  
+  // oculto la barra de scroll pero mantengo funcionalidad
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 10px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 10px;
+    
+    &:hover {
+      background: #666;
+    }
+  }
+  
+  // firefox
+  scrollbar-width: thin;
+  scrollbar-color: #999 #e0e0e0;
+}
+
+.sliderItem {
+  flex: 0 0 auto;
+  width: 280px;
+  scroll-snap-align: start;
+  
+  @media (min-width: 768px) {
+    width: 300px;
+  }
+}
+
+// flechas de navegación
+.sliderArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: #333;
+    color: white;
+    border-color: #333;
+    transform: translateY(-50%) scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+    display: none; // oculto flechas en mobile
+  }
+}
+
+.arrowLeft {
+  left: -20px;
+  
+  @media (max-width: 1200px) {
+    left: -10px;
+  }
+}
+
+.arrowRight {
+  right: -20px;
+  
+  @media (max-width: 1200px) {
+    right: -10px;
+  }
+}
+
+// indicadores de scroll (puntos)
+.scrollIndicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  
+  @media (min-width: 769px) {
+    display: none; // oculto en desktop
+  }
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ddd;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  
+  &:hover {
+    background: #999;
+  }
+  
+  &.active {
+    background: #333;
+    width: 20px;
+    border-radius: 4px;
+  }
+}
+
+// ajusto los estilos existentes de relatedProducts
+.relatedProducts {
+  margin-top: 4rem;
+  
+  h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0 0 1rem;
+    text-align: center;
+  }
 }
