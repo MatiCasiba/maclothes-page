@@ -5,6 +5,7 @@ import { FiArrowLeft, FiShoppingBag, FiHeart, FiChevronLeft, FiChevronRight } fr
 import ProductCard from '../../components/common/productCard/ProductCard'
 import {products} from '@data/products'
 import styles from './ProductDetail.module.scss'
+import { useCart } from "../../context/CartContext"
 
 const ProductDetail = () => {
   const { id } = useParams()
@@ -14,6 +15,7 @@ const ProductDetail = () => {
   const [selectedTalle, setSelectedTalle] = useState('')
   const [selectedColor, setSelectedColor] = useState('')
   const sliderRef = useRef(null)
+  const { addToCart } = useCart()
 
   useEffect(() => {
     // busca el producto por id
@@ -50,7 +52,11 @@ const ProductDetail = () => {
       alert('Por favor seleccioná un talle')
       return
     }
-    // acá va la lógica del carrito
+    
+    addToCart(product, 1, selectedTalle, selectedColor)
+
+    alert('Producto agregado al carrito!')
+
     console.log('Agregar al carrito', {
       product,
       talle: selectedTalle,
