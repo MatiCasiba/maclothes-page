@@ -2,6 +2,7 @@ import { FiShoppingBag, FiHeart } from 'react-icons/fi';
 import styles from './ProductCard.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useCart } from '../../../context/CartContext';
 
 const ProductCard = ({ product }) => {
   console.log('ProductCard recibió:', product)
@@ -9,6 +10,7 @@ const ProductCard = ({ product }) => {
   const { id, name, price, offerPrice, images, category } = product;
   const hasOffer = offerPrice && offerPrice < price;
   const [imgError, setImgError] = useState(false)
+  const { addToCart } = useCart()
 
   // tomo la primera imagen del array, o una imagen por defecto
   const productImage = !imgError && images && images.length > 0
@@ -58,7 +60,13 @@ const ProductCard = ({ product }) => {
           )}
         </div>
 
-        <button className={styles.addToCartButton}>
+        <button 
+          className={styles.addToCartButton}
+          onClick={(e) => {
+            e.stopPropagation()
+            addToCart(product, 1, '', '') // sin talle/color por defecto
+          }}
+        >
           <FiShoppingBag size={18} />
           <span>Agregar al carrito</span>
         </button>
