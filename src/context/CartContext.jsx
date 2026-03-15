@@ -76,6 +76,19 @@ export const CartProvider = ({ children }) => {
         )
     }
 
+    // actualizo cantidad
+    const updateQuantity = (itemId, talle, color, newQuantity) => {
+        if (newQuantity < 1) return;
+
+        setCart(prevCart =>
+            prevCart.map(item =>
+                item.id === itemId && item.talle === talle && item.color === color
+                    ? { ...item, quantity: newQuantity }
+                    : item
+            )
+        );
+    };
+
     // vacio el carrito
     const clearCart = () => {
         setCart([])
@@ -86,6 +99,11 @@ export const CartProvider = ({ children }) => {
         return cart.reduce((total, item) => total + item.quantity, 0)
     }
 
+    // calculo del subtotal
+    const getSubtotal = () => {
+        return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+    };
+    
     // valor a exportar
     const value = {
         cart,
