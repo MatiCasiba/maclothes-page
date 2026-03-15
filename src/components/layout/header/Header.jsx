@@ -4,6 +4,7 @@ import MenuToggle from './MenuToggle';
 import styles from './Header.module.scss';
 import SearchBar from './SearchBar';
 import { menuData } from '@data/menuData';
+import { useCart } from '../../../context/CartContext';
 
 // convierte camelCase a kebab-case para parámetros de URL
 const slugify = (str) => str?.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
@@ -13,6 +14,8 @@ const Header = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [categoriaDesktop, setCategoriaDesktop] = useState(null);
   const [subcategoriaDesktop, setSubcategoriaDesktop] = useState('hombre');
+  const {getTotalItems, setIsCartOpen} = useCart()
+  const cartItemsCount = getTotalItems()
 
   return (
     <header className={styles.header}>
@@ -45,8 +48,15 @@ const Header = () => {
             <FiSearch size={24} />
           </button>
 
-          <button className={styles.iconButton} aria-label="Carrito">
+          <button 
+            className={styles.iconButton} 
+            aria-label="Carrito"
+            onClick={() => setIsCartOpen(true)} // abrir carrito
+          >
             <FiShoppingBag size={24} />
+            {cartItemsCount > 0 && (
+              <span className={styles.cartBadge}>{cartItemsCount}</span>
+            )}
           </button>
         </div>
       </div>
