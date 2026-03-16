@@ -68,10 +68,8 @@ export const CartProvider = ({ children }) => {
     // elimino producto del carrito
     const removeFromCart = (itemId, talle, color) => {
         setCart(prevCart =>
-            prevCart.map(item =>
-                item.id === itemId && item.talle === talle && item.color === color
-                    ? { ...item, quantity: newQuantity }
-                    : item
+            prevCart.filter(item =>
+                !(item.id === itemId && item.talle === talle && item.color === color)
             )
         )
     }
