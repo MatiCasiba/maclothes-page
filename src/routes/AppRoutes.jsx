@@ -5,6 +5,7 @@ import Contact from '../pages/contact/Contact';
 import AboutUs from '../pages/aboutUs/AboutUs';
 import CategoryPage from '../pages/category/CategoryPage';
 import ProductDetail from '../pages/productDetail/ProductDetail';
+import Cart from '../pages/cart/Cart';
 
 const AppRoutes = () => {
   return (
@@ -15,7 +16,7 @@ const AppRoutes = () => {
         <Route path='producto/:id' element={<ProductDetail />} />
         <Route path="contacto" element={<Contact />} />
         <Route path="nosotros" element={<AboutUs />} />
-        
+        <Route path='carrito' element={<Cart />} />
       </Route>
     </Routes>
   );
