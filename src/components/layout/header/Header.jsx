@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FiMenu, FiSearch, FiShoppingBag, FiX, FiChevronDown, FiChevronRight } from 'react-icons/fi';
 import MenuToggle from './MenuToggle';
 import styles from './Header.module.scss';
@@ -10,11 +11,12 @@ import { useCart } from '../../../context/CartContext';
 const slugify = (str) => str?.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
 
 const Header = () => {
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [categoriaDesktop, setCategoriaDesktop] = useState(null);
   const [subcategoriaDesktop, setSubcategoriaDesktop] = useState('hombre');
-  const {getTotalItems, setIsCartOpen} = useCart()
+  const {getTotalItems} = useCart()
   const cartItemsCount = getTotalItems()
 
   return (
@@ -51,7 +53,7 @@ const Header = () => {
           <button 
             className={styles.iconButton} 
             aria-label="Carrito"
-            onClick={() => setIsCartOpen(true)} // abrir carrito
+            onClick={() => navigate('/carrito')}
           >
             <FiShoppingBag size={24} />
             {cartItemsCount > 0 && (

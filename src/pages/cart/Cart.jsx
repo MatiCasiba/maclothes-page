@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import { useCart } from "../../context/CartContext"
-import { FiArrowLeft } from "react-icons/fi"
+import { FiArrowLeft, FiTrash2 } from "react-icons/fi"
 import styles from './Cart.module.scss'
 
 const Cart = () => {
