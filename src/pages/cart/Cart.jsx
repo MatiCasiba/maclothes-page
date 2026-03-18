@@ -92,7 +92,9 @@ const Cart = () => {
             <span>${getSubtotal().toLocaleString('es-AR')}</span>
           </div>
 
-          <button className={styles.checkoutButton}>
+          <button 
+            className={styles.checkoutButton}
+            onClick={() => navigate('/checkout')}>
             Finalizar compra
           </button>
 
