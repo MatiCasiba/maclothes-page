@@ -16,14 +16,17 @@ const Header = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [categoriaDesktop, setCategoriaDesktop] = useState(null);
   const [subcategoriaDesktop, setSubcategoriaDesktop] = useState('hombre');
-  const {getTotalItems} = useCart()
-  const cartItemsCount = getTotalItems()
+  const { cart } = useCart()
+  const cartItemsCount = cart.reduce((total, item) => total + item.quantity, 0)
+
+  console.log('🛒 Header - carrito:', cart);
+  console.log('🛒 Header - cantidad:', cartItemsCount);
 
   return (
     <header className={styles.header}>
       {/* Fila superior */}
       <div className={styles.headerContainer}>
-        <button 
+        <button
           className={`${styles.iconButton} ${styles.mobileOnly}`}
           onClick={() => setIsMenuOpen(true)}
           aria-label="Abrir menú"
@@ -42,7 +45,7 @@ const Header = () => {
         </div>
 
         <div className={styles.actionIcons}>
-          <button 
+          <button
             className={`${styles.iconButton} ${styles.mobileSearch}`}
             onClick={() => setIsSearchOpen(!isSearchOpen)}
             aria-label="Buscar"
@@ -50,8 +53,8 @@ const Header = () => {
             <FiSearch size={24} />
           </button>
 
-          <button 
-            className={styles.iconButton} 
+          <button
+            className={styles.iconButton}
             aria-label="Carrito"
             onClick={() => navigate('/carrito')}
           >
@@ -67,7 +70,7 @@ const Header = () => {
       <nav className={styles.desktopNav}>
         <div className={styles.navContainer}>
           <ul className={styles.navList}>
-            <li 
+            <li
               className={styles.navItem}
               onMouseEnter={() => setCategoriaDesktop('productos')}
               onMouseLeave={() => setCategoriaDesktop(null)}
@@ -75,19 +78,19 @@ const Header = () => {
               <button className={styles.navButton}>
                 Productos <FiChevronDown size={16} />
               </button>
-              
+
               {categoriaDesktop === 'productos' && (
                 <div className={styles.megaMenu}>
                   <div className={styles.megaMenuContainer}>
                     {/* Columna izquierda: Hombre / Mujer */}
                     <div className={styles.megaMenuSidebar}>
-                      <button 
+                      <button
                         className={`${styles.megaMenuTab} ${subcategoriaDesktop === 'hombre' ? styles.active : ''}`}
                         onMouseEnter={() => setSubcategoriaDesktop('hombre')}
                       >
                         Hombre <FiChevronRight size={16} />
                       </button>
-                      <button 
+                      <button
                         className={`${styles.megaMenuTab} ${subcategoriaDesktop === 'mujer' ? styles.active : ''}`}
                         onMouseEnter={() => setSubcategoriaDesktop('mujer')}
                       >
@@ -101,8 +104,8 @@ const Header = () => {
                         <div className={styles.categoriaGrid}>
                           {Object.entries(menuData.productos.hombre).map(([key, categoria]) => (
                             <div key={key} className={styles.categoriaItem}>
-                              <a 
-                                href={`/hombre?categoria=${slugify(key)}`} 
+                              <a
+                                href={`/hombre?categoria=${slugify(key)}`}
                                 className={styles.categoriaTitulo}
                               >
                                 {categoria.label}
@@ -111,7 +114,7 @@ const Header = () => {
                                 <ul className={styles.subcategoriaList}>
                                   {Object.entries(categoria.subcategorias).map(([subKey, subCategoria]) => (
                                     <li key={subKey}>
-                                      <a href={`/hombre?categoria=${slugify(key)}&subcategoria=${slugify(subKey)}` }>
+                                      <a href={`/hombre?categoria=${slugify(key)}&subcategoria=${slugify(subKey)}`}>
                                         {subCategoria.label}
                                       </a>
                                     </li>
@@ -127,8 +130,8 @@ const Header = () => {
                         <div className={styles.categoriaGrid}>
                           {Object.entries(menuData.productos.mujer).map(([key, categoria]) => (
                             <div key={key} className={styles.categoriaItem}>
-                              <a 
-                                href={`/mujer?categoria=${slugify(key)}`} 
+                              <a
+                                href={`/mujer?categoria=${slugify(key)}`}
                                 className={styles.categoriaTitulo}
                               >
                                 {categoria.label}
@@ -137,7 +140,7 @@ const Header = () => {
                                 <ul className={styles.subcategoriaList}>
                                   {Object.entries(categoria.subcategorias).map(([subKey, subCategoria]) => (
                                     <li key={subKey}>
-                                      <a href={`/mujer?categoria=${slugify(key)}&subcategoria=${slugify(subKey)}` }>
+                                      <a href={`/mujer?categoria=${slugify(key)}&subcategoria=${slugify(subKey)}`}>
                                         {subCategoria.label}
                                       </a>
                                     </li>
@@ -174,12 +177,12 @@ const Header = () => {
         <div className={styles.searchOverlay}>
           <div className={styles.searchBar}>
             <FiSearch size={20} className={styles.searchIcon} />
-            <input 
-              type="text" 
+            <input
+              type="text"
               placeholder="Buscar productos..."
               autoFocus
             />
-            <button 
+            <button
               className={styles.closeSearch}
               onClick={() => setIsSearchOpen(false)}
             >

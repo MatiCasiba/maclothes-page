@@ -15,12 +15,17 @@ export const useCart = () => {
 // Provider del carrito
 export const CartProvider = ({ children }) => {
     // estado del carrito
-    const [cart, setCart] = useState([])
+    //const [cart, setCart] = useState([])
+    const [cart, setCart] = useState(() => {
+        const savedCart = localStorage.getItem('cart')
+        return savedCart ? JSON.parse(savedCart) : []
+    })
     const [isCartOpen, setIsCartOpen] = useState(false)
 
     // cargar carrito del localStorage al iniciar
     useEffect(() => {
         const savedCart = localStorage.getItem('cart')
+        console.log('Cargando carrito al inciar: ', savedCart)
         if (savedCart) {
             setCart(JSON.parse(savedCart))
         }
@@ -28,11 +33,13 @@ export const CartProvider = ({ children }) => {
 
     // guardar carrito en localStorage cuando cambie
     useEffect(() => {
+        console.log('Guardando carrito: ', cart)
         localStorage.setItem('cart', JSON.stringify(cart))
     }, [cart])
 
     // agrego producto al carrito
     const addToCart = (product, quantity = 1, talle = '', color = '') => {
+        console.log('Agegando al carrito', { product, quantity, talle, color });
         setCart(prevCart => {
             //verifico si el producto ya existe (mismo id, talle y color)
             const existingItemIndex = prevCart.findIndex(
@@ -62,7 +69,7 @@ export const CartProvider = ({ children }) => {
             }
         })
 
-        //setIsCartOpen(true)
+        setIsCartOpen(true)
     }
 
     // elimino producto del carrito
@@ -101,7 +108,7 @@ export const CartProvider = ({ children }) => {
     const getSubtotal = () => {
         return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
     };
-    
+
     // valor a exportar
     const value = {
         cart,
