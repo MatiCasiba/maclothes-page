@@ -1,0 +1,438 @@
+.checkoutPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  
+  &:hover {
+    color: #333;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0 0 2rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+// Barra de progreso
+.progressBar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #ddd;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  background: white;
+  padding: 0 1rem;
+  
+  .stepNumber {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ddd;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .stepLabel {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  &.active {
+    .stepNumber {
+      background: #333;
+    }
+    
+    .stepLabel {
+      color: #333;
+      font-weight: 600;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .stepLabel {
+      font-size: 0.75rem;
+    }
+  }
+}
+
+.checkoutContainer {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Formulario
+.checkoutForm {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 1.5rem 0 1rem;
+    
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  
+  label {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 600;
+  }
+  
+  input {
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+    
+    &:focus {
+      outline: none;
+      border-color: #333;
+    }
+    
+    &::placeholder {
+      color: #ccc;
+    }
+  }
+}
+
+// Opciones de envío
+.shippingOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.shippingOption {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  input[type="radio"] {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .optionContent {
+    flex: 1;
+    
+    strong {
+      display: block;
+      color: #333;
+      margin-bottom: 0.25rem;
+    }
+    
+    span {
+      color: #666;
+      font-size: 0.9rem;
+    }
+  }
+  
+  .optionPrice {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  &.selected {
+    border-color: #333;
+    background: #f8f8f8;
+  }
+  
+  &:hover {
+    border-color: #999;
+  }
+}
+
+// Opciones de pago
+.paymentOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.paymentOption {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  input[type="radio"] {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .optionContent {
+    flex: 1;
+    
+    strong {
+      display: block;
+      color: #333;
+      margin-bottom: 0.25rem;
+    }
+    
+    span {
+      color: #666;
+      font-size: 0.9rem;
+    }
+  }
+  
+  &.selected {
+    border-color: #333;
+    background: #f8f8f8;
+  }
+  
+  &:hover {
+    border-color: #999;
+  }
+}
+
+// Botones
+.continueButton {
+  width: 100%;
+  padding: 1rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 2rem;
+  
+  &:hover {
+    background: #555;
+  }
+}
+
+// Paso de confirmación
+.confirmStep {
+  text-align: center;
+  
+  .confirmIcon {
+    color: #4caf50;
+    margin: 1rem 0;
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 2rem;
+  }
+}
+
+.confirmSection {
+  text-align: left;
+  background: #f8f8f8;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  
+  h3 {
+    font-size: 1rem;
+    color: #333;
+    margin: 0 0 0.5rem;
+  }
+  
+  p {
+    color: #666;
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+  }
+}
+
+.finalizeButton {
+  width: 100%;
+  padding: 1rem;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 2rem;
+  
+  &:hover {
+    background: #45a049;
+  }
+}
+
+// Resumen del pedido
+.orderSummary {
+  background: #f8f8f8;
+  padding: 1.5rem;
+  border-radius: 8px;
+  height: fit-content;
+  
+  h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0 0 1.5rem;
+  }
+}
+
+.summaryItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  max-height: 300px;
+  overflow-y: auto;
+  
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: #f0f0f0;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+}
+
+.summaryItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 4px;
+  
+  img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .itemInfo {
+    flex: 1;
+    
+    h4 {
+      font-size: 0.9rem;
+      color: #333;
+      margin: 0 0 0.25rem;
+    }
+    
+    p {
+      font-size: 0.8rem;
+      color: #666;
+      margin: 0;
+    }
+  }
+  
+  .itemPrice {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9rem;
+  }
+}
+
+.summaryTotals {
+  border-top: 2px solid #ddd;
+  padding-top: 1rem;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  color: #666;
+  
+  &.total {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #ddd;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+  }
+}
