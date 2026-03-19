@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FiMenu, FiSearch, FiShoppingBag, FiX, FiChevronDown, FiChevronRight } from 'react-icons/fi';
+import { FiMenu, FiSearch, FiShoppingBag, FiX, FiChevronDown, FiChevronRight, FiHeart } from 'react-icons/fi';
 import MenuToggle from './MenuToggle';
 import styles from './Header.module.scss';
 import SearchBar from './SearchBar';
 import { menuData } from '@data/menuData';
 import { useCart } from '../../../context/CartContext';
+import { useWishList } from '../../../context/WishlistContext';
 
 // convierte camelCase a kebab-case para parámetros de URL
 const slugify = (str) => str?.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
@@ -18,6 +19,8 @@ const Header = () => {
   const [subcategoriaDesktop, setSubcategoriaDesktop] = useState('hombre');
   const { cart } = useCart()
   const cartItemsCount = cart.reduce((total, item) => total + item.quantity, 0)
+  const { getTotalItems: getWishlistTotal } = useWishList()
+  const wishlistItemsCount = getWishlistTotal()
 
   console.log('🛒 Header - carrito:', cart);
   console.log('🛒 Header - cantidad:', cartItemsCount);
@@ -51,6 +54,17 @@ const Header = () => {
             aria-label="Buscar"
           >
             <FiSearch size={24} />
+          </button>
+
+          <button
+            className={styles.iconButton}
+            aria-label="Favoritos"
+            onClick={() => navigate('/wishlist')}
+          >
+            <FiHeart size={24} />
+            {wishlistItemsCount > 0 && (
+              <span className={styles.cartBadge}>{wishlistItemsCount}</span>
+            )}
           </button>
 
           <button
