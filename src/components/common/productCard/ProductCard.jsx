@@ -28,7 +28,7 @@ const ProductCard = ({ product }) => {
     navigate(`/producto/${id}`) // navega al detalle
   }
 
-  const handleWishlistClick = () => {
+  const handleWishlistClick = (e) => {
     e.stopPropagation()
     if(inWishList){
       removeFromWishlist(id)
