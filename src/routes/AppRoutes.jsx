@@ -7,6 +7,7 @@ import CategoryPage from '../pages/category/CategoryPage';
 import ProductDetail from '../pages/productDetail/ProductDetail';
 import Cart from '../pages/cart/Cart';
 import Checkout from '../pages/checkout/Checkout';
+import Wishlist from '../pages/wishlist/Wishlist';
 
 const AppRoutes = () => {
   return (
@@ -19,6 +20,7 @@ const AppRoutes = () => {
         <Route path="nosotros" element={<AboutUs />} />
         <Route path='carrito' element={<Cart />} />
         <Route path='checkout' element={<Checkout />} />
+        <Route path='wishlist' element={<Wishlist />} />
       </Route>
     </Routes>
   );
