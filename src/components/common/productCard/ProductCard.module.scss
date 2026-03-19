@@ -1,5 +1,3 @@
-// src/components/common/ProductCard/ProductCard.module.scss
-
 .productCard {
   background: white;
   border-radius: 8px;
@@ -73,6 +71,11 @@
     background-color: #ff4444;
     color: white;
     transform: scale(1.1);
+  }
+
+  &:hover {
+    background-color: #ff4444;
+    color: white;
   }
 }
 
