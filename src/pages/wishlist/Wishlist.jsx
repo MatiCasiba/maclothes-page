@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom"
 import { useCart } from "../../context/CartContext"
-import { useWishList } from "../../context/WishlistContext"
+import { useWishlist } from "../../context/WishlistContext"
 import styles from './Wishlist.module.scss'
 import { FiArrowLeft, FiHeart, FiShoppingBag, FiTrash2 } from "react-icons/fi"
 
 const Wishlist = () => {
-    const { wishlist, removeFromWishlist, clearWishlist } = useWishList()
+    const { wishlist, removeFromWishlist, clearWishlist } = useWishlist()
     const { addToCart } = useCart()
     const navigate = useNavigate()
 

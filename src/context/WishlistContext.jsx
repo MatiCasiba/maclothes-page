@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 const WishlistContext = createContext()
 
-export const useWishList = () => {
+export const useWishlist = () => {
     const context = useContext(WishlistContext)
     if (!context) {
         throw new Error('useWishlist debe usarse dentro del WishlistProvider')
@@ -49,7 +49,7 @@ export const WishlistProvider = ({ children }) => {
 
     // elimino producto de wishlist
     const removeFromWishlist = (productId) => {
-        setWishlist(prev => prev.filter(item => item.id === productId))
+        setWishlist(prev => prev.filter(item => item.id !== productId))
     }
 
     // verifico si un pproducto está en wishlist

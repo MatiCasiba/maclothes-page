@@ -6,7 +6,7 @@ import styles from './Header.module.scss';
 import SearchBar from './SearchBar';
 import { menuData } from '@data/menuData';
 import { useCart } from '../../../context/CartContext';
-import { useWishList } from '../../../context/WishlistContext';
+import { useWishlist } from '../../../context/WishlistContext';
 
 // convierte camelCase a kebab-case para parámetros de URL
 const slugify = (str) => str?.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
@@ -19,7 +19,7 @@ const Header = () => {
   const [subcategoriaDesktop, setSubcategoriaDesktop] = useState('hombre');
   const { cart } = useCart()
   const cartItemsCount = cart.reduce((total, item) => total + item.quantity, 0)
-  const { getTotalItems: getWishlistTotal } = useWishList()
+  const { getTotalItems: getWishlistTotal } = useWishlist()
   const wishlistItemsCount = getWishlistTotal()
 
   console.log('🛒 Header - carrito:', cart);

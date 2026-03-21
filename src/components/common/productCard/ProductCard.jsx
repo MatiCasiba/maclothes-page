@@ -3,7 +3,7 @@ import styles from './ProductCard.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useCart } from '../../../context/CartContext';
-import { useWishList } from '../../../context/WishlistContext';
+import { useWishlist } from '../../../context/WishlistContext';
 
 const ProductCard = ({ product }) => {
   console.log('ProductCard recibió:', product)
@@ -12,7 +12,7 @@ const ProductCard = ({ product }) => {
   const hasOffer = offerPrice && offerPrice < price;
   const [imgError, setImgError] = useState(false)
   const { addToCart } = useCart()
-  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishList()
+  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist()
   const inWishList = isInWishlist(id) // verifico si está en favorito
 
   // tomo la primera imagen del array, o una imagen por defecto
