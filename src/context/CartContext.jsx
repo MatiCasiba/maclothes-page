@@ -60,7 +60,7 @@ export const CartProvider = ({ children }) => {
                     name: product.name,
                     price: product.offerPrice || product.price,
                     originalPrice: product.price,
-                    image: product.images[0],
+                    image: product.images || (product.images && product.images[0] || '/placeholder.jpg'),
                     talle,
                     color,
                     quantity,

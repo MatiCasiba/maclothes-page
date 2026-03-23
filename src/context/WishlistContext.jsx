@@ -47,6 +47,7 @@ export const WishlistProvider = ({ children }) => {
                 name: product.name,
                 price: product.price,
                 offerPrice: product.offerPrice,
+                images: product.images,
                 image: product.images[0],
                 category: product.category
             }];
