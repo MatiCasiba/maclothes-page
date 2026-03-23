@@ -11,23 +11,29 @@ export const useWishlist = () => {
 }
 
 export const WishlistProvider = ({ children }) => {
-    const [wishlist, setWishlist] = useState([])
+    const [wishlist, setWishlist] = useState(() =>{
+        const saved = localStorage.getItem('wishlist')
+        console.log('Inicializadno wishlist desde localStorage:', saved);
+        return saved ? JSON.parse(saved) : []
+    })
 
     //cargar wishlist del localStorage al iniciar
-    useEffect(() => {
+    /* useEffect(() => {
         const savedWishlist = localStorage.getItem('wishlist')
         if (savedWishlist) {
             setWishlist(JSON.parse(savedWishlist))
         }
-    }, [])
+    }, []) */
 
     // guadar wishlist en localStorage cuando cambie
     useEffect(() => {
+        console.log('Guradando wishlist en localStorage: ', wishlist);
         localStorage.setItem('wishlist', JSON.stringify(wishlist))
     }, [wishlist])
 
     // agrego producto a wishlist
     const addToWishlist = (product) => {
+        console.log('Agregando a wishlist: ', product.id);
         setWishlist(prev => {
             //verifico si ya existe
             const exist = prev.some(item => item.id === product.id)
@@ -49,6 +55,7 @@ export const WishlistProvider = ({ children }) => {
 
     // elimino producto de wishlist
     const removeFromWishlist = (productId) => {
+        console.log('Eliminando de wishlist: ', productId);
         setWishlist(prev => prev.filter(item => item.id !== productId))
     }
 
@@ -59,6 +66,7 @@ export const WishlistProvider = ({ children }) => {
 
     // vacio wishlist
     const clearWishlist = () => {
+        console.log('Vaciando wishlist');
         setWishlist([])
     }
 
