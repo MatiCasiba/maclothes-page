@@ -3,7 +3,7 @@ import { FiArrowLeft, FiSearch } from "react-icons/fi"
 import { useNavigate, useSearchParams } from "react-router-dom"
 import { products } from '@data/products'
 import ProductCard from "../../components/common/productCard/ProductCard"
-import styles from './SearchResults.module.scsss'
+import styles from './SearchResults.module.scss'
 
 const SearchResults = () => {
     const [searchParams] = useSearchParams()
