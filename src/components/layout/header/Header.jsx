@@ -189,20 +189,7 @@ const Header = () => {
       {/* Búsqueda mobile */}
       {isSearchOpen && (
         <div className={styles.searchOverlay}>
-          <div className={styles.searchBar}>
-            <FiSearch size={20} className={styles.searchIcon} />
-            <input
-              type="text"
-              placeholder="Buscar productos..."
-              autoFocus
-            />
-            <button
-              className={styles.closeSearch}
-              onClick={() => setIsSearchOpen(false)}
-            >
-              <FiX size={20} />
-            </button>
-          </div>
+          <SearchBar />
         </div>
       )}
 

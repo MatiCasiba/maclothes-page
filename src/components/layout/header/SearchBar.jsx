@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-import { FiSearch } from 'react-icons/fi';
+import { FiSearch, FiX } from 'react-icons/fi';
 import styles from './Header.module.scss';
 import { useNavigate } from 'react-router-dom';
+import { products } from '@data/products'
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -17,9 +18,9 @@ const SearchBar = () => {
       return
     }
 
-    const term = searchTerm.toLocaleLowerCase()
+    const term = searchTerm.toLowerCase()
     const filtered = products.all
-      .filter(product => product.name.toLoweCase().includes(term))
+      .filter(product => product.name.toLowerCase().includes(term))
       .slice(0, 8) // limite de sugerencias
     setSuggestions(filtered)
   }, [searchTerm])
