@@ -8,6 +8,7 @@ import ProductDetail from '../pages/productDetail/ProductDetail';
 import Cart from '../pages/cart/Cart';
 import Checkout from '../pages/checkout/Checkout';
 import Wishlist from '../pages/wishlist/Wishlist';
+import SearchResults from '../pages/searchResults/SearchResults';
 
 const AppRoutes = () => {
   return (
@@ -21,6 +22,7 @@ const AppRoutes = () => {
         <Route path='carrito' element={<Cart />} />
         <Route path='checkout' element={<Checkout />} />
         <Route path='wishlist' element={<Wishlist />} />
+        <Route path='buscar' element={<SearchResults />} />
       </Route>
     </Routes>
   );
