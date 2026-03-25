@@ -11,6 +11,7 @@ import Wishlist from '../pages/wishlist/Wishlist';
 import SearchResults from '../pages/searchResults/SearchResults';
 import Login from '../pages/login/Login';
 import Register from '../pages/register/Register';
+import PrivateRoute from './PrivateRoute';
 
 const AppRoutes = () => {
   return (
@@ -22,7 +23,7 @@ const AppRoutes = () => {
         <Route path="contacto" element={<Contact />} />
         <Route path="nosotros" element={<AboutUs />} />
         <Route path='carrito' element={<Cart />} />
-        <Route path='checkout' element={<Checkout />} />
+        {/* <Route path='checkout' element={<Checkout />} /> */}
         <Route path='wishlist' element={<Wishlist />} />
         <Route path='buscar' element={<SearchResults />} />
       </Route>
@@ -30,6 +31,15 @@ const AppRoutes = () => {
       {/* rutas de autenticación */}
       <Route path='login' element={<Login />} />
       <Route path='register' element={<Register />} />
+
+      <Route 
+        path="checkout" 
+        element={
+          <PrivateRoute>
+            <Checkout />
+          </PrivateRoute>
+        } 
+      />
     </Routes>
   );
 };
