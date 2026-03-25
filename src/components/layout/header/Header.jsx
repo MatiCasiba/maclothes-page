@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FiMenu, FiSearch, FiShoppingBag, FiX, FiChevronDown, FiChevronRight, FiHeart } from 'react-icons/fi';
+import { FiMenu, FiSearch, FiShoppingBag, FiX, FiChevronDown, FiChevronRight, FiHeart, FiUser, FiLogOut } from 'react-icons/fi';
 import MenuToggle from './MenuToggle';
 import styles from './Header.module.scss';
 import SearchBar from './SearchBar';
 import { menuData } from '@data/menuData';
 import { useCart } from '../../../context/CartContext';
 import { useWishlist } from '../../../context/WishlistContext';
+import { useAuth } from '../../../context/AuthContext';
 
 // convierte camelCase a kebab-case para parámetros de URL
 const slugify = (str) => str?.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
@@ -21,6 +22,7 @@ const Header = () => {
   const cartItemsCount = cart.reduce((total, item) => total + item.quantity, 0)
   const { getTotalItems: getWishlistTotal } = useWishlist()
   const wishlistItemsCount = getWishlistTotal()
+  const { user, logout } = useAuth()
 
   console.log('🛒 Header - carrito:', cart);
   console.log('🛒 Header - cantidad:', cartItemsCount);
@@ -77,6 +79,34 @@ const Header = () => {
               <span className={styles.cartBadge}>{cartItemsCount}</span>
             )}
           </button>
+
+          {user ? (
+            <>
+              <button
+                className={styles.iconButton}
+                aria-label="Perfil"
+                onClick={() => navigate('/profile')}
+              >
+                <FiUser size={24} />
+              </button>
+              <button
+                className={styles.iconButton}
+                aria-label="Cerrar sesión"
+                onClick={logout}
+              >
+                <FiLogOut size={24} />
+              </button>
+            </>
+          ) : (
+            <button
+              className={styles.iconButton}
+              aria-label="Iniciar sesión"
+              onClick={() => navigate('/login')}
+            >
+              <FiUser size={24} />
+            </button>
+          )}
+
         </div>
       </div>
 
