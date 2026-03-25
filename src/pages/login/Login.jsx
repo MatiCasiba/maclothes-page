@@ -12,7 +12,7 @@ const Login = () => {
     const { login } = useAuth()
     const navigate = useNavigate()
 
-    const handleSubmiit = async (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefautl()
         setError('')
         setIsLoading(true)
