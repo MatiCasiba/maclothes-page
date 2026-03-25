@@ -9,6 +9,8 @@ import Cart from '../pages/cart/Cart';
 import Checkout from '../pages/checkout/Checkout';
 import Wishlist from '../pages/wishlist/Wishlist';
 import SearchResults from '../pages/searchResults/SearchResults';
+import Login from '../pages/login/Login';
+import Register from '../pages/register/Register';
 
 const AppRoutes = () => {
   return (
@@ -24,6 +26,10 @@ const AppRoutes = () => {
         <Route path='wishlist' element={<Wishlist />} />
         <Route path='buscar' element={<SearchResults />} />
       </Route>
+
+      {/* rutas de autenticación */}
+      <Route path='login' element={<Login />} />
+      <Route path='register' element={<Register />} />
     </Routes>
   );
 };
