@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useAuth } from "../../context/AuthContext"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import styles from './Login.module.scss'
 
 
@@ -15,7 +15,7 @@ const Login = () => {
     const handleSubmiit = async (e) => {
         e.preventDefautl()
         setError('')
-        setsLoading(true)
+        setIsLoading(true)
 
         try {
             await login(email, password)
