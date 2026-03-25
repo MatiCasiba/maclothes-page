@@ -12,6 +12,7 @@ import SearchResults from '../pages/searchResults/SearchResults';
 import Login from '../pages/login/Login';
 import Register from '../pages/register/Register';
 import PrivateRoute from './PrivateRoute';
+import Profile from '../pages/profile/Profile';
 
 const AppRoutes = () => {
   return (
@@ -37,6 +38,14 @@ const AppRoutes = () => {
         element={
           <PrivateRoute>
             <Checkout />
+          </PrivateRoute>
+        } 
+      />
+      <Route 
+        path="profile" 
+        element={
+          <PrivateRoute>
+            <Profile />
           </PrivateRoute>
         } 
       />
