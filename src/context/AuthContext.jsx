@@ -26,10 +26,10 @@ export const AuthProvider = ({ children }) => {
     //registrar nuevo usuario
     const register = (email, password, name) => {
         //simulo una base de datos de usuarios
-        const users = JSON.parse(localStorage.getItem('user') || '[]')
+        const users = JSON.parse(localStorage.getItem('users') || '[]')
 
         //verifico si el email ya está registrado
-        if (user.some(u => u.email === email)) {
+        if (users.some(u => u.email === email)) {
             throw new Error('El email ya está registrado')
         }
 
@@ -43,7 +43,7 @@ export const AuthProvider = ({ children }) => {
         }
 
         // guardar en base de datos
-        user.push(newUser)
+        users.push(newUser)
         localStorage.setItem('users', JSON.stringify(users))
 
         // iniciar sesión automáticamente
@@ -57,7 +57,7 @@ export const AuthProvider = ({ children }) => {
     //iniciar sesión
     const login = (email, password) => {
         const users = JSON.parse(localStorage.getItem('users') || '[]')
-        const foundUser = users.find(u => u.email === email || u.password === password)
+        const foundUser = users.find(u => u.email === email && u.password === password)
 
         if (!foundUser) {
             throw new Error('Emial o contraseña incorrectos')
@@ -85,8 +85,8 @@ export const AuthProvider = ({ children }) => {
         localStorage.setItem('user', JSON.stringify(updateUser))
 
         //actualizar en base de datos
-        const users = JSON.parse(localStorage.getItem('user') || '[]')
-        const userIndex = user.findIndex(u => u.id === user.id)
+        const users = JSON.parse(localStorage.getItem('users') || '[]')
+        const userIndex = users.findIndex(u => u.id === user.id)
         if (userIndex !== -1) {
             users[userIndex] = { ...users[userIndex], ...updates }
             localStorage.setItem('users', JSON.stringify(users))
