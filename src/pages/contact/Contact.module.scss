@@ -1,0 +1,158 @@
+.contactPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.contactContainer {
+  h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+    
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+// información de contacto
+.contactInfo {
+  background: #f8f8f8;
+  padding: 2rem;
+  border-radius: 12px;
+  
+  h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoItem {
+  display: flex;
+  gap: 1rem;
+  
+  .icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    color: #333;
+    margin-top: 0.25rem;
+  }
+  
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    
+    strong {
+      color: #333;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    span, a {
+      color: #666;
+      font-size: 0.95rem;
+      text-decoration: none;
+      
+      &:hover {
+        color: #333;
+      }
+    }
+  }
+}
+
+// formulario
+.contactForm {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    
+    &:focus {
+      outline: none;
+      border-color: #333;
+    }
+    
+    &::placeholder {
+      color: #ccc;
+    }
+  }
+}
+
+.submitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  
+  &:hover {
+    background: #555;
+  }
+}
+
+.successMessage {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #4caf50;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.9rem;
+}
