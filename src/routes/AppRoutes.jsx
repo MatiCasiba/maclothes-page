@@ -21,6 +21,7 @@ const AppRoutes = () => {
         <Route index element={<Home />} />
         <Route path=":category" element={<CategoryPage />}/>
         <Route path="contacto" element={<Contact />} />
+        <Route path='nosotros' element={<AboutUs />} />
         <Route path='producto/:id' element={<ProductDetail />} />
         <Route path="contacto" element={<Contact />} />
         <Route path="nosotros" element={<AboutUs />} />
