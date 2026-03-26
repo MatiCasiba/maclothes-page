@@ -1,0 +1,88 @@
+.featuredSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+  text-align: center;
+  
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.productGrid {
+  width: 100%;
+  
+  // mobile: scroll horizontal
+  @media (max-width: 767px) {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 0.5rem 0 1.5rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    
+    &::-webkit-scrollbar {
+      height: 4px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: #f0f0f0;
+      border-radius: 4px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 4px;
+    }
+    
+    > * {
+      flex: 0 0 250px;
+      scroll-snap-align: start;
+    }
+  }
+  
+  // tablet: 2 columnas
+  @media (min-width: 768px) and (max-width: 1023px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  // desktop: 3 columnas
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.loadMore {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  border: 2px solid #333;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: #333;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    display: none; // oculto en mobile porque ya tienen scroll
+  }
+}
