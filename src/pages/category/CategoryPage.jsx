@@ -3,9 +3,10 @@ import { products } from '@data/products'
 import styles from './CategoryPage.module.scss'
 import { useEffect, useState } from 'react'
 import ProductCard from '../../components/common/productCard/ProductCard'
+import { FiFilter, FiX } from 'react-icons/fi'
 
 const CategoryPage = () => {
-  const { category } = useParams() // hombre o mujer
+  const { category } = useParams()
   const [searchParams] = useSearchParams()
   const [categoryProducts, setCategoryProducts] = useState([])
   const [filters, setFilters] = useState({
@@ -15,63 +16,46 @@ const CategoryPage = () => {
     precioMin: '',
     precioMax: '',
   })
+  const [showFilters, setShowFilters] = useState(false) // estado para mobile
 
   useEffect(() => {
-    //filtro productos por categoría (hombre/mujer)
-    // categoría viene de la ruta dinámica
-    // productos ya cargados en products.all
-
     let filtered = products.all.filter(p => {
       const match = p.category === category
       if(match) console.log('MATCH encontrado:', p.id, p.category)
       return match
     })
-    // número tras filtro categoría
 
-    // convertidor camelCase -> kebab-case (slug)
     const slugify = (str) => {
       if (!str) return str;
       return str
-        .replace(/([a-z])([A-Z])/g, '$1-$2') //agrego guion entre camelCase
-        .replace(/_/g, '-') // guiones bajos para poner guiones si los hay
+        .replace(/([a-z])([A-Z])/g, '$1-$2')
+        .replace(/_/g, '-')
         .toLowerCase();
     };
 
-    // aplico filtro por subcategoría sii viene en la url
     let subcategoriaParam = searchParams.get('categoria');
     subcategoriaParam = slugify(subcategoriaParam);
-    // valor normalizado de subcategoriaParam
     if(subcategoriaParam) {
       filtered = filtered.filter(p => p.subcategoria === subcategoriaParam)
       console.log('Después filtro subcategoriaParam, count =', filtered.length)
-
-      // actualizo el filtro para que se vea en el select (usar valor real)
       setFilters(prev => ({ ...prev, subcategoria: subcategoriaParam}))
     }
 
-    // aplico filtro por tipo (sub-subcategoria)
     let tipoParam = searchParams.get('subcategoria');
     tipoParam = slugify(tipoParam);
-    // valor normalizado de tipoParam
     if(tipoParam){
       filtered = filtered.filter(p => p.tipo === tipoParam)
       console.log('Después filtro tipoParam, count =', filtered.length)
     }
 
-    // mostrar resultados finales
-
     setCategoryProducts(filtered)
-    window.scrollTo(0,0) //scroll al inicio al cambiar de categoría
+    window.scrollTo(0,0)
   }, [category, searchParams])
 
-  //obtengo valores únicos para filtros
   const subcategorias = [...new Set(categoryProducts.map(p => p.subcategoria))]
   const talles = [...new Set(categoryProducts.flatMap(p => p.talles))]
   const colores = [...new Set(categoryProducts.flatMap(p => p.colores))]
-  
-  // logs de depuración opcionales (comentar si no hace falta)
 
-  // aplico filtros
   const filteredProducts = categoryProducts.filter(product => {
     if (filters.subcategoria && product.subcategoria !== filters.subcategoria) return false;
     if (filters.talle && !product.talles.includes(filters.talle)) return false;
@@ -95,17 +79,40 @@ const CategoryPage = () => {
       precioMax: ''
     })
   }
+
+  const handleCloseFilters = () => {
+    setShowFilters(false)
+  }
+
   return (
     <div className={styles.categoryPage}>
       <div className={styles.categoryHeader}>
         <h1>{category === 'hombre' ? 'Hombre' : 'Mujer'}</h1>
-        <p className={styles.resultsCount}>{filteredProducts.length} productos</p>
+        <div className={styles.headerInfo}>
+          <p className={styles.resultsCount}>{filteredProducts.length} productos</p>
+          {/* botón de filtros solo en mobile */}
+          <button 
+            className={styles.filterButtonMobile}
+            onClick={() => setShowFilters(!showFilters)}
+          >
+            <FiFilter size={20} />
+            {showFilters ? 'Ocultar filtros' : 'Filtros'}
+          </button>
+        </div>
       </div>
 
       <div className={styles.categoryContent}>
-        {/* sidebar de filtros */}
-        <aside className={styles.filtersSidebar}>
-          <h3>Filtros</h3>
+        {/* sidebar de filtros - con clase condicional para mobile */}
+        <aside className={`${styles.filtersSidebar} ${showFilters ? styles.filtersOpen : ''}`}>
+          <div className={styles.filtersHeader}>
+            <h3>Filtros</h3>
+            <button 
+              className={styles.closeFiltersMobile}
+              onClick={() => setShowFilters(false)}
+            >
+              <FiX size={20} />
+            </button>
+          </div>
           
           {/* filtro por subcategoría */}
           <div className={styles.filterGroup}>
@@ -165,6 +172,14 @@ const CategoryPage = () => {
 
           <button className={styles.clearFilters} onClick={clearFilters}>
             Limpiar filtros
+          </button>
+          
+          {/* botón para ver productos en mobile */}
+          <button 
+            className={styles.seeProductsButton}
+            onClick={handleCloseFilters}
+          >
+            Ver {filteredProducts.length} productos
           </button>
         </aside>
 
