@@ -1,12 +1,12 @@
 .banner {
   width: 100vw;
   height: 500px;
-  background-image: url('/banners/home-banner.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  transition: all 0.3s ease;
   
   @media (max-width: 768px) {
     height: 350px;
@@ -19,7 +19,22 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+  }
+  
+  // efecto hover en desktop
+  @media (min-width: 769px) {
+    &:hover {
+      &::before {
+        background: rgba(0, 0, 0, 0.6);
+      }
+      
+      .bannerContent {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   }
 }
 
@@ -34,29 +49,77 @@
   text-align: center;
   color: white;
   padding: 0 1rem;
+  
+  // en desktop: oculto por defecto
+  @media (min-width: 769px) {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+  }
 }
 
 .bannerTitle {
   font-size: 3.5rem;
   font-weight: 800;
+  color: white;
   letter-spacing: 4px;
   margin-bottom: 1rem;
   text-transform: uppercase;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
   
   @media (max-width: 768px) {
+    color: white;
     font-size: 2rem;
     letter-spacing: 2px;
+    transform: translateY(0);
   }
+}
+
+.banner:hover .bannerTitle {
+  transform: translateY(0);
 }
 
 .bannerSubtitle {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   opacity: 0.9;
+  transform: translateY(20px);
+  transition: transform 0.4s ease 0.1s;
   
   @media (max-width: 768px) {
     font-size: 1rem;
+    transform: translateY(0);
   }
+}
+
+.banner:hover .bannerSubtitle {
+  transform: translateY(0);
+}
+
+// descripción que aparece con hover
+.bannerDescription {
+  max-width: 500px;
+  margin-bottom: 2rem;
+  transform: translateY(20px);
+  transition: transform 0.4s ease 0.2s;
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.75rem 1.5rem;
+    border-radius: 40px;
+    backdrop-filter: blur(4px);
+    
+    @media (max-width: 768px) {
+      display: none; // Ocultar en mobile
+    }
+  }
+}
+
+.banner:hover .bannerDescription {
+  transform: translateY(0);
 }
 
 .bannerButton {
@@ -70,9 +133,171 @@
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s ease;
+  transform: translateY(20px);
+  transition: transform 0.4s ease 0.3s, background 0.3s ease, color 0.3s ease;
   
   &:hover {
     background: white;
     color: #333;
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+    transform: translateY(0);
+  }
+}
+
+.banner:hover .bannerButton {
+  transform: translateY(0);
+}
+
+// botones de navegación
+.prevButton, .nextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  
+  &:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  @media (max-width: 768px) {
+    width: 32px;
+    height: 32px;
+    opacity: 0.7;
+    visibility: visible;
+    
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+// muestro botones al hacer hover en desktop
+.banner:hover {
+  .prevButton, .nextButton {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.prevButton {
+  left: 20px;
+}
+
+.nextButton {
+  right: 20px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+  
+  @media (min-width: 769px) {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+}
+
+.banner:hover .dots {
+  @media (min-width: 769px) {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &.active {
+    background: white;
+    width: 24px;
+    border-radius: 5px;
+  }
+  
+  &:hover {
+    background: white;
+  }
+}
+
+// pestañas, siempre visibles en desktop y mobile
+.bannerWrapper {
+  position: relative;
+}
+
+.bannerTabs {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem;
+  border-radius: 40px;
+  backdrop-filter: blur(8px);
+  
+  // siempre visible en desktop y mobile
+  opacity: 1;
+  visibility: visible;
+  
+  @media (max-width: 768px) {
+    top: 10px;
+    gap: 0.5rem;
+    padding: 0.25rem;
+  }
+}
+
+.tabButton {
+  padding: 0.5rem 1.5rem;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  &.active {
+    background: white;
+    color: #333;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0.25rem 1rem;
+    font-size: 0.8rem;
   }
 }
