@@ -4,16 +4,6 @@ import styles from './OfferSection.module.scss';
 import ProductCard from '../../common/productCard/ProductCard';
 import { getOfferProducts } from '../../../../data/products';
 
-// datos mock de productos en oferta
-/* const mockOffers = Array(12).fill().map((_, i) => ({
-  id: i + 1,
-  name: `Producto de ejemplo ${i + 1}`,
-  price: 100 + i * 10,
-  offerPrice: i % 2 === 0 ? 80 + i * 8 : null, // algunos en oferta, otros no
-  image: `/productos/product-${(i % 5) + 1}.jpg`, // cicla entre 5 imágenes
-  category: i % 3 === 0 ? 'Hombre' : i % 3 === 1 ? 'Mujer' : 'Accesorios'
-})); */
-
 const OfferSection = () => {
   const [visibleProducts, setVisibleProducts] = useState(6);
   const [offerProducts, setOfferProducts] = useState([]);
@@ -21,16 +11,14 @@ const OfferSection = () => {
   
   // defino breakpoints
   const isMobile = width < 768;
-  const isTablet = width >= 768 && width < 1024;
-  const isDesktop = width >= 1024;
 
   // carga de productos en oferta al montar componente
   useEffect(() => {
     const productsOnOffer = getOfferProducts()
     setOfferProducts(productsOnOffer)
-    console.log('Productos en oferta:', productsOnOffer.length) // para verificar
+    console.log('Productos en oferta:', productsOnOffer.length)
 
-     // verifico que tengan imágenes
+    // verifico que tengan imágenes
     productsOnOffer.forEach(p => {
       console.log(`${p.name}:`, {
         tieneImages: !!p.images,
@@ -44,10 +32,20 @@ const OfferSection = () => {
     setVisibleProducts(prev => prev + 6);
   };
 
+  const handleShowLess = () => {
+    setVisibleProducts(6);
+    // scroll suave al inicio de la sección
+    const section = document.getElementById('offers-section');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   // en celulares, muestro todos para scroll horizontal
   // en tablet/desktop, muestro según visibleProducts
   const displayedProducts = isMobile ? offerProducts : offerProducts.slice(0, visibleProducts);
   const hasMore = !isMobile && visibleProducts < offerProducts.length;
+  const hasLess = !isMobile && visibleProducts > 6;
 
   // si no hay productos en oferta, no muestro la sección
   if(offerProducts.length === 0){
@@ -55,7 +53,7 @@ const OfferSection = () => {
   }
 
   return (
-    <section className={styles.offersSection}>
+    <section id="offers-section" className={styles.offersSection}>
       <h2 className={styles.sectionTitle}>Ofertas</h2>
       
       <div className={styles.productGrid}>
@@ -64,11 +62,18 @@ const OfferSection = () => {
         ))}
       </div>
 
-      {hasMore && (
-        <button className={styles.loadMore} onClick={handleLoadMore}>
-          Ver más productos
-        </button>
-      )}
+      <div className={styles.buttonsContainer}>
+        {hasMore && (
+          <button className={styles.loadMore} onClick={handleLoadMore}>
+            Ver más productos
+          </button>
+        )}
+        {hasLess && (
+          <button className={styles.showLess} onClick={handleShowLess}>
+            Ver menos
+          </button>
+        )}
+      </div>
     </section>
   );
 };
