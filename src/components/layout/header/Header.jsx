@@ -16,6 +16,7 @@ const Header = () => {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const [categoriaDesktop, setCategoriaDesktop] = useState(null);
   const [subcategoriaDesktop, setSubcategoriaDesktop] = useState('hombre');
   const { cart } = useCart()
@@ -81,22 +82,44 @@ const Header = () => {
           </button>
 
           {user ? (
-            <>
+            <div className={styles.userMenu}>
               <button
-                className={styles.iconButton}
-                aria-label="Perfil"
-                onClick={() => navigate('/profile')}
+                className={`${styles.iconButton} ${styles.userAvatarButton}`}
+                aria-label="Abrir menú de usuario"
+                onClick={() => setIsUserMenuOpen(prev => !prev)}
               >
-                <FiUser size={24} />
+                {user.avatar ? (
+                  <img src={user.avatar} alt="Avatar" className={styles.userAvatar} />
+                ) : (
+                  <span className={styles.userInitials}>
+                    {user.name ? user.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase() : 'US'}
+                  </span>
+                )}
               </button>
-              <button
-                className={styles.iconButton}
-                aria-label="Cerrar sesión"
-                onClick={logout}
-              >
-                <FiLogOut size={24} />
-              </button>
-            </>
+
+              {isUserMenuOpen && (
+                <div className={styles.userDropdown}>
+                  <button
+                    className={styles.dropdownItem}
+                    onClick={() => {
+                      setIsUserMenuOpen(false)
+                      navigate('/profile')
+                    }}
+                  >
+                    <FiUser size={16} /> Perfil
+                  </button>
+                  <button
+                    className={styles.dropdownItem}
+                    onClick={() => {
+                      setIsUserMenuOpen(false)
+                      logout()
+                    }}
+                  >
+                    <FiLogOut size={16} /> Cerrar sesión
+                  </button>
+                </div>
+              )}
+            </div>
           ) : (
             <button
               className={styles.iconButton}

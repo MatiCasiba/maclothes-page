@@ -28,13 +28,118 @@
   justify-content: center;
   border-radius: 4px;
   position: relative;
-  
+  min-width: 40px;
+  min-height: 40px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
   &:hover {
     background-color: #f5f5f5;
   }
-  
+
   &:active {
     background-color: #e0e0e0;
+  }
+}
+
+.userMenu {
+  position: relative;
+}
+
+.userAvatarButton {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.userAvatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.userInitials {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.userDropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.4rem);
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+  z-index: 1500;
+  overflow: hidden;
+}
+
+.dropdownItem {
+  width: 100%;
+  border: none;
+  background: none;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #333;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.dropdownItem:hover {
+  background-color: #f4f4f4;
+}
+
+@media (max-width: 430px) {
+  .headerContainer {
+    padding: 0.45rem 0.4rem;
+  }
+
+  .actionIcons {
+    gap: 0.2rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .iconButton {
+    padding: 0.25rem;
+    min-width: 32px;
+    min-height: 32px;
+    border-radius: 6px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .userAvatarButton {
+    width: 36px;
+    height: 36px;
+  }
+
+  .userInitials {
+    font-size: 0.75rem;
+  }
+
+  .logo .logoText {
+    font-size: 1.4rem;
   }
 }
 
