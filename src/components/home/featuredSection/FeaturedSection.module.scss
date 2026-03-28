@@ -63,13 +63,15 @@
   }
 }
 
-.loadMore {
-  display: block;
-  margin: 2rem auto 0;
-  padding: 1rem 2.5rem;
-  background: transparent;
-  border: 2px solid #333;
-  color: #333;
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.loadMore, .showLess {
+  padding: 1rem 2rem;
   font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -77,12 +79,29 @@
   cursor: pointer;
   transition: all 0.3s ease;
   
+  @media (max-width: 768px) {
+    display: none; // oculto en mobile porque ya tienen scroll
+  }
+}
+
+.loadMore {
+  background: transparent;
+  border: 2px solid #333;
+  color: #333;
+  
   &:hover {
     background: #333;
     color: white;
   }
+}
+
+.showLess {
+  background: transparent;
+  border: 2px solid #999;
+  color: #666;
   
-  @media (max-width: 768px) {
-    display: none; // oculto en mobile porque ya tienen scroll
+  &:hover {
+    background: #999;
+    color: white;
   }
 }

@@ -10,8 +10,6 @@ const FeaturedSection = () => {
   const { width } = useWindowSize()
 
   const isMobile = width < 768
-  const isTablet = width >= 768 && width < 1024
-  const isDesktop = width >= 1024
 
   useEffect(() => {
     const productsOnFeatured = getFeaturedProducts()
@@ -23,10 +21,20 @@ const FeaturedSection = () => {
     setVisibleProducts(prev => prev + 6)
   }
 
+  const handleShowLess = () => {
+    setVisibleProducts(6)
+    // scroll suave al inicio de la sección
+    const section = document.getElementById('featured-section')
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   //en mobile, muestro todos para scroll horizontal
   //en tablet/desktop, muestro según visibleProducts
   const displayedProducts = isMobile ? featuredProducts : featuredProducts.slice(0, visibleProducts)
   const hasMore = !isMobile && visibleProducts < featuredProducts.length
+  const hasLess = !isMobile && visibleProducts > 6
 
   //si no hay productos destacados, no muestro la sección
   if(featuredProducts.length === 0){
@@ -34,7 +42,7 @@ const FeaturedSection = () => {
   }
 
   return (
-    <section className={styles.featuredSection}>
+    <section id="featured-section" className={styles.featuredSection}>
       <h2 className={styles.sectionTitle}>Productos destacados</h2>
       
       <div className={styles.productGrid}>
@@ -43,11 +51,18 @@ const FeaturedSection = () => {
         ))}
       </div>
 
-      {hasMore && (
-        <button className={styles.loadMore} onClick={handleLoadMore}>
-          Ver más productos
-        </button>
-      )}
+      <div className={styles.buttonsContainer}>
+        {hasMore && (
+          <button className={styles.loadMore} onClick={handleLoadMore}>
+            Ver más productos
+          </button>
+        )}
+        {hasLess && (
+          <button className={styles.showLess} onClick={handleShowLess}>
+            Ver menos
+          </button>
+        )}
+      </div>
     </section>
   )
 }
