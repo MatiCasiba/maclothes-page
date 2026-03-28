@@ -13,16 +13,15 @@ const Login = () => {
     const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
-        e.preventDefautl()
+        e.preventDefault()
         setError('')
         setIsLoading(true)
 
         try {
-            await login(email, password)
-            navigate('/')
+            const user = await login(email, password)
+            navigate('/', {replace: true})
         } catch (error) {
             setError(error.message)
-        } finally {
             setIsLoading(false)
         }
     }
