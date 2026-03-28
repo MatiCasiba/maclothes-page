@@ -44,6 +44,13 @@ const Header = () => {
   const wishlistItemsCount = getWishlistTotal()
   const { user, logout } = useAuth()
 
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isMenuOpen])
+
   console.log('🛒 Header - carrito:', cart);
   console.log('🛒 Header - cantidad:', cartItemsCount);
 
