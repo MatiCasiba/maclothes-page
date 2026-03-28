@@ -295,8 +295,8 @@ export const hombreProducts = [
         price: 74900,
         offerPrice: null,
         images: [
-            '/productos/hombre/abrigos/camperas/inflada.webp',
-            '/productos/hombre/abrigos/camperas/inflada-2.webp'
+            '/productos/hombre/abrigos/camperas/campera-inflada.webp',
+            '/productos/hombre/abrigos/camperas/campera-inflada-2.webp'
         ],
         category: 'hombre',
         subcategoria: 'abrigos',
@@ -351,8 +351,8 @@ export const hombreProducts = [
         price: 999990,
         offerPrice: null,
         images: [
-            '/productos/hombre/abrigos/sobretodos/sobretodo-garessio.jpg',
-            '/productos/hombre/abrigos/sobretodos/sobretodo-garessio-2.jpg'
+            '/productos/hombre/abrigos/sobretodo/sobretodo-garessio.jpg',
+            '/productos/hombre/abrigos/sobretodo/sobretodo-garessio-2.jpg'
         ],
         category: 'hombre',
         subcategoria: 'abrigos',
@@ -369,8 +369,8 @@ export const hombreProducts = [
         price: 2899990,
         offerPrice: 2319992,
         images: [
-            '/productos/hombre/abrigos/sobretodos/sobretodo-igliano.jpg',
-            '/productos/hombre/abrigos/sobretodos/sobretodo-igliano-2.jpg'
+            '/productos/hombre/abrigos/sobretodo/sobretodo-igliano.jpg',
+            '/productos/hombre/abrigos/sobretodo/sobretodo-igliano-2.jpg'
         ],
         category: 'hombre',
         subcategoria: 'abrigos',
@@ -387,8 +387,8 @@ export const hombreProducts = [
         price: 999990,
         offerPrice: null,
         images: [
-            '/productos/hombre/abrigos/sobretodos/sobretodo-galgliato.jpg',
-            '/productos/hombre/abrigos/sobretodos/sobretodo-galgliato-2.jpg'
+            '/productos/hombre/abrigos/sobretodo/sobretodo-gagliato.jpg',
+            '/productos/hombre/abrigos/sobretodo/sobretodo-gagliato-2.jpg'
         ],
         category: 'hombre',
         subcategoria: 'abrigos',
@@ -442,8 +442,8 @@ export const hombreProducts = [
         price: 49990,
         offerPrice: null,
         images: [
-            '/productos/hombre/abrigos/chalecos/chaleco-infldo.webp',
-            '/productos/hombre/abrigos/chalecos/chaleco-infldo-2.webp'
+            '/productos/hombre/abrigos/chalecos/chaleco-inflado.webp',
+            '/productos/hombre/abrigos/chalecos/chaleco-inflado-2.webp'
         ],
         category: 'hombre',
         subcategoria: 'abrigos',
@@ -553,8 +553,8 @@ export const hombreProducts = [
         price: 15990,
         offerPrice: null,
         images: [
-            '/productos/hombre/accesorios/gorras/gorra-lisa.webp',
-            '/productos/hombre/accesorios/gorras/gorra-lisa-2.webp'
+            '/productos/hombre/accesorios/gorras/gorra-sport-lisa.webp',
+            '/productos/hombre/accesorios/gorras/gorra-sport-lisa-2.webp'
         ],
         category: 'hombre',
         subcategoria: 'accesorios',

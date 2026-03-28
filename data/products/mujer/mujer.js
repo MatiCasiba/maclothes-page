@@ -494,7 +494,7 @@ export const mujerProducts = [
         category: 'mujer',
         subcategoria: 'accesorios',
         tipo: 'cinto',
-        talles: [''],
+        talles: ['único'],
         colores: ['Oro', 'Plata'],
         destacado: true,
         fechaCreacion: new Date('2025-09-15')
@@ -511,7 +511,7 @@ export const mujerProducts = [
         category: 'mujer',
         subcategoria: 'accesorios',
         tipo: 'cinto',
-        talles: [''],
+        talles: ['único'],
         colores: ['Marron', 'Negro'],
         destacado: false,
         fechaCreacion: new Date('2025-09-15')
@@ -523,18 +523,18 @@ export const mujerProducts = [
         price: 105990,
         offerPrice: 85900,
         images: [
-            '/productos/mujer/accesorios/cinto/cinto-piel-serraje.jpg'
+            '/productos/mujer/accesorios/cinto/cinturon-piel-serraje.jpg'
         ],
         category: 'mujer',
         subcategoria: 'accesorios',
         tipo: 'cinto',
-        talles: [''],
+        talles: ['único'],
         colores: ['Marron'],
         destacado: true,
         fechaCreacion: new Date('2025-09-15')
     },
     {
-        id: 'm-reloj-001 ',
+        id: 'm-reloj-001',
         name: 'Valkur Reloj Helmi ',
         description: '',
         price: 179000,
@@ -545,14 +545,14 @@ export const mujerProducts = [
         ],
         category: 'mujer',
         subcategoria: 'accesorios',
-        tipo: 'reloj',
-        talles: [''],
+        tipo: 'relojes',
+        talles: ['único'],
         colores: ['Rosa'],
         destacado: true,
         fechaCreacion: new Date('2025-04-20')
     },
     {
-        id: 'm-reloj-002 ',
+        id: 'm-reloj-002',
         name: 'Valkur Reloj Janne ',
         description: '',
         price: 179000,
@@ -563,14 +563,14 @@ export const mujerProducts = [
         ],
         category: 'mujer',
         subcategoria: 'accesorios',
-        tipo: 'reloj',
-        talles: [''],
+        tipo: 'relojes',
+        talles: ['único'],
         colores: ['Blanco'],
         destacado: false,
         fechaCreacion: new Date('2025-04-20')
     },
     {
-        id: 'm-reloj-003 ',
+        id: 'm-reloj-003',
         name: 'Valkur Reloj Seren ',
         description: '',
         price: 179000,
@@ -581,14 +581,14 @@ export const mujerProducts = [
         ],
         category: 'mujer',
         subcategoria: 'accesorios',
-        tipo: 'reloj',
-        talles: [''],
+        tipo: 'relojes',
+        talles: ['único'],
         colores: ['Rosa'],
         destacado: true,
         fechaCreacion: new Date('2025-04-20')
     },
     {
-        id: 'm-reloj-004 ',
+        id: 'm-reloj-004',
         name: 'Valkur Reloj Trya ',
         description: '',
         price: 179000,
@@ -599,8 +599,8 @@ export const mujerProducts = [
         ],
         category: 'mujer',
         subcategoria: 'accesorios',
-        tipo: 'reloj',
-        talles: [''],
+        tipo: 'relojes',
+        talles: ['único'],
         colores: ['Rosa'],
         destacado: false,
         fechaCreacion: new Date('2025-04-20')
@@ -774,8 +774,8 @@ export const mujerProducts = [
         price: 149900,
         offerPrice: 129990,
         images: [
-            '/productos/mujer/pantalones/jeans/jean-z1975.jpg',
-            '/productos/mujer/pantalones/jeans/jean-z1975-2.jpg'
+            '/productos/mujer/pantalones/jeans/jeans-z1975.jpg',
+            '/productos/mujer/pantalones/jeans/jeans-z1975-2.jpg'
         ],
         category: 'mujer',
         subcategoria: 'pantalones',
@@ -792,8 +792,8 @@ export const mujerProducts = [
         price: 165900,
         offerPrice: null,
         images: [
-            '/productos/mujer/pantalones/jeans/jean-zw.jpg',
-            '/productos/mujer/pantalones/jeans/jean-zw-2.jpg'
+            '/productos/mujer/pantalones/jeans/jeans-zw.jpg',
+            '/productos/mujer/pantalones/jeans/jeans-zw-2.jpg'
         ],
         category: 'mujer',
         subcategoria: 'pantalones',
@@ -810,8 +810,8 @@ export const mujerProducts = [
         price: 245990,
         offerPrice: 205500,
         images: [
-            '/productos/mujer/abrigos/camperas/chaqueta-bolsillos-trabilla.jpg',
-            '/productos/mujer/abrigos/camperas/chaqueta-bolsillos-trabilla-2.jpg'
+            '/productos/mujer/abrigos/camperas/chaqueta-bolsillos-trabillas.jpg',
+            '/productos/mujer/abrigos/camperas/chaqueta-bolsillos-trabillas-2.jpg'
         ],
         category: 'mujer',
         subcategoria: 'abrigos',
