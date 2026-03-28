@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FiMenu, FiSearch, FiShoppingBag, FiX, FiChevronDown, FiChevronRight, FiHeart, FiUser, FiLogOut } from 'react-icons/fi';
 import MenuToggle from './MenuToggle';
@@ -19,6 +19,25 @@ const Header = () => {
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const [categoriaDesktop, setCategoriaDesktop] = useState(null);
   const [subcategoriaDesktop, setSubcategoriaDesktop] = useState('hombre');
+  const userMenuRef = useRef(null);
+
+  useEffect(() => {
+    if (!isUserMenuOpen) return;
+
+    const handleClickOutside = (event) => {
+      if (userMenuRef.current && !userMenuRef.current.contains(event.target)) {
+        setIsUserMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, [isUserMenuOpen]);
   const { cart } = useCart()
   const cartItemsCount = cart.reduce((total, item) => total + item.quantity, 0)
   const { getTotalItems: getWishlistTotal } = useWishlist()
@@ -82,7 +101,7 @@ const Header = () => {
           </button>
 
           {user ? (
-            <div className={styles.userMenu}>
+            <div className={styles.userMenu} ref={userMenuRef}>
               <button
                 className={`${styles.iconButton} ${styles.userAvatarButton}`}
                 aria-label="Abrir menú de usuario"
