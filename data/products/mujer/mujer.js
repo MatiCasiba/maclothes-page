@@ -403,7 +403,7 @@ export const mujerProducts = [
         offerPrice: 115990,
         images: [
             '/productos/mujer/vestidos-monos/vestido-mini-asimetrico.jpg',
-            '/productos/mujer/vestidos-monos/vestido-mini-asimétrico-2.jpg'
+            '/productos/mujer/vestidos-monos/vestido-mini-asimetrico-2.jpg'
         ],
         category: 'mujer',
         subcategoria: 'vestidos-monos',
