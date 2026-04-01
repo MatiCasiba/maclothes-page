@@ -7,22 +7,6 @@
 .pageHeader {
   margin-bottom: 2rem;
   
-  .backButton {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: none;
-    border: none;
-    color: #666;
-    font-size: 0.9rem;
-    cursor: pointer;
-    margin-bottom: 1rem;
-    
-    &:hover {
-      color: #333;
-    }
-  }
-  
   h1 {
     font-size: 2rem;
     color: #333;
@@ -32,6 +16,33 @@
       font-size: 1.5rem;
     }
   }
+}
+
+.headerButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  
+  button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+    color: #666;
+    
+    &:hover {
+      color: #333;
+    }
+  }
+}
+
+.homeButton {
+  color: #666;
 }
 
 .ordersList {

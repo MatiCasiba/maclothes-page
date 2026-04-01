@@ -1,7 +1,8 @@
+// src/pages/myOrders/MyOrders.jsx
 import { useNavigate } from "react-router-dom"
 import { useAuth } from "../../context/AuthContext"
 import { useEffect, useState } from "react"
-import { FiArrowLeft, FiCalendar, FiDollarSign, FiEye } from "react-icons/fi"
+import { FiArrowLeft, FiCalendar, FiDollarSign, FiEye, FiHome, FiPackage } from "react-icons/fi"
 import styles from './MyOrders.module.scss'
 
 const MyOrders = () => {
@@ -11,15 +12,9 @@ const MyOrders = () => {
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
-        //carga pedidos del localStorage
         const allOrders = JSON.parse(localStorage.getItem('orders') || '[]')
-
-        //filtra pedidos del usuario actual
         const userOrders = allOrders.filter(order => order.email === user?.email)
-
-        //ordenar por fecha (más reciente primero)
         userOrders.sort((a, b) => new Date(b.date) - new Date(a.date))
-
         setOrders(userOrders)
         setIsLoading(false)
     }, [user])
@@ -34,53 +29,59 @@ const MyOrders = () => {
     }
 
     const formatPrice = (price) => {
-            return `$${price.toLocaleString('es-AR')}`
-        }
+        return `$${price.toLocaleString('es-AR')}`
+    }
 
-        const getStatusBadge = (status) => {
-            switch (status) {
-                case 'pending':
-                    return <span className={`${styles.status} ${styles.pending}`}>Pendiente</span>;
-                case 'processing':
-                    return <span className={`${styles.status} ${styles.processing}`}>En proceso</span>;
-                case 'shipped':
-                    return <span className={`${styles.status} ${styles.shipped}`}>Enviado</span>;
-                case 'delivered':
-                    return <span className={`${styles.status} ${styles.delivered}`}>Entregado</span>;
-                default:
-                    return <span className={`${styles.status} ${styles.pending}`}>Confirmado</span>;
-            }
+    const getStatusBadge = (status) => {
+        switch (status) {
+            case 'pending':
+                return <span className={`${styles.status} ${styles.pending}`}>Pendiente</span>;
+            case 'processing':
+                return <span className={`${styles.status} ${styles.processing}`}>En proceso</span>;
+            case 'shipped':
+                return <span className={`${styles.status} ${styles.shipped}`}>Enviado</span>;
+            case 'delivered':
+                return <span className={`${styles.status} ${styles.delivered}`}>Entregado</span>;
+            default:
+                return <span className={`${styles.status} ${styles.pending}`}>Confirmado</span>;
         }
+    }
 
-        if (isLoading) {
-            return (
-                <div className={styles.loading}>
-                    <div className={styles.spinner}></div>
-                    <p>Cargando tus pedidos...</p>
-                </div>
-            )
-        }
+    if (isLoading) {
+        return (
+            <div className={styles.loading}>
+                <div className={styles.spinner}></div>
+                <p>Cargando tus pedidos...</p>
+            </div>
+        )
+    }
 
-        if (orders.length === 0) {
-            return (
-                <div className={styles.emptyOrders}>
-                    <FiPackage size={64} className={styles.emptyIcon} />
-                    <h2>No tenés pedidos aún</h2>
-                    <p>¡Realizá tu primera compra y aparecerá aquí!</p>
-                    <button className={styles.shopButton} onClick={() => navigate('/')}>
-                        Comenzar a comprar
-                    </button>
-                </div>
-            )
-        }
+    if (orders.length === 0) {
+        return (
+            <div className={styles.emptyOrders}>
+                <FiPackage size={64} className={styles.emptyIcon} />
+                <h2>No tenés pedidos aún</h2>
+                <p>¡Realizá tu primera compra y aparecerá aquí!</p>
+                <button className={styles.shopButton} onClick={() => navigate('/')}>
+                    Comenzar a comprar
+                </button>
+            </div>
+        )
+    }
 
     return (
         <div className={styles.myOrdersPage}>
             <div className={styles.pageHeader}>
-                <button className={styles.backButton} onClick={() => navigate(-1)}>
-                    <FiArrowLeft size={20} />
-                    Volver
-                </button>
+                <div className={styles.headerButtons}>
+                    <button className={styles.backButton} onClick={() => navigate(-1)}>
+                        <FiArrowLeft size={20} />
+                        Volver
+                    </button>
+                    <button className={styles.homeButton} onClick={() => navigate('/')}>
+                        <FiHome size={20} />
+                        Ir a la tienda
+                    </button>
+                </div>
                 <h1>Mis pedidos</h1>
             </div>
 
