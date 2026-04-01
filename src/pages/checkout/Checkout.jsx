@@ -55,7 +55,14 @@ const Checkout = () => {
       paymentMethod: formData.metodoPago === 'efectivo' ? 'Efectivo' : 'Transferencia bancaria',
       shippingMethod: formData.metodoEnvio === 'standard' ? 'Estándar' : 'Express',
       items: cart,
-      date: new Date().toISOString()
+      date: new Date().toISOString(),
+
+      //datos de envío
+      direccion: formData.direccion,
+      ciudad: formData.ciudad,
+      provincia: formData.provincia,
+      codigoPostal: formData.codigoPostal,
+      status: 'pending'
     }
 
     // guardo en localStorage
