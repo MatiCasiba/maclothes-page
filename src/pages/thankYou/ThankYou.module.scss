@@ -1,0 +1,179 @@
+.thankYouPage {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(135deg, #f8f8f8 0%, #fff 100%);
+}
+
+.thankYouCard {
+  max-width: 550px;
+  width: 100%;
+  background: white;
+  border-radius: 24px;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.5s ease;
+}
+
+.iconContainer {
+  margin-bottom: 1.5rem;
+}
+
+.checkIcon {
+  color: #4caf50;
+  animation: scaleIn 0.5s ease;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.orderInfo {
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+  
+  span {
+    color: #666;
+  }
+  
+  strong {
+    color: #333;
+  }
+}
+
+.emailMessage {
+  background: #e8f5e9;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  
+  p {
+    color: #2e7d32;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+}
+
+.continueButton {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: #555;
+    transform: translateY(-2px);
+  }
+}
+
+.ordersButton {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: 2px solid #333;
+  color: #333;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: #333;
+    color: white;
+    transform: translateY(-2px);
+  }
+}
+
+.supportInfo {
+  p {
+    color: #999;
+    font-size: 0.85rem;
+    margin: 0;
+    
+    a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 600;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
