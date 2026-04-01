@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom"
 import { useAuth } from "../../context/AuthContext"
 import { useEffect, useState } from "react"
 import { FiArrowLeft, FiCalendar, FiDollarSign, FiEye } from "react-icons/fi"
+import styles from './MyOrders.module.scss'
 
 const MyOrders = () => {
     const { user } = useAuth()
@@ -27,13 +28,13 @@ const MyOrders = () => {
         const date = new Date(dateString)
         return date.toLocaleDateString('es-AR', {
             day: 'numeric',
-            moth: 'long',
+            month: 'long',
             year: 'numeric'
         })
     }
 
     const formatPrice = (price) => {
-            return `$${price.toLocaleDateString('es-AR')}`
+            return `$${price.toLocaleString('es-AR')}`
         }
 
         const getStatusBadge = (status) => {
