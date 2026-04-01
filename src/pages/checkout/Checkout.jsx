@@ -47,10 +47,28 @@ const Checkout = () => {
   }
 
   const handleFinalizar = () => {
-    // acá va a ir lógica para enviar el pedido a un backend
+    // creo  objeto con  los datos del pedido
+    const orderDetails = {
+      orderNumber: `MAC-${Date.now()}`,
+      email: formData.email,
+      total: totalConEnvio,
+      paymentMethod: formData.metodoPago === 'efectivo' ? 'Efectivo' : 'Transferencia bancaria',
+      shippingMethod: formData.metodoEnvio === 'standard' ? 'Estándar' : 'Express',
+      items: cart,
+      date: new Date().toISOString()
+    }
+
+    // guardo en localStorage
+    const orders = JSON.parse(localStorage.getItem('orders') || '[]')
+    orders.push(orderDetails)
+    localStorage.setItem('orders', JSON.stringify(orders))
+
     console.log('Pedido finalziado: ', {formData, cart, total: getSubtotal()});
+    //limpio carrito
     clearCart()
-    navigate('/')
+
+    // navego a la página de gracias con los datos
+    navigate('/gracias', {state: {orderDetails}})
   }
 
   const total = getSubtotal()
