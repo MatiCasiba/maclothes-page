@@ -13,6 +13,7 @@ import Login from '../pages/login/Login';
 import Register from '../pages/register/Register';
 import PrivateRoute from './PrivateRoute';
 import Profile from '../pages/profile/Profile';
+import ThankYou from '../pages/thankYou/ThankYou';
 
 const AppRoutes = () => {
   return (
@@ -51,6 +52,8 @@ const AppRoutes = () => {
           </PrivateRoute>
         } 
       />
+
+      <Route path='gracias' element={<ThankYou />} />
     </Routes>
   );
 };
