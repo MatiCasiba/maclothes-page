@@ -1,0 +1,287 @@
+.myOrdersPage {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.pageHeader {
+  margin-bottom: 2rem;
+  
+  .backButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    
+    &:hover {
+      color: #333;
+    }
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+    
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.ordersList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.orderCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #f8f8f8;
+  border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.orderInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.orderNumber {
+  font-weight: 600;
+  color: #333;
+  background: #e0e0e0;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.orderDate {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.orderStatus {
+  .status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    
+    &.pending {
+      background: #fff3e0;
+      color: #ed6c02;
+    }
+    
+    &.processing {
+      background: #e3f2fd;
+      color: #1976d2;
+    }
+    
+    &.shipped {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+    
+    &.delivered {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+  }
+}
+
+.orderItems {
+  padding: 1.5rem;
+  
+  h4 {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+.orderItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+  
+  img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+
+.itemInfo {
+  flex: 1;
+  
+  .itemName {
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 0.25rem;
+    font-size: 0.9rem;
+  }
+  
+  .itemDetail {
+    color: #666;
+    font-size: 0.8rem;
+    margin: 0;
+  }
+}
+
+.itemPrice {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.moreItems {
+  color: #666;
+  font-size: 0.8rem;
+  margin: 0.5rem 0 0;
+  font-style: italic;
+}
+
+.orderFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.orderTotal {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 1rem;
+  
+  span {
+    color: #666;
+  }
+  
+  strong {
+    color: #333;
+    font-size: 1.2rem;
+  }
+}
+
+.detailButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 2px solid #333;
+  border-radius: 6px;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: #333;
+    color: white;
+  }
+}
+
+// estados de carga y vacío
+.loading, .emptyOrders {
+  text-align: center;
+  padding: 4rem 2rem;
+  
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f0f0f0;
+    border-top-color: #333;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 1rem;
+  }
+  
+  .emptyIcon {
+    color: #ccc;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+}
+
+.shopButton {
+  padding: 0.75rem 2rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  
+  &:hover {
+    background: #555;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
