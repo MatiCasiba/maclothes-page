@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useAuth } from "../../context/AuthContext"
 import styles from './Profile.module.scss'
 import { useNavigate } from "react-router-dom"
-import { FiCalendar, FiEdit2, FiLogOut, FiMail, FiShoppingBag, FiUser } from "react-icons/fi"
+import { FiCalendar, FiEdit2, FiHome, FiLogOut, FiMail, FiShoppingBag, FiUser } from "react-icons/fi"
 
 const Profile = () => {
     const { user, updateProfile, logout } = useAuth()
@@ -56,14 +56,23 @@ const Profile = () => {
                                 <span>{new Date(user?.createdAt).toLocaleDateString('es-AR')}</span>
                             </div>
 
-                            {/* boton de mis pedidos */}
-                            <button 
-                                className={styles.ordersButton}
-                                onClick={() => navigate('/mis-pedidos')}
-                            >
-                                <FiShoppingBag size={18} />
-                                Mis pedidos
-                            </button>
+                            <div className={styles.buttonGroup}>
+                                <button 
+                                    className={styles.storeButton}
+                                    onClick={() => navigate('/')}
+                                >
+                                    <FiHome size={18} />
+                                    Ir a la tienda
+                                </button>
+                                
+                                <button 
+                                    className={styles.ordersButton}
+                                    onClick={() => navigate('/mis-pedidos')}
+                                >
+                                    <FiShoppingBag size={18} />
+                                    Mis pedidos
+                                </button>
+                            </div>
 
                             <div className={styles.actions}>
                                 <button onClick={() => setIsEditing(true)} className={styles.editButton}>

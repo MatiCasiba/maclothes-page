@@ -71,9 +71,43 @@
   }
 }
 
-// botón de mis pedidos
+// grupo de botones
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0 1rem;
+  
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+}
+
+// botón ir a la tienda
+.storeButton {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: #333;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: #555;
+    transform: translateY(-2px);
+  }
+}
+
+// botón mis pedidos
 .ordersButton {
-  width: 100%;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,7 +120,6 @@
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  margin: 1.5rem 0 1rem;
   transition: all 0.3s ease;
   
   &:hover {
@@ -107,6 +140,10 @@
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
+  
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
 }
 
 .editButton, .logoutButton {
@@ -174,6 +211,10 @@
   display: flex;
   gap: 1rem;
   margin-top: 1.5rem;
+  
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
 }
 
 .saveButton, .cancelButton {
