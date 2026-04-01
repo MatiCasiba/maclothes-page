@@ -14,6 +14,8 @@ import Register from '../pages/register/Register';
 import PrivateRoute from './PrivateRoute';
 import Profile from '../pages/profile/Profile';
 import ThankYou from '../pages/thankYou/ThankYou';
+import OrderDetails from '../pages/orderDetails/OrderDetails';
+import MyOrders from '../pages/myOrders/MyOrders';
 
 const AppRoutes = () => {
   return (
@@ -52,6 +54,22 @@ const AppRoutes = () => {
           </PrivateRoute>
         } 
       />
+      <Route 
+        path='mis-pedidos'
+        element={
+          <PrivateRoute>
+            <MyOrders />
+          </PrivateRoute>
+        }
+      />
+      <Route 
+        path='pedido/:orderID' 
+        element={
+          <PrivateRoute>
+            <OrderDetails />
+          </PrivateRoute>} 
+      />
+
 
       <Route path='gracias' element={<ThankYou />} />
     </Routes>
